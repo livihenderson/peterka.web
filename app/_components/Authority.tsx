@@ -41,7 +41,7 @@ export default function Authority() {
                 fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
               }}
             >
-              Čísla, která <span className="italic mr-[0.18em]">stojí</span> za přístupem.
+              Čísla, která <span className="italic">stojí </span>za přístupem.
             </h2>
             <p className="mt-6 max-w-md text-paper/75 leading-relaxed">
               Naši klienti nepřicházejí pro produkt. Přicházejí proto, že hledají

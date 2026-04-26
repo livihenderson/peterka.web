@@ -39,7 +39,7 @@ export default function Testimonials() {
               }}
             >
               Slova, která <br />
-              <span className="italic text-moss mr-[0.18em]">znamenají&nbsp;víc</span> než&nbsp;recenze.
+              <span className="italic text-moss">znamenají&nbsp;víc </span>než&nbsp;recenze.
             </h2>
           </div>
           <div className="col-span-12 md:col-span-5">

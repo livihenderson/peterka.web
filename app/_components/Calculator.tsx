@@ -85,9 +85,7 @@ export default function Calculator() {
                 fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
               }}
             >
-              Co dělá{" "}
-              <span className="italic text-moss mr-[0.18em]">čas</span>
-              s&nbsp;penězi.
+              Co dělá <span className="italic text-moss">čas </span>s&nbsp;penězi.
             </h2>
           </div>
           <div className="col-span-12 md:col-span-5 flex md:items-end">
