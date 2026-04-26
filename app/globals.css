@@ -1,26 +1,205 @@
 @import "tailwindcss";
 
+/* ============================================================
+   PETERKA & KOLEKTIV — Design tokens
+   "Heritage Library" — bone parchment, deep forest, aged brass
+   ============================================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surfaces */
+  --bone:        #F2EBDD;   /* primary parchment background */
+  --bone-warm:   #EADFC8;   /* secondary surface */
+  --bone-light:  #F8F3E7;   /* highlight surface */
+  --paper:       #FBF7EE;   /* lightest surface */
+
+  /* Ink */
+  --ink:         #11140F;   /* primary text, near-black w/ green undertone */
+  --ink-soft:    #2C322B;   /* secondary text */
+  --ink-mute:    #5C5F58;   /* tertiary text */
+
+  /* Forest — primary brand */
+  --moss:        #1E3A2C;   /* deep forest, primary accent */
+  --moss-deep:   #112318;   /* darker forest */
+  --moss-soft:   #2C5340;   /* lighter forest */
+
+  /* Brass — secondary accent */
+  --brass:       #A6814E;   /* aged brass */
+  --brass-light: #C9A471;   /* lighter brass */
+  --brass-deep:  #7B5C36;   /* deeper brass */
+
+  /* Hairlines */
+  --rule:        #C5B89D;   /* hairline rule on bone */
+  --rule-soft:   #D8CCB1;
+  --rule-dark:   #2A3329;   /* hairline rule on moss */
+
+  /* Functional */
+  --selection:   #C9A471;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bone);
+  --color-foreground: var(--ink);
+  --color-bone: var(--bone);
+  --color-bone-warm: var(--bone-warm);
+  --color-bone-light: var(--bone-light);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-mute: var(--ink-mute);
+  --color-moss: var(--moss);
+  --color-moss-deep: var(--moss-deep);
+  --color-moss-soft: var(--moss-soft);
+  --color-brass: var(--brass);
+  --color-brass-light: var(--brass-light);
+  --color-brass-deep: var(--brass-deep);
+  --color-rule: var(--rule);
+  --color-rule-soft: var(--rule-soft);
+  --color-rule-dark: var(--rule-dark);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-instrument);
+  --font-mono: var(--font-jetbrains);
+
+  --container-prose: 64rem;
+  --container-wide: 88rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "ss02", "kern", "liga";
+  }
+
+  body {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: var(--selection);
+    color: var(--ink);
+  }
+
+  /* Subtle parchment grain — applied selectively */
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='8' /><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.07 0' /></filter><rect width='100%25' height='100%25' filter='url(%23n)' /></svg>");
+    opacity: 0.6;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    z-index: 0;
+  }
+
+  /* Drop cap for editorial paragraphs */
+  .dropcap::first-letter {
+    font-family: var(--font-display);
+    font-weight: 500;
+    float: left;
+    font-size: 5.5em;
+    line-height: 0.85;
+    margin: 0.08em 0.08em 0 -0.04em;
+    color: var(--moss);
+  }
+
+  /* Vertical caption */
+  .vcap {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Scroll-driven reveal — pure CSS */
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    animation: reveal 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 22%;
+  }
+  .reveal-slow {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: reveal 2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 32%;
+  }
+  @keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Ink-rule that draws itself */
+  .rule-draw {
+    transform-origin: left;
+    animation: rule-draw 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes rule-draw {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  /* Soft photo treatment — slightly desaturated, warm shadow */
+  .portrait-treatment {
+    filter: saturate(0.82) contrast(1.04) sepia(0.05);
+  }
+  .portrait-treatment-strong {
+    filter: saturate(0.55) contrast(1.06) sepia(0.12);
+    transition: filter 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .portrait-treatment-strong:hover {
+    filter: saturate(1) contrast(1) sepia(0);
+  }
+
+  /* Numbers — tabular */
+  .num {
+    font-feature-settings: "tnum", "lnum";
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+/* Marquee for long quote line */
+@keyframes drift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.drift {
+  animation: drift 60s linear infinite;
+}
+
+/* Pulse for map markers */
+@keyframes ping-soft {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.ping-soft {
+  animation: ping-soft 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  transform-origin: center;
+}
+
+@keyframes blink-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.blink { animation: blink-cursor 1.1s steps(2) infinite; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
