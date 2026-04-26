@@ -81,7 +81,7 @@ export default function Locations() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-12 md:gap-16 items-start">
+        <div className="grid grid-cols-12 gap-y-12 lg:gap-16 items-start">
           {/* Map */}
           <div className="col-span-12 lg:col-span-8 reveal">
             <div className="relative" style={{ aspectRatio: "5342 / 3123" }}>
