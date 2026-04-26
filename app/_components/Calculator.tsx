@@ -16,6 +16,18 @@ function formatNumber(n: number) {
   }).format(Math.round(n));
 }
 
+// Compact axis label, e.g. 5_177_098 → "5,2 mil." — fits in narrow gutter
+function formatCompact(n: number) {
+  if (n >= 1_000_000) {
+    const v = (n / 1_000_000).toFixed(1).replace(".", ",");
+    return `${v} mil.`;
+  }
+  if (n >= 1_000) {
+    return `${Math.round(n / 1_000)} tis.`;
+  }
+  return Math.round(n).toString();
+}
+
 export default function Calculator() {
   const [initial, setInitial] = useState(250_000);
   const [monthly, setMonthly] = useState(8_000);
@@ -142,7 +154,7 @@ export default function Calculator() {
           {/* Chart + summary */}
           <div className="col-span-12 lg:col-span-7 bg-bone p-8 md:p-12 flex flex-col">
             {/* Headline numbers */}
-            <div className="grid grid-cols-3 gap-px bg-rule border border-rule">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-rule border border-rule">
               <Stat
                 label="Celkem za horizont"
                 value={formatCZK(finalValue)}
@@ -194,7 +206,7 @@ export default function Calculator() {
                         letterSpacing="1"
                         fill="rgba(17,20,15,0.45)"
                       >
-                        {formatNumber(maxY * t).replace(/\s/g, " ")}
+                        {formatCompact(maxY * t)}
                       </text>
                     </g>
                   );
