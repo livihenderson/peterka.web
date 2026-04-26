@@ -87,7 +87,10 @@ export default function Services() {
 
         <div className="grid grid-cols-12 gap-px bg-rule border border-rule">
           {services.map((s, i) => {
-            const span = i === 0 ? "col-span-12 md:col-span-7 row-span-2" : i === 1 ? "col-span-12 md:col-span-5" : "col-span-12 md:col-span-4";
+            // Top row: 3 cards × col-span-4 (Investice, Hypotéky, Pojištění)
+            // Bottom row: 2 cards × col-span-6 (Nemovitosti, Firmy)
+            const span =
+              i < 3 ? "col-span-12 md:col-span-4" : "col-span-12 md:col-span-6";
             return (
               <article
                 key={s.n}
@@ -138,17 +141,21 @@ export default function Services() {
                 </ul>
 
                 {/* Bottom CTA */}
-                <div className="mt-auto pt-8">
+                <div className="mt-auto pt-7 border-t border-rule/55">
                   <Link
                     href={s.href}
-                    className="inline-flex items-baseline gap-2 font-display italic text-moss text-sm hover:text-moss-deep transition-colors"
-                    style={{
-                      fontVariationSettings:
-                        "'opsz' 144, 'SOFT' 100, 'WONK' 1",
-                    }}
+                    className="inline-flex items-baseline gap-3 group/cta"
                   >
-                    {s.cta}
-                    <span className="not-italic inline-block transition-transform duration-500 group-hover:translate-x-1.5">
+                    <span
+                      className="relative font-display italic text-moss text-lg md:text-xl leading-snug pb-1 border-b border-brass/0 group-hover/cta:border-brass transition-colors duration-500"
+                      style={{
+                        fontVariationSettings:
+                          "'opsz' 144, 'SOFT' 100, 'WONK' 1",
+                      }}
+                    >
+                      {s.cta}
+                    </span>
+                    <span className="font-display not-italic text-moss text-xl md:text-2xl leading-none translate-y-px inline-block transition-transform duration-500 group-hover/cta:translate-x-2">
                       →
                     </span>
                   </Link>
