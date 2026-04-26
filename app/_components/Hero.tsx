@@ -125,8 +125,8 @@ export default function Hero() {
               {/* Frame */}
               <div className="relative aspect-[3/4] w-full max-w-[480px] ml-auto">
                 {/* Brass corner accents */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 border-t border-l border-brass z-10" />
-                <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
+                <div className="absolute -top-5 -left-5 w-10 h-10 border-t border-l border-brass z-10" />
+                <div className="absolute -bottom-5 -right-5 w-10 h-10 border-b border-r border-brass z-10" />
 
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
