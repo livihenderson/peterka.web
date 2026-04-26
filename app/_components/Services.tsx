@@ -94,13 +94,13 @@ export default function Services() {
             return (
               <article
                 key={s.n}
-                className={`reveal group relative bg-bone p-8 md:p-12 min-h-[320px] md:min-h-[520px] flex flex-col ${span}`}
+                className={`reveal group relative bg-bone p-8 md:p-12 min-h-[420px] md:min-h-[520px] flex flex-col ${span}`}
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 {/* Number */}
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between gap-5">
                   <div
-                    className="font-display num text-2xl text-brass-deep"
+                    className="font-display num text-2xl text-brass-deep shrink-0"
                     style={{
                       fontVariationSettings:
                         "'opsz' 144, 'SOFT' 30, 'WONK' 1",
@@ -108,7 +108,7 @@ export default function Services() {
                   >
                     {s.n}
                   </div>
-                  <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-ink-mute">
+                  <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-ink-mute leading-relaxed text-right">
                     {s.short}
                   </div>
                 </div>
