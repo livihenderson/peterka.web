@@ -101,7 +101,7 @@ export default function Footer() {
               <a href="#" className="hover:text-moss">Reklamační řád</a>
             </span>
           </div>
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-left">
             Designed and created by Olivia
           </div>
         </div>
