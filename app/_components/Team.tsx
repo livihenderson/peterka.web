@@ -112,49 +112,52 @@ export default function Team() {
             </div>
           </article>
 
-          {/* 3 stacked advisors */}
+          {/* 3 stacked advisors — same overlay treatment as the founder, smaller scale */}
           <div className="col-span-12 lg:col-span-5 grid grid-cols-1 gap-6 md:gap-8">
             {team.slice(1).map((m, i) => (
               <article
                 key={m.name}
-                className="reveal group grid grid-cols-12 gap-4 md:gap-6 items-stretch"
+                className="reveal group"
                 style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
-                <div className="col-span-5 sm:col-span-4 lg:col-span-5 relative aspect-[3/4] overflow-hidden bg-moss-deep">
+                <div className="relative aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/5] w-full overflow-hidden bg-moss-deep">
                   <Image
                     src={m.img}
                     alt={m.name}
                     fill
-                    sizes="(max-width: 1024px) 40vw, 25vw"
-                    className="object-cover portrait-treatment-strong"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-top portrait-treatment-strong"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
-                </div>
-                <div className="col-span-7 sm:col-span-8 lg:col-span-7 flex flex-col justify-between py-1">
-                  <div>
-                    <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-brass-deep">
-                      {m.city}
-                    </div>
+                  {/* Dark gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent" />
+                  {/* Top-left brass tag */}
+                  <div className="absolute top-5 left-5 flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light">
+                    <span className="inline-block w-3 h-px bg-brass" />
+                    {m.city}
+                  </div>
+                  {/* Identity overlay text */}
+                  <div className="absolute left-6 right-6 bottom-6 text-paper">
                     <h3
-                      className="mt-3 font-display text-3xl md:text-[2.4rem] leading-[0.98] tracking-[-0.02em] text-ink"
+                      className="font-display text-4xl md:text-5xl tracking-[-0.025em] leading-[0.95]"
                       style={{
                         fontVariationSettings:
                           "'opsz' 144, 'SOFT' 30, 'WONK' 1",
                       }}
                     >
                       {m.name.split(" ")[0]}<br />
-                      <span className="italic text-moss">
+                      <span className="italic text-brass-light">
                         {m.name.split(" ").slice(1).join(" ")}
                       </span>
                     </h3>
                     <p
-                      className="mt-3 text-sm leading-[1.55] text-ink-soft"
+                      className="mt-4 max-w-md text-sm leading-[1.55] text-paper/80"
                       dangerouslySetInnerHTML={{ __html: m.note }}
                     />
-                  </div>
-                  <div className="mt-4 flex items-center gap-4 pt-3 border-t border-rule font-mono text-[10px] tracking-[0.22em] uppercase text-ink-mute">
-                    <span>{m.role.split(" · ")[0]}</span>
-                    <span className="ml-auto num">{m.years} let</span>
+                    <div className="mt-5 flex items-center gap-4 font-mono text-[10px] tracking-[0.3em] uppercase text-paper/65">
+                      <span>{m.role.split(" · ")[0]}</span>
+                      <span className="inline-block w-6 h-px bg-paper/40" />
+                      <span className="num">{m.years} let praxe</span>
+                    </div>
                   </div>
                 </div>
               </article>
