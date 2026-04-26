@@ -74,7 +74,7 @@ export default function HypotekaCalculator() {
       </div>
 
       <div className="col-span-12 lg:col-span-7 bg-bone p-8 md:p-12 flex flex-col">
-        <div className="grid grid-cols-2 gap-px bg-rule border border-rule">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-rule border border-rule">
           <Stat label="Měsíční splátka" value={formatCZK(calc.monthly)} accent="moss" />
           <Stat label="Výše úvěru" value={formatCZK(calc.loan)} />
           <Stat label="Celkem zaplaceno" value={formatCZK(calc.total)} />
