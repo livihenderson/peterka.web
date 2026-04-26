@@ -238,7 +238,7 @@ export default function InvesticePage() {
                 className="reveal font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.025em] text-ink max-w-[24ch]"
                 style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
-                Trh poráží <span className="italic text-moss">nudná</span> strategie<br />
+                Trh poráží <span className="italic text-moss mr-[0.18em]">nudná</span> strategie<br />
                 dodržovaná deset let v&nbsp;kuse.
               </h2>
 
@@ -275,7 +275,7 @@ export default function InvesticePage() {
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
                 style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
-                Tři způsoby, jak <span className="italic text-moss">začít</span> nebo&nbsp;pokračovat.
+                Tři způsoby, jak <span className="italic text-moss mr-[0.18em]">začít</span> nebo&nbsp;pokračovat.
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
