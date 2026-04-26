@@ -235,18 +235,6 @@ export default function Locations() {
                   </text>
                 </g>
 
-                {/* Title plate — bottom left */}
-                <g transform={`translate(80, ${3123 - 60})`}>
-                  <text
-                    fontFamily="var(--font-jetbrains), monospace"
-                    fontSize={9 * S}
-                    fill="rgba(248,243,231,0.55)"
-                    letterSpacing={3 * S}
-                  >
-                    PŮSOBNOST · ČESKÁ REPUBLIKA · MMXXVI
-                  </text>
-                </g>
-
                 {/* Tiny attribution — required by CC BY-SA source */}
                 <g transform={`translate(${5342 - 80}, ${3123 - 30})`}>
                   <text
