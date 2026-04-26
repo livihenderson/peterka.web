@@ -137,15 +137,6 @@ export default function Locations() {
                       onClick={() => setActive(c.id)}
                       className="cursor-pointer"
                     >
-                      {isActive && (
-                        <circle
-                          cx={c.cx}
-                          cy={c.cy}
-                          r={8 * S}
-                          fill="rgba(201,164,113,0.55)"
-                          className="ping-soft"
-                        />
-                      )}
                       <circle
                         cx={c.cx}
                         cy={c.cy}
