@@ -94,7 +94,7 @@ export default function Services() {
             return (
               <article
                 key={s.n}
-                className={`reveal group relative bg-bone p-8 md:p-12 min-h-[420px] md:min-h-[520px] flex flex-col ${span}`}
+                className={`reveal group relative bg-bone p-8 md:p-12 min-h-[540px] md:min-h-[520px] flex flex-col ${span}`}
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 {/* Number */}
