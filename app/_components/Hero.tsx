@@ -160,7 +160,7 @@ export default function Hero() {
               </div>
 
               {/* Vertical caption */}
-              <div className="hidden lg:block absolute -left-2 top-2 vcap text-ink-mute">
+              <div className="hidden lg:block absolute -left-10 top-16 vcap text-ink-mute">
                 Est. MMX · Edo Finance partner
               </div>
             </div>
