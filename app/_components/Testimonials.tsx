@@ -86,7 +86,7 @@ export default function Testimonials() {
         </div>
 
         {/* Edo Finance affiliation */}
-        <div className="mt-20 md:mt-28 grid grid-cols-12 gap-6 md:gap-10 items-center pt-10 border-t border-rule">
+        <div className="mt-20 md:mt-28 grid grid-cols-12 gap-y-6 md:gap-x-10 items-center pt-10 border-t border-rule">
           <div className="col-span-12 md:col-span-5">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
               Pod střechou

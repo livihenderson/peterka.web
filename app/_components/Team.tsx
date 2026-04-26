@@ -70,7 +70,7 @@ export default function Team() {
         </div>
 
         {/* Featured founder + 3 advisors grid */}
-        <div className="grid grid-cols-12 gap-6 md:gap-8">
+        <div className="grid grid-cols-12 gap-y-6 md:gap-y-8 lg:gap-x-8">
           {/* Founder large */}
           <article className="reveal col-span-12 lg:col-span-7 group">
             <div className="relative aspect-[4/5] md:aspect-[5/6] w-full overflow-hidden bg-moss-deep">

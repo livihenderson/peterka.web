@@ -44,7 +44,7 @@ export default function Contact() {
       />
 
       <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
-        <div className="grid grid-cols-12 gap-12 md:gap-16 items-start">
+        <div className="grid grid-cols-12 gap-y-12 lg:gap-16 items-start">
           {/* Left — invite */}
           <div className="col-span-12 lg:col-span-5">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
