@@ -66,7 +66,7 @@ export default function Hero() {
               <p className="font-sans text-lg md:text-xl leading-[1.55] text-ink-soft">
                 Komplexní privátní péče o váš majetek, vaši rodinu a vaše záměry —
                 investice, hypotéky, pojištění a&nbsp;nemovitosti pod jednou
-                střechou. Bez šablon. Bez kvót. Bez kompromisů v kvalitě.
+                střechou. Bez kompromisů v kvalitě.
               </p>
             </div>
 

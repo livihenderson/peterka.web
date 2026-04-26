@@ -31,7 +31,7 @@ export default function Authority() {
               { v: "41+", lbl: "let zkušeností", sub: "v součtu napříč týmem" },
               { v: "100%", lbl: "nezávislost", sub: "v doporučeních klientům" },
               { v: "5", lbl: "oblastí péče", sub: "pod jednou střechou" },
-              { v: "0", lbl: "kvótních cílů", sub: "na úkor klienta" },
+              { v: "+900", lbl: "klientů", sub: "v součtu napříč týmem" },
             ].map((s, i) => (
               <div
                 key={i}

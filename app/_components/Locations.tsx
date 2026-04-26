@@ -74,9 +74,9 @@ export default function Locations() {
           </div>
           <div className="col-span-12 md:col-span-6 md:col-start-7 md:flex md:items-end">
             <p className="text-lg leading-[1.6] text-paper/80 max-w-md">
-              Klienty obsluhujeme po&nbsp;celé republice — osobně, online,
-              i&nbsp;u&nbsp;vás doma. Kdykoli chcete potřesení rukou, najdete
-              nás v&nbsp;Praze, Českých Budějovicích nebo&nbsp;Táboře.
+              Klienty obsluhujeme po&nbsp;celé republice — osobně, i&nbsp;online.
+              Kdykoli chcete potřesení rukou, najdete nás v&nbsp;Praze,
+              Českých Budějovicích nebo&nbsp;Táboře.
             </p>
           </div>
         </div>

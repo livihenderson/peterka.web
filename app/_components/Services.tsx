@@ -79,8 +79,8 @@ export default function Services() {
             <p className="text-lg leading-[1.6] text-ink-soft max-w-md">
               Nestaráme se jen o&nbsp;jednu věc. Staráme se o&nbsp;celek.
               Klient, který si u&nbsp;nás kupuje hypotéku, často zjistí,
-              že&nbsp;mu řešíme i&nbsp;pojištění auta otce, investice dětí
-              a&nbsp;daňové optimalizace s.r.o. Jednou rozhovorem.
+              že&nbsp;mu vyřešíme i&nbsp;pojištění auta, investice dětí
+              a&nbsp;daňové optimalizace s.r.o. Jedním rozhovorem.
             </p>
           </div>
         </div>

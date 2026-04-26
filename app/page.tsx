@@ -6,7 +6,6 @@ import Team from "./_components/Team";
 import Locations from "./_components/Locations";
 import Process from "./_components/Process";
 import Calculator from "./_components/Calculator";
-import Testimonials from "./_components/Testimonials";
 import Contact from "./_components/Contact";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Locations />
       <Process />
       <Calculator />
-      <Testimonials />
       <Contact />
     </>
   );

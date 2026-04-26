@@ -48,7 +48,7 @@ export default function Manifesto() {
                 Ne se ctí, ne pro klienty.
               </p>
               <p className="text-lg leading-[1.65] text-ink-soft">
-                Odešel od posledního zaměstnavatele s jediným cílem: postavit
+                Odešel z poslední společnosti s jediným cílem: postavit
                 tým lidí, kteří k&nbsp;povolání přistupují stejně. Tým, kde
                 rozhodují roky zkušeností, ne týdenní žebříček prodejů. Tak
                 vzniklo Peterka&nbsp;&amp;&nbsp;Kolektiv — pod střechou skupiny
