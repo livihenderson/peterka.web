@@ -170,15 +170,6 @@
   }
 }
 
-/* Marquee for long quote line */
-@keyframes drift {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-.drift {
-  animation: drift 60s linear infinite;
-}
-
 @keyframes blink-cursor {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
