@@ -96,9 +96,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <span>© MMXXVI · Peterka &amp; Kolektiv · Všechna práva vyhrazena</span>
             <span className="flex flex-wrap gap-x-6 gap-y-2">
-              <a href="#" className="hover:text-moss">Zásady ochrany údajů</a>
-              <a href="#" className="hover:text-moss">Cookies</a>
-              <a href="#" className="hover:text-moss">Reklamační řád</a>
+              <Link href="/zasady-ochrany-udaju" className="hover:text-moss">Zásady ochrany údajů</Link>
+              <Link href="/cookies" className="hover:text-moss">Cookies</Link>
             </span>
           </div>
           <div className="mt-4 text-left">

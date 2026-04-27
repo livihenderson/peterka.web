@@ -37,15 +37,24 @@ export default function Navigation() {
       }`}
     >
       <div className="mx-auto flex max-w-[88rem] items-center justify-between px-6 md:px-10 h-16 md:h-20">
-        <Link href="/" className="group flex items-end gap-2 select-none">
+        <Link href="/" className="group flex items-baseline gap-3 md:gap-4 select-none">
           <span
-            className="font-display text-[1.7rem] md:text-[1.9rem] leading-none tracking-[-0.02em] text-ink"
+            className="font-display text-[1.9rem] md:text-[2.15rem] leading-none tracking-[-0.022em] text-ink"
             style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
           >
             Peterka
           </span>
-          <span className="hidden md:inline-block translate-y-[-3px] font-mono text-[10px] tracking-[0.32em] uppercase text-ink-mute">
-            &nbsp;&amp;&nbsp;Kolektiv
+          <span className="hidden md:inline-flex items-baseline gap-2.5">
+            <span
+              className="font-display italic text-[1.4rem] leading-none text-moss translate-y-[1px]"
+              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1" }}
+              aria-hidden
+            >
+              &amp;
+            </span>
+            <span className="font-mono text-[11px] tracking-[0.34em] uppercase text-ink-soft">
+              Kolektiv
+            </span>
           </span>
         </Link>
 

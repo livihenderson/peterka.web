@@ -1,6 +1,18 @@
 import Image from "next/image";
 
-const team = [
+type Member = {
+  img: string;
+  name: string;
+  role: string;
+  years: string;
+  city: string;
+  note: string;
+  accent?: boolean;
+  web?: string;
+  webHref?: string;
+};
+
+const team: Member[] = [
   {
     img: "/peterka_profile.png",
     name: "Tomáš Peterka",
@@ -19,6 +31,8 @@ const team = [
     city: "Praha",
     note:
       "Diskreční mandáty, dlouhodobé portfolia rodin a&nbsp;podnikatelských skupin.",
+    web: "ivapetrikova.cz",
+    webHref: "https://ivapetrikova.cz",
   },
   {
     img: "/albrecht_josef.png",
@@ -151,6 +165,17 @@ export default function Team() {
                       className="mt-4 max-w-md text-sm leading-[1.55] text-paper/80"
                       dangerouslySetInnerHTML={{ __html: m.note }}
                     />
+                    {m.web && m.webHref && (
+                      <a
+                        href={m.webHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.28em] uppercase text-brass-light hover:text-paper transition-colors"
+                      >
+                        {m.web}
+                        <span className="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+                      </a>
+                    )}
                     <div className="mt-5 flex items-center gap-4 font-mono text-[10px] tracking-[0.3em] uppercase text-paper/65">
                       <span>{m.role.split(" · ")[0]}</span>
                       <span className="inline-block w-6 h-px bg-paper/40" />
@@ -192,6 +217,17 @@ export default function Team() {
                         className="mt-3 text-sm leading-[1.55] text-ink-soft"
                         dangerouslySetInnerHTML={{ __html: m.note }}
                       />
+                      {m.web && m.webHref && (
+                        <a
+                          href={m.webHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-brass-deep hover:text-moss transition-colors"
+                        >
+                          {m.web}
+                          <span className="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
+                        </a>
+                      )}
                     </div>
                     <div className="mt-4 flex items-center gap-4 pt-3 border-t border-rule font-mono text-[10px] tracking-[0.22em] uppercase text-ink-mute">
                       <span>{m.role.split(" · ")[0]}</span>

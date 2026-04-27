@@ -1,3 +1,73 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+const stats: {
+  prefix?: string;
+  value: number;
+  suffix?: string;
+  lbl: string;
+  sub: string;
+}[] = [
+  { value: 41, suffix: "+", lbl: "let zkušeností", sub: "v součtu napříč týmem" },
+  { value: 100, suffix: "%", lbl: "nezávislost", sub: "v doporučeních klientům" },
+  { value: 5, lbl: "oblastí péče", sub: "pod jednou střechou" },
+  { prefix: "+", value: 900, lbl: "klientů", sub: "v součtu napříč týmem" },
+];
+
+function CountUp({
+  end,
+  duration = 1600,
+  delay = 0,
+}: {
+  end: number;
+  duration?: number;
+  delay?: number;
+}) {
+  const [n, setN] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      setN(end);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting && !started.current) {
+            started.current = true;
+            const startAt = performance.now() + delay;
+            const tick = (now: number) => {
+              if (now < startAt) {
+                requestAnimationFrame(tick);
+                return;
+              }
+              const t = Math.min(1, (now - startAt) / duration);
+              const eased = 1 - Math.pow(1 - t, 4);
+              setN(Math.round(end * eased));
+              if (t < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            io.disconnect();
+          }
+        }
+      },
+      { threshold: 0.35 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [end, duration, delay]);
+
+  return <span ref={ref}>{n}</span>;
+}
+
 export default function Authority() {
   return (
     <section className="relative bg-moss text-paper overflow-hidden">
@@ -27,12 +97,7 @@ export default function Authority() {
           </div>
 
           <div className="col-span-12 md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-px bg-rule-dark">
-            {[
-              { v: "41+", lbl: "let zkušeností", sub: "v součtu napříč týmem" },
-              { v: "100%", lbl: "nezávislost", sub: "v doporučeních klientům" },
-              { v: "5", lbl: "oblastí péče", sub: "pod jednou střechou" },
-              { v: "+900", lbl: "klientů", sub: "v součtu napříč týmem" },
-            ].map((s, i) => (
+            {stats.map((s, i) => (
               <div
                 key={i}
                 className="reveal bg-moss p-7 md:p-8 flex flex-col justify-between min-h-[180px]"
@@ -44,7 +109,9 @@ export default function Authority() {
                     fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
                   }}
                 >
-                  {s.v}
+                  {s.prefix}
+                  <CountUp end={s.value} delay={i * 120} />
+                  {s.suffix}
                 </div>
                 <div className="mt-6">
                   <div className="font-display text-lg italic text-brass-light">
