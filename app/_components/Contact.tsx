@@ -62,7 +62,7 @@ export default function Contact() {
             <p className="mt-8 text-paper/75 max-w-md text-lg leading-[1.6]">
               Napište nám pár vět o&nbsp;tom, kde stojíte a&nbsp;co řešíte.
               Do&nbsp;dvou pracovních dnů se ozveme s&nbsp;termíny.
-              Nezávazně, diskrétně, bez&nbsp;katalogu produktů.
+              Nezávazně, bez&nbsp;katalogu produktů.
             </p>
 
             <div className="mt-12 space-y-7 pt-8 border-t border-rule-dark">
