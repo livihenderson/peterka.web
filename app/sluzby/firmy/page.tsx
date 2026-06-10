@@ -2,30 +2,29 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "../../_components/Contact";
-import Calculator from "../../_components/Calculator";
 import StatValue from "../../_components/StatValue";
 
 export const metadata: Metadata = {
-  title: "Investice — privátní portfolia, pravidelné investice, investiční dohled",
+  title: "Firmy — péče o majitele i podnik",
   description:
-    "Dlouhodobá investiční strategie, kterou jste schopni dodržet i ve špatném roce. Privátní portfolia, pravidelné investice, investiční dohled poradce. Peterka & Kolektiv.",
+    "Optimalizace odměn, firemní financování, ochrana klíčových osob a mezigenerační předání. Finanční péče pro majitele firem a jejich rodiny. Peterka & Kolektiv.",
   keywords: [
-    "investice",
-    "investiční poradce",
-    "pravidelné investice",
-    "investiční poradenství",
-    "akcie",
-    "ETF",
-    "investiční portfolio",
-    "privátní investice",
-    "investiční poradce Praha",
-    "Peterka investice",
+    "firemní finance",
+    "finanční poradce pro firmy",
+    "optimalizace odměn jednatele",
+    "firemní financování",
+    "manažerské pojištění",
+    "pojištění klíčových osob",
+    "předání firmy",
+    "nástupnictví",
+    "mezigenerační předání majetku",
+    "Peterka firmy",
   ],
-  alternates: { canonical: "/sluzby/investice" },
+  alternates: { canonical: "/sluzby/firmy" },
   openGraph: {
-    title: "Investice · Peterka & Kolektiv",
+    title: "Firmy · Peterka & Kolektiv",
     description:
-      "Strategie, kterou stojí za to dodržet — i ve chvíli, kdy zprávy panikaří.",
+      "Majitel a podnik nejsou dva oddělené světy. Staráme se o ně jako o celek.",
     type: "article",
   },
 };
@@ -33,77 +32,77 @@ export const metadata: Metadata = {
 const okruhy = [
   {
     n: "01",
-    t: "Začínám investovat",
+    t: "Optimalizace odměn",
     body:
-      "Začínáte budovat. Měsíční úložky, dlouhý horizont, jednoduché a&nbsp;levné nástroje (zpravidla ETF). Ideální pro&nbsp;mladé, kteří už vydělávají dost na&nbsp;to, aby si&nbsp;část příjmu pravidelně odkládali, pro&nbsp;rodiče, kteří spoří dětem, i&nbsp;pro&nbsp;klienty před padesátkou se&nbsp;střednědobým cílem.",
-    from: "od 1 000 Kč / měs.",
-    horizon: "horizont 7+ let",
+      "Jak si ze&nbsp;své firmy platit chytře — poměr mzdy, podílů na&nbsp;zisku a&nbsp;benefitů, který dává smysl daňově i&nbsp;dlouhodobě. Nastavujeme ve&nbsp;spolupráci s&nbsp;vaším daňovým poradcem či&nbsp;účetní.",
+    from: "pro jednatele a majitele",
+    horizon: "revize 1× ročně",
   },
   {
     n: "02",
-    t: "Chci plánovat strategii",
+    t: "Firemní financování",
     body:
-      "Máte volné prostředky a&nbsp;hledáte strategii. Sestavujeme strukturované portfolio přizpůsobené vašemu cíli, horizontu a&nbsp;rizikové toleranci. Pravidelná revize a&nbsp;rebalancování.",
-    from: "od 100 000 Kč",
-    horizon: "horizont 5+ let",
+      "Provozní úvěry, financování strojů, hal i&nbsp;firemních nemovitostí. Nabídky srovnáváme napříč bankami stejně důsledně jako u&nbsp;hypoték — banka má být dodavatel, ne&nbsp;rozhodčí.",
+    from: "od 1 mil. Kč",
+    horizon: "provozní i investiční",
   },
   {
     n: "03",
-    t: "Chci investiční dohled",
+    t: "Ochrana a předání",
     body:
-      "Program průběžné konzultační péče. Vaše portfolio i&nbsp;dění na&nbsp;trzích sledujeme nepřetržitě a&nbsp;sami se ozýváme s&nbsp;konkrétním doporučením — konečné rozhodnutí je vždy na&nbsp;vás. Vhodné pro&nbsp;klienty s&nbsp;velkým majetkem, kteří chtějí jistotu, že&nbsp;nic nepropásnou.",
-    from: "od 1 mil. Kč",
+      "Pojištění klíčových osob a&nbsp;manažerské odpovědnosti, zajištění rodiny majitele — a&nbsp;včasná příprava mezigeneračního předání firmy. Nástupnictví je proces na&nbsp;roky, ne&nbsp;na&nbsp;jednu schůzku u&nbsp;notáře.",
+    from: "klíčové osoby i rodina",
     horizon: "horizont 10+ let",
   },
 ];
 
 const realityNumbers = [
   {
-    v: "7–9 %",
-    lbl: "průměrný roční výnos akciového trhu",
-    sub: "dlouhodobý průměr za 100+ let, MSCI World",
+    v: "70 %",
+    lbl: "rodinných firem nepřežije předání",
+    sub: "do druhé generace — bez plánu nástupnictví",
   },
   {
-    v: "−40 %",
-    lbl: "nejhorší pokles, který musíte ustát",
-    sub: "v průměru jednou za 10–15 let — vždy se vrátí",
+    v: "1",
+    lbl: "klíčový člověk umí zastavit firmu",
+    sub: "výpadek majitele či technologa bez pojistky",
   },
   {
-    v: "8×",
-    lbl: "kolikrát se peníze zhodnotí",
-    sub: "při 7 % p.a. za 30 let — síla složeného úročení",
+    v: "2 světy",
+    lbl: "firemní a rodinné finance",
+    sub: "u majitele jsou vždy jedna rozvaha",
   },
   {
-    v: "0",
-    lbl: "lidí, kteří umí trh načasovat",
-    sub: "akademický výzkum 60 let mlčky souhlasí",
+    v: "0 Kč",
+    lbl: "stojí druhý názor",
+    sub: "na vaše stávající firemní úvěry a pojistky",
   },
 ];
 
 const mistakes = [
   {
     n: "I",
-    t: "Snaha o načasování trhu",
-    b: `„Počkám, až to spadne.“ Statisticky největší ztráty si investoři způsobují tím, že stojí mimo trh během deseti nejlepších dní v&nbsp;dekádě. Pravidelnost dlouhodobě poráží odhady.`,
+    t: "Všechno v jednom s.r.o.",
+    b: "Provoz, nemovitosti i&nbsp;úspory v&nbsp;jedné entitě znamenají, že&nbsp;jeden neúspěšný kontrakt ohrožuje všechno. Oddělení majetku od&nbsp;provozu je základ, ne&nbsp;nadstandard.",
   },
   {
     n: "II",
-    t: "Drahé aktivně řízené fondy",
-    b: `Fond s&nbsp;poplatkem 2,5 % p.a. musí trh každý rok porazit o&nbsp;víc než&nbsp;2,5 %, jen aby vám něco vydělal. Většina nedokáže ani to. Levné ETF s&nbsp;poplatkem 0,1 % zpravidla výkon poměřuje, ne&nbsp;kazí.`,
+    t: "Majitel jako jediný klíč",
+    b: "Firma, kterou bez&nbsp;majitele nikdo neumí řídit ani&nbsp;podepsat, je pro&nbsp;banku i&nbsp;rodinu rizikem. Pojištění klíčové osoby a&nbsp;jasné plné moci stojí zlomek toho, co jejich absence.",
   },
   {
     n: "III",
-    t: "Příliš mnoho fondů",
-    b: "Klient s&nbsp;deseti fondy v&nbsp;portfoliu obvykle drží stejné akcie třikrát zaplacené třem správcům. Diversifikace je&nbsp;v&nbsp;tom, co fondy obsahují, ne&nbsp;v&nbsp;jejich počtu.",
+    t: "Firma jako spořicí účet",
+    b: "Nechávat celý zisk ležet ve&nbsp;firmě se zdá bezpečné — dokud nepřijde spor, exekuce odběratele nebo změna trhu. Majetek majitele má&nbsp;růst i&nbsp;mimo firemní rozvahu.",
   },
   {
     n: "IV",
-    t: "Daňová slepota",
-    b: "Tříletý časový test, daňová ztráta z&nbsp;jiných investic, zápočet — to&nbsp;všechno mění reálný výnos o&nbsp;jednotky procent. Nejde o&nbsp;optimalizaci, jde o&nbsp;to neplatit dvakrát to, co se dá zaplatit jednou.",
+    t: "Předání bez plánu",
+    b: "Nástupnictví řešené až&nbsp;dědickým řízením je nejdražší varianta — daňově, právně i&nbsp;rodinně. Promyšlené předání trvá roky, a&nbsp;proto začíná dnes, ne&nbsp;v&nbsp;důchodu.",
   },
 ];
 
-export default function InvesticePage() {
+export default function FirmyPage() {
   return (
     <>
       {/* HERO */}
@@ -125,32 +124,33 @@ export default function InvesticePage() {
             <span>›</span>
             <Link href="/#sluzby" className="hover:text-moss">Služby</Link>
             <span>›</span>
-            <span className="text-ink">Investice</span>
+            <span className="text-ink">Firmy</span>
           </nav>
 
           <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § Investice · 01 / 05
+                § Firmy · 05 / 05
               </div>
               <h1
                 className="mt-6 font-display text-[clamp(2.6rem,6.6vw,6rem)] leading-[0.95] tracking-[-0.025em] text-ink"
               >
-                <span className="block reveal">Strategie,</span>
+                <span className="block reveal">Firma i rodina.</span>
                 <span
                   className="block italic text-moss reveal"
                   style={{
                     animationDelay: "120ms",
-                    }}
+                  }}
                 >
-                  kterou stojí za to dodržet.
+                  Jedna rozvaha.
                 </span>
               </h1>
 
               <p className="reveal mt-10 max-w-xl text-lg md:text-xl leading-[1.55] text-ink-soft" style={{ animationDelay: "260ms" }}>
-                Investování není o&nbsp;hledání zázračných akcií. Je to disciplína —
-                pravidelnost, čas, daňová efektivita a&nbsp;klid během poklesů.
-                To&nbsp;poslední vás v&nbsp;bance nenaučí.
+                Majitel firmy nemá oddělené světy. Odměna jednatele, úvěr
+                na&nbsp;halu, pojistka klíčového člověka i&nbsp;budoucí předání —
+                to&nbsp;všechno jsou jedny peníze. Staráme se o&nbsp;ně
+                jako&nbsp;o&nbsp;celek.
               </p>
 
               <div
@@ -161,16 +161,16 @@ export default function InvesticePage() {
                   href="/#kontakt"
                   className="group inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 text-[12.5px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
                 >
-                  Sjednat investiční konzultaci
+                  Sjednat konzultaci pro firmu
                   <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                     →
                   </span>
                 </Link>
                 <a
-                  href="#kalkulacka"
+                  href="#okruhy"
                   className="group inline-flex items-center gap-3 border-b border-ink/40 pb-1 text-[13px] tracking-[0.18em] uppercase text-ink-soft hover:text-moss hover:border-moss transition-colors"
                 >
-                  Spočítat zhodnocení
+                  Co řešíme nejčastěji
                 </a>
               </div>
             </div>
@@ -182,8 +182,8 @@ export default function InvesticePage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/kozel.png"
-                    alt="Dušan Kozel — investice a privátní portfolia"
+                    src="/peterka_profile.png"
+                    alt="Tomáš Peterka — péče o majitele firem"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -194,15 +194,15 @@ export default function InvesticePage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>10 let</span>
+                      <span>15 let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
                     >
-                      Dušan Kozel
+                      Tomáš Peterka
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      Praha · Privátní portfolia
+                      Praha · Zakladatel
                     </div>
                   </div>
                 </div>
@@ -234,24 +234,24 @@ export default function InvesticePage() {
               <h2
                 className="reveal font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.025em] text-ink max-w-[24ch]"
               >
-                Trh poráží <span className="italic text-moss">nudná </span>strategie<br />
-                dodržovaná deset let v&nbsp;kuse.
+                Nejdřív <span className="italic text-moss">majitel, </span>
+                potom produkty.
               </h2>
 
               <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
                 <p className="dropcap text-lg leading-[1.65] text-ink-soft">
-                  Většina investorů neprohrává kvůli špatné volbě nástroje, ale
-                  kvůli své vlastní psychologii. Vystoupí v&nbsp;krizi, vrátí se
-                  po&nbsp;vrcholu, hledají zkratky, kupují to, o&nbsp;čem se píše,
-                  a&nbsp;prodávají to, co bolí. Ne proto, že&nbsp;jsou hloupí —
-                  proto, že&nbsp;jsou lidé.
+                  Majiteli firmy se obvykle prodává po&nbsp;kouskách: banka
+                  nabídne úvěr, pojišťovna pojistku, účetní spočítá daně.
+                  Nikdo z&nbsp;nich ale nesedí nad&nbsp;celkem — nad&nbsp;tím,
+                  jak spolu souvisí odměna jednatele, rezervy firmy, majetek
+                  rodiny a&nbsp;den, kdy firmu jednou někdo převezme.
                 </p>
                 <p className="text-lg leading-[1.65] text-ink-soft">
-                  Naše práce je dvojí: postavit s&nbsp;vámi strategii, která
-                  matematicky dává smysl, a&nbsp;potom stát vedle vás
-                  ve&nbsp;chvíli, kdy hlavní zprávy panikaří. Investice
-                  bez&nbsp;disciplíny je sázka. Investice s&nbsp;disciplínou je
-                  spořicí účet, který se násobí časem.
+                  Naše práce začíná u&nbsp;majitele, ne&nbsp;u&nbsp;produktu.
+                  Nejdřív rozumíme firmě, rodině a&nbsp;záměrům — teprve potom
+                  skládáme řešení: financování, ochranu klíčových lidí,
+                  daňově rozumnou výplatu a&nbsp;plán předání. Jeden tým,
+                  jedna strategie, žádné slepé místo.
                 </p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function InvesticePage() {
       </section>
 
       {/* OKRUHY */}
-      <section className="relative py-20 md:py-28 bg-bone-light">
+      <section id="okruhy" className="relative py-20 md:py-28 bg-bone-light">
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
@@ -270,14 +270,14 @@ export default function InvesticePage() {
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
               >
-                Tři způsoby, jak <span className="italic text-moss">začít </span>nebo&nbsp;pokračovat.
+                Co s majiteli <span className="italic text-moss">řešíme </span>nejčastěji.
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Každý klient přichází z&nbsp;jiného místa. Někdo začíná, někdo
-                spravuje rodinný kapitál, někdo by se rád zbavil každodenního
-                rozhodování. Pro&nbsp;každého z&nbsp;nich máme přiměřený formát.
+                Každá firma je jinde — někdo roste a&nbsp;potřebuje kapitál,
+                někdo konsoliduje, někdo začíná přemýšlet o&nbsp;předání.
+                Společné mají jedno: majitele, na&nbsp;kterém všechno stojí.
               </p>
             </div>
           </div>
@@ -336,16 +336,16 @@ export default function InvesticePage() {
               <h2
                 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.02] tracking-[-0.025em]"
               >
-                Co byste měli<br />
-                <span className="italic text-brass-light">opravdu očekávat.</span>
+                Co majitelé znají —<br />
+                <span className="italic text-brass-light">a neřeší.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-6 md:col-start-7 flex md:items-end">
               <p className="text-paper/80 leading-relaxed max-w-md">
-                Slibovat 15 % ročně bez&nbsp;rizika je byznys jiných firem.
-                My vám raději hned na&nbsp;začátku ukážeme, jak vypadá
-                realistický průběh. Disciplína se tvoří z&nbsp;nepříjemných
-                pravd, ne&nbsp;z&nbsp;katalogových.
+                Většina majitelů má perfektní přehled o&nbsp;maržích
+                a&nbsp;cash&nbsp;flow. Slepá místa bývají jinde — v&nbsp;tom,
+                co se stane, když vypadne klíčový člověk, a&nbsp;v&nbsp;tom,
+                jak firma jednou změní ruce.
               </p>
             </div>
           </div>
@@ -376,27 +376,24 @@ export default function InvesticePage() {
         </div>
       </section>
 
-      {/* CALCULATOR (reused) */}
-      <Calculator />
-
       {/* COMMON MISTAKES */}
       <section className="relative py-24 md:py-32 bg-bone-warm">
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 05 — Chyby
+                § 04 — Chyby
               </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
               >
-                Čtyři chyby, které <span className="italic text-moss">krájejí výnos.</span>
+                Čtyři chyby, na&nbsp;které <span className="italic text-moss">firmy doplácejí.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Na&nbsp;rozdíl od&nbsp;hypoték nelze investiční chyby vždy zpětně
-                napravit — proto je důležité vědět o&nbsp;nich dřív, než&nbsp;začnou.
+                Žádná z&nbsp;nich nebolí dnes. Všechny umí bolet za&nbsp;pět
+                let — a&nbsp;všechny se dají vyřešit dřív, než&nbsp;nastanou.
               </p>
             </div>
           </div>
@@ -430,14 +427,14 @@ export default function InvesticePage() {
             <p
               className="font-display italic text-xl md:text-2xl text-ink max-w-3xl leading-[1.3]"
             >
-              Pokud váháte mezi „začít teď“ a&nbsp;„počkat na&nbsp;lepší dobu“ —
-              první z&nbsp;nich téměř vždy vyhrává.
+              Nejlepší chvíle nastavit firemní finance byla při&nbsp;založení.
+              Druhá nejlepší je&nbsp;tento týden.
             </p>
             <Link
               href="/#kontakt"
               className="group inline-flex items-center gap-3 self-start md:self-auto whitespace-nowrap bg-ink text-paper px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
             >
-              Začít s investováním
+              Konzultace pro firmu
               <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                 →
               </span>

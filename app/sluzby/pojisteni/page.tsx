@@ -2,30 +2,29 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "../../_components/Contact";
-import Calculator from "../../_components/Calculator";
 import StatValue from "../../_components/StatValue";
 
 export const metadata: Metadata = {
-  title: "Investice — privátní portfolia, pravidelné investice, investiční dohled",
+  title: "Pojištění — životní, majetkové, odpovědnost",
   description:
-    "Dlouhodobá investiční strategie, kterou jste schopni dodržet i ve špatném roce. Privátní portfolia, pravidelné investice, investiční dohled poradce. Peterka & Kolektiv.",
+    "Pojistka, která dává smysl — bez balastu, který se nikdy nevyplatí. Ochrana příjmu a rodiny, majetek a domácnost, odpovědnost a podnikání. Peterka & Kolektiv.",
   keywords: [
-    "investice",
-    "investiční poradce",
-    "pravidelné investice",
-    "investiční poradenství",
-    "akcie",
-    "ETF",
-    "investiční portfolio",
-    "privátní investice",
-    "investiční poradce Praha",
-    "Peterka investice",
+    "pojištění",
+    "životní pojištění",
+    "pojištění nemovitosti",
+    "pojištění domácnosti",
+    "úrazové pojištění",
+    "pojištění invalidity",
+    "pojištění odpovědnosti",
+    "revize pojistných smluv",
+    "pojišťovací poradce",
+    "Peterka pojištění",
   ],
-  alternates: { canonical: "/sluzby/investice" },
+  alternates: { canonical: "/sluzby/pojisteni" },
   openGraph: {
-    title: "Investice · Peterka & Kolektiv",
+    title: "Pojištění · Peterka & Kolektiv",
     description:
-      "Strategie, kterou stojí za to dodržet — i ve chvíli, kdy zprávy panikaří.",
+      "Pojištění pro dny, které nikdo neplánuje — bez balastu, který se nikdy nevyplatí.",
     type: "article",
   },
 };
@@ -33,77 +32,77 @@ export const metadata: Metadata = {
 const okruhy = [
   {
     n: "01",
-    t: "Začínám investovat",
+    t: "Ochrana příjmu a rodiny",
     body:
-      "Začínáte budovat. Měsíční úložky, dlouhý horizont, jednoduché a&nbsp;levné nástroje (zpravidla ETF). Ideální pro&nbsp;mladé, kteří už vydělávají dost na&nbsp;to, aby si&nbsp;část příjmu pravidelně odkládali, pro&nbsp;rodiče, kteří spoří dětem, i&nbsp;pro&nbsp;klienty před padesátkou se&nbsp;střednědobým cílem.",
-    from: "od 1 000 Kč / měs.",
-    horizon: "horizont 7+ let",
+      "Životní a&nbsp;úrazové pojištění postavené od&nbsp;největšího rizika: výpadek příjmu živitele. Invalidita, vážné nemoci, smrt — v&nbsp;tomto pořadí, protože v&nbsp;tomto pořadí přicházejí. Bez&nbsp;připojištění, která se nikdy nevyplatí.",
+    from: "pro živitele rodin",
+    horizon: "revize při životních změnách",
   },
   {
     n: "02",
-    t: "Chci plánovat strategii",
+    t: "Majetek a domácnost",
     body:
-      "Máte volné prostředky a&nbsp;hledáte strategii. Sestavujeme strukturované portfolio přizpůsobené vašemu cíli, horizontu a&nbsp;rizikové toleranci. Pravidelná revize a&nbsp;rebalancování.",
-    from: "od 100 000 Kč",
-    horizon: "horizont 5+ let",
+      "Dům, byt, domácnost, auto. Hlídáme hlavně pojistné částky — ceny staveb rostou rychleji, než&nbsp;se smlouvy aktualizují, a&nbsp;podpojištěný dům znamená krácené plnění přesně ve&nbsp;chvíli, kdy potřebujete celou částku.",
+    from: "dům · byt · auto",
+    horizon: "aktualizace 1× za 3 roky",
   },
   {
     n: "03",
-    t: "Chci investiční dohled",
+    t: "Odpovědnost a podnikání",
     body:
-      "Program průběžné konzultační péče. Vaše portfolio i&nbsp;dění na&nbsp;trzích sledujeme nepřetržitě a&nbsp;sami se ozýváme s&nbsp;konkrétním doporučením — konečné rozhodnutí je vždy na&nbsp;vás. Vhodné pro&nbsp;klienty s&nbsp;velkým majetkem, kteří chtějí jistotu, že&nbsp;nic nepropásnou.",
-    from: "od 1 mil. Kč",
-    horizon: "horizont 10+ let",
+      "Občanská i&nbsp;profesní odpovědnost, korporátní programy, pojištění podnikatelských rizik. A&nbsp;když se něco stane, řešíme škodní událost s&nbsp;vámi — od&nbsp;nahlášení po&nbsp;vyplacení.",
+    from: "pro rodiny i firmy",
+    horizon: "vedeme i škodní události",
   },
 ];
 
 const realityNumbers = [
   {
-    v: "7–9 %",
-    lbl: "průměrný roční výnos akciového trhu",
-    sub: "dlouhodobý průměr za 100+ let, MSCI World",
+    v: "4×",
+    lbl: "pravděpodobnější je invalidita než smrt",
+    sub: "v produktivním věku — a pojišťuje se nejméně",
   },
   {
-    v: "−40 %",
-    lbl: "nejhorší pokles, který musíte ustát",
-    sub: "v průměru jednou za 10–15 let — vždy se vrátí",
+    v: "60 %",
+    lbl: "českých nemovitostí je podpojištěno",
+    sub: "pojistné částky neodpovídají cenám staveb",
   },
   {
-    v: "8×",
-    lbl: "kolikrát se peníze zhodnotí",
-    sub: "při 7 % p.a. za 30 let — síla složeného úročení",
+    v: "1/3",
+    lbl: "pojistného často platí balast",
+    sub: "připojištění s minimální šancí na plnění",
   },
   {
-    v: "0",
-    lbl: "lidí, kteří umí trh načasovat",
-    sub: "akademický výzkum 60 let mlčky souhlasí",
+    v: "0 Kč",
+    lbl: "stojí revize stávajících smluv",
+    sub: "druhý názor na to, co už platíte",
   },
 ];
 
 const mistakes = [
   {
     n: "I",
-    t: "Snaha o načasování trhu",
-    b: `„Počkám, až to spadne.“ Statisticky největší ztráty si investoři způsobují tím, že stojí mimo trh během deseti nejlepších dní v&nbsp;dekádě. Pravidelnost dlouhodobě poráží odhady.`,
+    t: "Investiční životko jako spoření",
+    b: "Smíchat pojištění s&nbsp;investicí znamená přeplatit obojí. Pojištění má chránit, investice zhodnocovat — každé zvlášť, průhledně a&nbsp;za&nbsp;férový poplatek.",
   },
   {
     n: "II",
-    t: "Drahé aktivně řízené fondy",
-    b: `Fond s&nbsp;poplatkem 2,5 % p.a. musí trh každý rok porazit o&nbsp;víc než&nbsp;2,5 %, jen aby vám něco vydělal. Většina nedokáže ani to. Levné ETF s&nbsp;poplatkem 0,1 % zpravidla výkon poměřuje, ne&nbsp;kazí.`,
+    t: "Pojištěná smrt, nepojištěná invalidita",
+    b: "Invalidita je v&nbsp;produktivním věku výrazně pravděpodobnější než&nbsp;smrt — a&nbsp;finančně bolí déle: příjem zmizí, výdaje vzrostou. Přesto bývá v&nbsp;pojistkách na&nbsp;posledním místě.",
   },
   {
     n: "III",
-    t: "Příliš mnoho fondů",
-    b: "Klient s&nbsp;deseti fondy v&nbsp;portfoliu obvykle drží stejné akcie třikrát zaplacené třem správcům. Diversifikace je&nbsp;v&nbsp;tom, co fondy obsahují, ne&nbsp;v&nbsp;jejich počtu.",
+    t: "Podpojištěný dům",
+    b: "Pojistná částka z&nbsp;doby koupě dnes nepostaví ani&nbsp;hrubou stavbu. Při&nbsp;podpojištění pojišťovna krátí plnění — i&nbsp;malou škodu pak platíte z&nbsp;větší části sami.",
   },
   {
     n: "IV",
-    t: "Daňová slepota",
-    b: "Tříletý časový test, daňová ztráta z&nbsp;jiných investic, zápočet — to&nbsp;všechno mění reálný výnos o&nbsp;jednotky procent. Nejde o&nbsp;optimalizaci, jde o&nbsp;to neplatit dvakrát to, co se dá zaplatit jednou.",
+    t: "Smlouva, na kterou se nesahá",
+    b: "Pojistka z&nbsp;roku 2012 nezná vaši hypotéku, děti ani&nbsp;podnikání. Život se mění každých pár let — smlouva, která se nemění s&nbsp;ním, chrání minulost, ne&nbsp;vás.",
   },
 ];
 
-export default function InvesticePage() {
+export default function PojisteniPage() {
   return (
     <>
       {/* HERO */}
@@ -125,32 +124,33 @@ export default function InvesticePage() {
             <span>›</span>
             <Link href="/#sluzby" className="hover:text-moss">Služby</Link>
             <span>›</span>
-            <span className="text-ink">Investice</span>
+            <span className="text-ink">Pojištění</span>
           </nav>
 
           <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § Investice · 01 / 05
+                § Pojištění · 03 / 05
               </div>
               <h1
                 className="mt-6 font-display text-[clamp(2.6rem,6.6vw,6rem)] leading-[0.95] tracking-[-0.025em] text-ink"
               >
-                <span className="block reveal">Strategie,</span>
+                <span className="block reveal">Pojištění pro dny,</span>
                 <span
                   className="block italic text-moss reveal"
                   style={{
                     animationDelay: "120ms",
-                    }}
+                  }}
                 >
-                  kterou stojí za to dodržet.
+                  které nikdo neplánuje.
                 </span>
               </h1>
 
               <p className="reveal mt-10 max-w-xl text-lg md:text-xl leading-[1.55] text-ink-soft" style={{ animationDelay: "260ms" }}>
-                Investování není o&nbsp;hledání zázračných akcií. Je to disciplína —
-                pravidelnost, čas, daňová efektivita a&nbsp;klid během poklesů.
-                To&nbsp;poslední vás v&nbsp;bance nenaučí.
+                Dobrá pojistka se nepozná podle ceny ani&nbsp;podle počtu
+                připojištění. Pozná se v&nbsp;jediný den — když má zaplatit.
+                Stavíme smlouvy, které ten den ustojí, a&nbsp;škrtáme balast,
+                který se nikdy nevyplatí.
               </p>
 
               <div
@@ -161,16 +161,16 @@ export default function InvesticePage() {
                   href="/#kontakt"
                   className="group inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 text-[12.5px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
                 >
-                  Sjednat investiční konzultaci
+                  Sjednat konzultaci o pojištění
                   <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                     →
                   </span>
                 </Link>
                 <a
-                  href="#kalkulacka"
+                  href="#okruhy"
                   className="group inline-flex items-center gap-3 border-b border-ink/40 pb-1 text-[13px] tracking-[0.18em] uppercase text-ink-soft hover:text-moss hover:border-moss transition-colors"
                 >
-                  Spočítat zhodnocení
+                  Co pojišťujeme
                 </a>
               </div>
             </div>
@@ -182,8 +182,8 @@ export default function InvesticePage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/kozel.png"
-                    alt="Dušan Kozel — investice a privátní portfolia"
+                    src="/lukashorejsi_profilovka.png"
+                    alt="Lukáš Hořejší — pojištění a ochrana majetku"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -194,15 +194,15 @@ export default function InvesticePage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>10 let</span>
+                      <span>7 let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
                     >
-                      Dušan Kozel
+                      Lukáš Hořejší
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      Praha · Privátní portfolia
+                      Tábor · Ochrana majetku
                     </div>
                   </div>
                 </div>
@@ -234,24 +234,24 @@ export default function InvesticePage() {
               <h2
                 className="reveal font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.025em] text-ink max-w-[24ch]"
               >
-                Trh poráží <span className="italic text-moss">nudná </span>strategie<br />
-                dodržovaná deset let v&nbsp;kuse.
+                Pojišťujeme <span className="italic text-moss">katastrofy, </span>
+                ne&nbsp;nepříjemnosti.
               </h2>
 
               <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
                 <p className="dropcap text-lg leading-[1.65] text-ink-soft">
-                  Většina investorů neprohrává kvůli špatné volbě nástroje, ale
-                  kvůli své vlastní psychologii. Vystoupí v&nbsp;krizi, vrátí se
-                  po&nbsp;vrcholu, hledají zkratky, kupují to, o&nbsp;čem se píše,
-                  a&nbsp;prodávají to, co bolí. Ne proto, že&nbsp;jsou hloupí —
-                  proto, že&nbsp;jsou lidé.
+                  Rozbitý displej přežijete. Deset let invalidního důchodu
+                  s&nbsp;hypotékou a&nbsp;dvěma dětmi nikoliv. Přesto se běžné
+                  pojistky plní drobnostmi, které se dobře prodávají,
+                  a&nbsp;šetří na&nbsp;rizicích, která umí rodinu skutečně
+                  položit.
                 </p>
                 <p className="text-lg leading-[1.65] text-ink-soft">
-                  Naše práce je dvojí: postavit s&nbsp;vámi strategii, která
-                  matematicky dává smysl, a&nbsp;potom stát vedle vás
-                  ve&nbsp;chvíli, kdy hlavní zprávy panikaří. Investice
-                  bez&nbsp;disciplíny je sázka. Investice s&nbsp;disciplínou je
-                  spořicí účet, který se násobí časem.
+                  Stavíme to obráceně: nejdřív velká rizika — příjem, střecha
+                  nad&nbsp;hlavou, odpovědnost — pořádně a&nbsp;levně. Drobnosti
+                  jen tam, kde dávají smysl. A&nbsp;když se něco stane, nejste
+                  na&nbsp;telefonu s&nbsp;pojišťovnou sami — škodní událost
+                  vedeme s&nbsp;vámi až&nbsp;do&nbsp;vyplacení.
                 </p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function InvesticePage() {
       </section>
 
       {/* OKRUHY */}
-      <section className="relative py-20 md:py-28 bg-bone-light">
+      <section id="okruhy" className="relative py-20 md:py-28 bg-bone-light">
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
@@ -270,14 +270,14 @@ export default function InvesticePage() {
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
               >
-                Tři způsoby, jak <span className="italic text-moss">začít </span>nebo&nbsp;pokračovat.
+                Tři vrstvy <span className="italic text-moss">ochrany.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Každý klient přichází z&nbsp;jiného místa. Někdo začíná, někdo
-                spravuje rodinný kapitál, někdo by se rád zbavil každodenního
-                rozhodování. Pro&nbsp;každého z&nbsp;nich máme přiměřený formát.
+                Příjem, majetek, odpovědnost. Každá vrstva chrání jinou část
+                života — a&nbsp;každá má svá pravidla, podle kterých se pozná
+                dobrá smlouva od&nbsp;drahého papíru.
               </p>
             </div>
           </div>
@@ -336,16 +336,15 @@ export default function InvesticePage() {
               <h2
                 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.02] tracking-[-0.025em]"
               >
-                Co byste měli<br />
-                <span className="italic text-brass-light">opravdu očekávat.</span>
+                Co pojistky kryjí —<br />
+                <span className="italic text-brass-light">a co doopravdy hrozí.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-6 md:col-start-7 flex md:items-end">
               <p className="text-paper/80 leading-relaxed max-w-md">
-                Slibovat 15 % ročně bez&nbsp;rizika je byznys jiných firem.
-                My vám raději hned na&nbsp;začátku ukážeme, jak vypadá
-                realistický průběh. Disciplína se tvoří z&nbsp;nepříjemných
-                pravd, ne&nbsp;z&nbsp;katalogových.
+                Pojištění je matematika pravděpodobností, ne&nbsp;katalog
+                produktů. Tahle čísla rozhodují o&nbsp;tom, jestli vaše
+                smlouva chrání vás — nebo statistiku pojišťovny.
               </p>
             </div>
           </div>
@@ -376,27 +375,25 @@ export default function InvesticePage() {
         </div>
       </section>
 
-      {/* CALCULATOR (reused) */}
-      <Calculator />
-
       {/* COMMON MISTAKES */}
       <section className="relative py-24 md:py-32 bg-bone-warm">
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 05 — Chyby
+                § 04 — Chyby
               </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
               >
-                Čtyři chyby, které <span className="italic text-moss">krájejí výnos.</span>
+                Čtyři chyby, které <span className="italic text-moss">se neodpouštějí.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Na&nbsp;rozdíl od&nbsp;hypoték nelze investiční chyby vždy zpětně
-                napravit — proto je důležité vědět o&nbsp;nich dřív, než&nbsp;začnou.
+                U&nbsp;pojištění se chyba pozná až&nbsp;ve&nbsp;chvíli, kdy ji
+                nelze napravit. Proto se vyplatí najít ji dnes — dokud je to
+                jen řádek ve&nbsp;smlouvě.
               </p>
             </div>
           </div>
@@ -430,14 +427,14 @@ export default function InvesticePage() {
             <p
               className="font-display italic text-xl md:text-2xl text-ink max-w-3xl leading-[1.3]"
             >
-              Pokud váháte mezi „začít teď“ a&nbsp;„počkat na&nbsp;lepší dobu“ —
-              první z&nbsp;nich téměř vždy vyhrává.
+              Dobrá pojistka je ta, na&nbsp;kterou roky nesáhnete —
+              a&nbsp;pak vás podrží.
             </p>
             <Link
               href="/#kontakt"
               className="group inline-flex items-center gap-3 self-start md:self-auto whitespace-nowrap bg-ink text-paper px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
             >
-              Začít s investováním
+              Konzultace o pojištění
               <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                 →
               </span>

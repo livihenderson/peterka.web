@@ -2,10 +2,10 @@ const services = [
   {
     n: "01",
     t: "Investice",
-    short: "Tvorba a správa portfolia",
+    short: "Tvorba portfolia a dohled",
     body:
       "Dlouhodobá strategie postavená na vašich cílech, ne na produktovém katalogu. Diversifikace, daňová optimalizace, pravidelná revize.",
-    detail: ["Akciová a dluhopisová portfolia", "Pravidelné investice", "Diskreční mandát"],
+    detail: ["Akciová a dluhopisová portfolia", "Pravidelné investice", "Investiční dohled"],
     cta: "Náš přístup k investicím",
     href: "/sluzby/investice",
   },
@@ -26,8 +26,8 @@ const services = [
     body:
       "Pojistka, která dává smysl — bez balastu, který nikdy nevyplatí. Pravidelná aktualizace dle životních situací.",
     detail: ["Životní a úrazové", "Nemovitosti a domácnost", "Odpovědnost a podnikání"],
-    cta: "Domluvit konzultaci o pojištění",
-    href: "/#kontakt",
+    cta: "Jak stavíme pojištění",
+    href: "/sluzby/pojisteni",
   },
   {
     n: "04",
@@ -46,8 +46,8 @@ const services = [
     body:
       "Optimalizace odměn, financování růstu, ochrana klíčových osob, mezigenerační předání. Pro majitele firem a&nbsp;jejich rodiny.",
     detail: ["Manažerské pojištění", "Firemní financování", "Předání majetku"],
-    cta: "Domluvit konzultaci pro firmu",
-    href: "/#kontakt",
+    cta: "Jak pečujeme o firmy",
+    href: "/sluzby/firmy",
   },
 ];
 
@@ -67,9 +67,6 @@ export default function Services() {
             </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,4.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               Pět oblastí. <br />
               <span className="italic text-moss">Jedno&nbsp;místo.</span>
@@ -101,10 +98,6 @@ export default function Services() {
                 <div className="flex items-start justify-between gap-5">
                   <div
                     className="font-display num text-2xl text-brass-deep shrink-0"
-                    style={{
-                      fontVariationSettings:
-                        "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                    }}
                   >
                     {s.n}
                   </div>
@@ -116,10 +109,6 @@ export default function Services() {
                 {/* Title */}
                 <h3
                   className="mt-10 font-display text-[clamp(2rem,3.6vw,3.4rem)] leading-[0.95] tracking-[-0.02em] text-ink transition-colors duration-500 group-hover:text-moss"
-                  style={{
-                    fontVariationSettings:
-                      "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                  }}
                 >
                   {s.t}
                 </h3>
@@ -148,10 +137,6 @@ export default function Services() {
                   >
                     <span
                       className="relative font-display italic text-moss text-lg md:text-xl leading-snug pb-1 border-b border-brass/0 group-hover/cta:border-brass transition-colors duration-500"
-                      style={{
-                        fontVariationSettings:
-                          "'opsz' 144, 'SOFT' 100, 'WONK' 1",
-                      }}
                     >
                       {s.cta}
                     </span>
