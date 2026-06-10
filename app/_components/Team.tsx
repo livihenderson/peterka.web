@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TeamRest from "./TeamRest";
 
 type Member = {
   img: string;
@@ -24,15 +25,13 @@ const team: Member[] = [
     accent: true,
   },
   {
-    img: "/iva_petrikova.png",
-    name: "Iva Petříková",
+    img: "/kozel.png",
+    name: "Dušan Kozel",
     role: "Investice · Privátní portfolia",
     years: "10",
     city: "Praha",
     note:
-      "Diskreční mandáty, dlouhodobé portfolia rodin a&nbsp;podnikatelských skupin.",
-    web: "ivapetrikova.cz",
-    webHref: "https://ivapetrikova.cz",
+      "Investiční dohled nad&nbsp;portfolii, dlouhodobé strategie rodin a&nbsp;podnikatelských skupin.",
   },
   {
     img: "/albrecht_josef.png",
@@ -66,11 +65,8 @@ export default function Team() {
             </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
-              Čtyři lidé.<br />
+              Jedenáct lidí.<br />
               <span className="italic text-moss">Jeden&nbsp;standard.</span>
             </h2>
           </div>
@@ -106,10 +102,6 @@ export default function Team() {
               <div className="absolute left-7 right-7 bottom-7 text-paper">
                 <div
                   className="font-display text-5xl md:text-7xl tracking-[-0.025em] leading-[0.95]"
-                  style={{
-                    fontVariationSettings:
-                      "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                  }}
                 >
                   Tomáš<br />
                   <span className="italic text-brass-light">Peterka</span>
@@ -151,10 +143,6 @@ export default function Team() {
                   <div className="absolute left-6 right-6 bottom-6 text-paper">
                     <h3
                       className="font-display text-4xl sm:text-5xl tracking-[-0.025em] leading-[0.95]"
-                      style={{
-                        fontVariationSettings:
-                          "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                      }}
                     >
                       {m.name.split(" ")[0]}<br />
                       <span className="italic text-brass-light">
@@ -203,10 +191,6 @@ export default function Team() {
                       </div>
                       <h3
                         className="mt-3 font-display text-3xl xl:text-[2.4rem] leading-[0.98] tracking-[-0.02em] text-ink"
-                        style={{
-                          fontVariationSettings:
-                            "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                        }}
                       >
                         {m.name.split(" ")[0]}<br />
                         <span className="italic text-moss">
@@ -240,17 +224,17 @@ export default function Team() {
           </div>
         </div>
 
+        {/* Rest of the team — expandable roster */}
+        <TeamRest />
+
         {/* Bottom signature line */}
         <div
           className="mt-16 md:mt-24 flex flex-col md:flex-row md:items-center md:justify-between gap-6 pt-8 border-t border-rule"
         >
           <p
             className="font-display italic text-2xl md:text-3xl text-ink max-w-3xl leading-[1.25]"
-            style={{
-              fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1",
-            }}
           >
-            Spolu více než <span className="num text-moss">41</span> let
+            Spolu více než <span className="num text-moss">31</span> let
             v&nbsp;oboru — a&nbsp;ani&nbsp;jeden den ve&nbsp;společnosti, kde&nbsp;by se
             kvótami platilo za&nbsp;pohodlí klienta.
           </p>
