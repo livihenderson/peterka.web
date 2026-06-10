@@ -66,7 +66,7 @@ export default function Team() {
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
             >
-              Jedenáct lidí.<br />
+              Dvanáct lidí.<br />
               <span className="italic text-moss">Jeden&nbsp;standard.</span>
             </h2>
           </div>

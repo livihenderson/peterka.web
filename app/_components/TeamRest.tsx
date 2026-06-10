@@ -10,9 +10,23 @@ type RestMember = {
   years: string;
   city: string;
   note: string;
+  /** Brightness multiplier for photos shot brighter than the rest (1 = unchanged) */
+  dim?: number;
+  /** Use the mild portrait treatment and a lighter gradient instead of the strong one */
+  soft?: boolean;
 };
 
 const rest: RestMember[] = [
+  {
+    img: "/iveta_kosile.png",
+    name: "Iva Petříková",
+    soft: true,
+    dim: 0.9,
+    focus: "Investice",
+    years: "10 let",
+    city: "Praha",
+    note: "Privátní portfolia a&nbsp;investiční dohled. Dlouhodobá péče o&nbsp;rodiny a&nbsp;podnikatele.",
+  },
   {
     img: "/mrazek.png",
     name: "Tomáš Mrázek",
@@ -68,6 +82,7 @@ const rest: RestMember[] = [
     years: "2 roky",
     city: "Praha",
     note: "Rodinné rozpočty, rezervy a&nbsp;penzijní příprava. První finanční plán pro&nbsp;mladé rodiny.",
+    dim: 0.85,
   },
 ];
 
@@ -130,9 +145,16 @@ export default function TeamRest() {
                     alt={m.name}
                     fill
                     sizes="(max-width: 640px) 144px, (max-width: 1280px) 176px, 208px"
-                    className="object-cover portrait-treatment-strong"
+                    className={`object-cover ${m.soft ? "portrait-treatment" : "portrait-treatment-strong"}`}
+                    style={
+                      m.dim
+                        ? ({ "--dim": m.dim } as React.CSSProperties)
+                        : undefined
+                    }
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t ${m.soft ? "from-ink/20" : "from-ink/40"} to-transparent`}
+                  />
                 </div>
                 <div className="flex min-w-0 flex-1 flex-col py-1">
                   <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-brass-deep">
