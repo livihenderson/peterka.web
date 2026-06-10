@@ -15,7 +15,7 @@ type Member = {
 
 const team: Member[] = [
   {
-    img: "/peterka_profile.png",
+    img: "/peterka_profile.webp",
     name: "Tomáš Peterka",
     role: "Zakladatel · Privátní finance",
     years: "15",
@@ -25,7 +25,7 @@ const team: Member[] = [
     accent: true,
   },
   {
-    img: "/kozel.png",
+    img: "/kozel.webp",
     name: "Dušan Kozel",
     role: "Investice · Privátní portfolia",
     years: "10",
@@ -34,7 +34,7 @@ const team: Member[] = [
       "Investiční dohled nad&nbsp;portfolii, dlouhodobé strategie rodin a&nbsp;podnikatelských skupin.",
   },
   {
-    img: "/albrecht_josef.png",
+    img: "/albrecht_josef.webp",
     name: "Josef Albrecht",
     role: "Hypotéky · Nemovitosti",
     years: "9",
@@ -43,7 +43,7 @@ const team: Member[] = [
       "Komplexní financování bydlení a&nbsp;investičních nemovitostí. Vlastní realitní vertikála.",
   },
   {
-    img: "/lukashorejsi_profilovka.png",
+    img: "/lukashorejsi_profilovka.webp",
     name: "Lukáš Hořejší",
     role: "Pojištění · Ochrana majetku",
     years: "7",

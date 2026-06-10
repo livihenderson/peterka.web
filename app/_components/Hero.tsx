@@ -121,7 +121,7 @@ export default function Hero() {
 
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/peterka_profile.png"
+                    src="/peterka_profile.webp"
                     alt="Tomáš Peterka, zakladatel"
                     fill
                     priority

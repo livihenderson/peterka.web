@@ -182,7 +182,7 @@ export default function InvesticePage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/kozel.png"
+                    src="/kozel.webp"
                     alt="Dušan Kozel — investice a privátní portfolia"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"

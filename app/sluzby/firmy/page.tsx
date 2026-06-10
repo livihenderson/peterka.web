@@ -182,7 +182,7 @@ export default function FirmyPage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/peterka_profile.png"
+                    src="/peterka_profile.webp"
                     alt="Tomáš Peterka — péče o majitele firem"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"

@@ -18,7 +18,7 @@ type RestMember = {
 
 const rest: RestMember[] = [
   {
-    img: "/iveta_kosile.png",
+    img: "/iveta_kosile.webp",
     name: "Iva Petříková",
     soft: true,
     dim: 0.9,
@@ -28,7 +28,7 @@ const rest: RestMember[] = [
     note: "Privátní portfolia a&nbsp;investiční dohled. Dlouhodobá péče o&nbsp;rodiny a&nbsp;podnikatele.",
   },
   {
-    img: "/mrazek.png",
+    img: "/mrazek.webp",
     name: "Tomáš Mrázek",
     focus: "Hypotéky",
     years: "3 roky",
@@ -36,7 +36,7 @@ const rest: RestMember[] = [
     note: "Financování bydlení a&nbsp;refinancování. Úvěrové strategie pro&nbsp;mladé rodiny.",
   },
   {
-    img: "/lacina.png",
+    img: "/lacina.webp",
     name: "Tomáš Lacina",
     focus: "Investice",
     years: "2 roky",
@@ -44,7 +44,7 @@ const rest: RestMember[] = [
     note: "Pravidelné investování a&nbsp;budování rezerv. Portfolia pro&nbsp;začínající investory.",
   },
   {
-    img: "/jakub.png",
+    img: "/jakub.webp",
     name: "Jakub Záleský",
     focus: "Pojištění",
     years: "3 roky",
@@ -52,7 +52,7 @@ const rest: RestMember[] = [
     note: "Zajištění příjmu a&nbsp;ochrana rodiny. Revize starých smluv.",
   },
   {
-    img: "/iveta .png",
+    img: "/iveta.webp",
     name: "Iveta Barancová",
     focus: "Investice",
     years: "4 roky",
@@ -60,7 +60,7 @@ const rest: RestMember[] = [
     note: "Dlouhodobá portfolia rodin a&nbsp;péče o&nbsp;klientské vztahy.",
   },
   {
-    img: "/bolito.PNG",
+    img: "/bolito.webp",
     name: "Josef Bolen",
     focus: "Hypotéky",
     years: "4 roky",
@@ -68,7 +68,7 @@ const rest: RestMember[] = [
     note: "Financování investičních nemovitostí a&nbsp;developerských záměrů.",
   },
   {
-    img: "/tomas_profile.PNG",
+    img: "/tomas_profile.webp",
     name: "Tomáš Hořejší",
     focus: "Pojištění",
     years: "4 roky",
@@ -76,7 +76,7 @@ const rest: RestMember[] = [
     note: "Korporátní programy a&nbsp;pojištění odpovědnosti pro&nbsp;podnikatele.",
   },
   {
-    img: "/modre_vlasy.PNG",
+    img: "/modre_vlasy.webp",
     name: "Erika Kofroňová",
     focus: "Finanční plánování",
     years: "2 roky",
