@@ -9,7 +9,7 @@ const stats: {
   lbl: string;
   sub: string;
 }[] = [
-  { value: 41, suffix: "+", lbl: "let zkušeností", sub: "v součtu napříč týmem" },
+  { value: 31, suffix: "+", lbl: "let zkušeností", sub: "v součtu napříč týmem" },
   { value: 100, suffix: "%", lbl: "nezávislost", sub: "v doporučeních klientům" },
   { value: 5, lbl: "oblastí péče", sub: "pod jednou střechou" },
   { prefix: "+", value: 900, lbl: "klientů", sub: "v součtu napříč týmem" },
@@ -34,8 +34,8 @@ function CountUp({
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      setN(end);
-      return;
+      const raf = requestAnimationFrame(() => setN(end));
+      return () => cancelAnimationFrame(raf);
     }
 
     const io = new IntersectionObserver(
@@ -83,9 +83,6 @@ export default function Authority() {
             </div>
             <h2
               className="mt-6 font-display text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               Čísla, která <span className="italic">stojí </span>za přístupem.
             </h2>
@@ -105,9 +102,6 @@ export default function Authority() {
               >
                 <div
                   className="font-display num text-5xl md:text-6xl leading-[0.9] tracking-[-0.02em]"
-                  style={{
-                    fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                  }}
                 >
                   {s.prefix}
                   <CountUp end={s.value} delay={i * 120} />

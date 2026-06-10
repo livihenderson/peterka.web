@@ -52,9 +52,6 @@ export default function Contact() {
             </div>
             <h2
               className="mt-6 font-display text-[clamp(2.6rem,6vw,5.6rem)] leading-[0.98] tracking-[-0.025em]"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               První schůzka<br />
               <span className="italic text-brass-light">je&nbsp;na&nbsp;nás.</span>
@@ -71,6 +68,7 @@ export default function Contact() {
               <ContactRow label="Praha" value="Vinohradská 184" />
               <ContactRow label="Č. Budějovice" value="Lannova 16" />
               <ContactRow label="Tábor" value="9. května 1282" />
+              <ContactRow label="Soběslav" value="náměstí Republiky 59" />
             </div>
           </div>
 
@@ -83,10 +81,6 @@ export default function Contact() {
                 </div>
                 <h3
                   className="mt-6 font-display text-4xl md:text-5xl leading-tight"
-                  style={{
-                    fontVariationSettings:
-                      "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                  }}
                 >
                   Děkujeme.
                   <br />
@@ -195,7 +189,6 @@ function ContactRow({
       </span>
       <span
         className="font-display text-xl md:text-2xl text-paper transition-colors group-hover:text-brass-light"
-        style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
       >
         {value}
       </span>

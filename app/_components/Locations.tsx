@@ -8,7 +8,7 @@ const cities = [
     id: "praha",
     name: "Praha",
     addr: "Vinohradská 184, Praha 3",
-    lead: "Tomáš Peterka · Iva Petříková",
+    lead: "Tomáš Peterka · Dušan Kozel",
     cx: 1877,
     cy: 1242,
     note: "Centrální pobočka",
@@ -29,6 +29,15 @@ const cities = [
     lead: "Josef Albrecht",
     cx: 1905,
     cy: 2554,
+    note: "Jihočeský region",
+  },
+  {
+    id: "sobeslav",
+    name: "Soběslav",
+    addr: "náměstí Republiky 59, Soběslav",
+    lead: "Jakub Záleský",
+    cx: 2020,
+    cy: 2270,
     note: "Jihočeský region",
   },
 ];
@@ -64,11 +73,8 @@ export default function Locations() {
             </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em]"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
-              Tři místa.<br />
+              Čtyři místa.<br />
               <span className="italic text-brass-light">Jeden&nbsp;přístup.</span>
             </h2>
           </div>
@@ -76,7 +82,7 @@ export default function Locations() {
             <p className="text-lg leading-[1.6] text-paper/80 max-w-md">
               Klienty obsluhujeme po&nbsp;celé republice — osobně, i&nbsp;online.
               Kdykoli chcete potřesení rukou, najdete nás v&nbsp;Praze,
-              Českých Budějovicích nebo&nbsp;Táboře.
+              Českých Budějovicích, Táboře nebo&nbsp;Soběslavi.
             </p>
           </div>
         </div>
@@ -270,20 +276,12 @@ export default function Locations() {
                     <div className="flex items-baseline gap-4 px-2">
                       <span
                         className="font-display num text-3xl text-brass-light"
-                        style={{
-                          fontVariationSettings:
-                            "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                        }}
                       >
                         0{i + 1}
                       </span>
                       <div className="flex-1">
                         <h3
                           className="font-display text-3xl tracking-[-0.02em] text-paper"
-                          style={{
-                            fontVariationSettings:
-                              "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                          }}
                         >
                           {c.name}
                         </h3>
@@ -306,8 +304,7 @@ export default function Locations() {
             </ol>
 
             <p className="mt-10 text-sm leading-[1.6] text-paper/65 max-w-sm">
-              Působnost po celé ČR · Schůzky možné u&nbsp;klienta i&nbsp;online ·
-              Komunikace v&nbsp;češtině, angličtině a&nbsp;němčině.
+              Působnost po celé ČR · Schůzky možné u&nbsp;klienta i&nbsp;online.
             </p>
           </div>
         </div>

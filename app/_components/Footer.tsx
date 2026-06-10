@@ -9,10 +9,6 @@ export default function Footer() {
           <div className="col-span-12 md:col-span-5">
             <div
               className="font-display text-6xl md:text-7xl tracking-[-0.025em] text-ink leading-[0.9]"
-              style={{
-                fontVariationSettings:
-                  "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               Peterka
               <br />
@@ -20,7 +16,7 @@ export default function Footer() {
             </div>
             <p className="mt-6 max-w-sm text-sm leading-[1.6] text-ink-soft">
               Privátní finanční dům — komplexní péče o&nbsp;váš majetek
-              a&nbsp;vaši rodinu. Praha · České Budějovice · Tábor.
+              a&nbsp;vaši rodinu. Praha · České Budějovice · Tábor · Soběslav.
             </p>
             <div className="mt-6 font-mono text-[10px] tracking-[0.28em] uppercase text-ink-mute">
               Pod střechou Edo&nbsp;Finance · Est.&nbsp;MMX
@@ -48,10 +44,6 @@ export default function Footer() {
                   <Link
                     href={i.h}
                     className="font-display text-lg text-ink hover:text-moss transition-colors"
-                    style={{
-                      fontVariationSettings:
-                        "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                    }}
                   >
                     {i.l}
                   </Link>
@@ -88,6 +80,7 @@ export default function Footer() {
               <li>Praha — Vinohradská 184</li>
               <li>České Budějovice — Lannova 16</li>
               <li>Tábor — 9. května 1282</li>
+              <li>Soběslav — náměstí Republiky 59</li>
             </ul>
           </div>
         </div>

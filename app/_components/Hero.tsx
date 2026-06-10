@@ -37,9 +37,6 @@ export default function Hero() {
           <div className="col-span-12 lg:col-span-7">
             <h1
               className="font-display text-ink text-[clamp(2.6rem,7vw,6.4rem)] leading-[0.92] tracking-[-0.025em]"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               <span className="block reveal" style={{ animationDelay: "0ms" }}>
                 Vaše finance
@@ -48,9 +45,7 @@ export default function Hero() {
                 className="block italic text-moss reveal"
                 style={{
                   animationDelay: "120ms",
-                  fontVariationSettings:
-                    "'opsz' 144, 'SOFT' 100, 'WONK' 1",
-                }}
+                  }}
               >
                 v rukou,&nbsp;
               </span>
@@ -97,17 +92,13 @@ export default function Hero() {
               style={{ animationDelay: "720ms" }}
             >
               {[
-                { v: "41", lbl: "let zkušeností v týmu" },
+                { v: "31", lbl: "let zkušeností v týmu" },
                 { v: "04", lbl: "specializovaní poradci" },
-                { v: "03", lbl: "pobočky v Česku" },
+                { v: "04", lbl: "pobočky v Česku" },
               ].map((s) => (
                 <div key={s.lbl}>
                   <div
                     className="font-display num text-4xl md:text-5xl text-ink leading-none"
-                    style={{
-                      fontVariationSettings:
-                        "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                    }}
                   >
                     {s.v}
                   </div>
@@ -148,10 +139,6 @@ export default function Hero() {
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
-                      style={{
-                        fontVariationSettings:
-                          "'opsz' 144, 'SOFT' 30",
-                      }}
                     >
                       Tomáš Peterka
                     </div>

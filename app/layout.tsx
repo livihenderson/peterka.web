@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s · Peterka & Kolektiv",
   },
   description:
-    "Komplexní soukromá péče o váš majetek, vaši rodinu a vaše záměry. Investice, hypotéky, pojištění a nemovitosti pod jednou střechou. Praha · České Budějovice · Tábor.",
+    "Komplexní soukromá péče o váš majetek, vaši rodinu a vaše záměry. Investice, hypotéky, pojištění a nemovitosti pod jednou střechou. Praha · České Budějovice · Tábor · Soběslav.",
   keywords: [
     "finanční poradenství",
     "soukromé finance",
@@ -39,13 +39,14 @@ export const metadata: Metadata = {
     "nemovitosti",
     "Praha",
     "Tábor",
+    "Soběslav",
     "České Budějovice",
     "Peterka",
   ],
   openGraph: {
     title: "Peterka & Kolektiv — Privátní finanční dům",
     description:
-      "Komplexní péče o váš majetek a vaše záměry. 41+ let zkušeností v jednom týmu.",
+      "Komplexní péče o váš majetek a vaše záměry. 31+ let zkušeností v jednom týmu.",
     type: "website",
     locale: "cs_CZ",
   },
