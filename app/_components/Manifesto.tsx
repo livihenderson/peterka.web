@@ -14,8 +14,7 @@ export default function Manifesto() {
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
                 § 02
               </div>
-              <div className="mt-3 font-display text-3xl italic text-moss"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1" }}>
+              <div className="mt-3 font-display text-3xl italic text-moss">
                 Filozofie
               </div>
               <div className="mt-6 h-px w-16 bg-rule rule-draw" />
@@ -30,9 +29,6 @@ export default function Manifesto() {
           <div className="col-span-12 lg:col-span-9 lg:pl-6 xl:pl-12">
             <h2
               className="reveal font-display text-[clamp(2.4rem,5.6vw,5.2rem)] leading-[1.02] tracking-[-0.025em] text-ink max-w-[20ch]"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               Není to <span className="italic text-moss">poradenství.</span>
               <br />
@@ -61,17 +57,12 @@ export default function Manifesto() {
               {/* Brass open-quote ornament */}
               <span
                 className="absolute -top-12 -left-2 md:-left-6 font-display text-[10rem] md:text-[14rem] leading-none text-brass/40 select-none"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1" }}
                 aria-hidden
               >
                 “
               </span>
               <blockquote
                 className="relative font-display italic text-ink text-[clamp(1.6rem,3.2vw,2.6rem)] leading-[1.25] tracking-[-0.01em]"
-                style={{
-                  fontVariationSettings:
-                    "'opsz' 144, 'SOFT' 100, 'WONK' 1",
-                }}
               >
                 Lidé si nepamatují produkt, který jste jim prodali.
                 Pamatují si, jak se vedle vás cítili — ve&nbsp;chvíli, kdy se
@@ -109,19 +100,11 @@ export default function Manifesto() {
                 >
                   <div
                     className="font-display num text-3xl text-brass-deep"
-                    style={{
-                      fontVariationSettings:
-                        "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                    }}
                   >
                     {p.n}
                   </div>
                   <div
                     className="mt-4 font-display text-2xl text-ink"
-                    style={{
-                      fontVariationSettings:
-                        "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                    }}
                   >
                     {p.t}
                   </div>

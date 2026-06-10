@@ -93,9 +93,6 @@ export default function Calculator() {
             </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               Co dělá <span className="italic text-moss">čas </span>s&nbsp;penězi.
             </h2>
@@ -323,7 +320,6 @@ function Slider({
         </label>
         <span
           className="font-display text-2xl text-ink num"
-          style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
         >
           {format(value)}
         </span>
@@ -406,9 +402,6 @@ function Stat({
       </div>
       <div
         className={`mt-3 font-display num text-2xl md:text-[1.7rem] leading-tight tracking-[-0.01em] ${color}`}
-        style={{
-          fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-        }}
       >
         {value}
       </div>

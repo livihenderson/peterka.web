@@ -40,14 +40,12 @@ export default function Navigation() {
         <Link href="/" className="group flex items-baseline gap-3 md:gap-4 select-none">
           <span
             className="font-display text-[1.9rem] md:text-[2.15rem] leading-none tracking-[-0.022em] text-ink"
-            style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
           >
             Peterka
           </span>
           <span className="hidden md:inline-flex items-baseline gap-2.5">
             <span
               className="font-display italic text-[1.4rem] leading-none text-moss translate-y-[1px]"
-              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1" }}
               aria-hidden
             >
               &amp;

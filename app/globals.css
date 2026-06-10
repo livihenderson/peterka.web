@@ -97,6 +97,12 @@
     z-index: 0;
   }
 
+  /* Fraunces optical/soft axes — previously set inline per element */
+  .font-display,
+  .dropcap::first-letter {
+    font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+  }
+
   /* Drop cap for editorial paragraphs */
   .dropcap::first-letter {
     font-family: var(--font-display);

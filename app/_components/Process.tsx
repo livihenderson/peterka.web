@@ -40,9 +40,6 @@ export default function Process() {
             </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              style={{
-                fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-              }}
             >
               Čtyři kroky.<br />
               <span className="italic text-moss">Bez tlaku.</span>
@@ -67,10 +64,6 @@ export default function Process() {
               <div className="flex items-baseline justify-between">
                 <span
                   className="font-display num text-5xl md:text-6xl text-brass leading-none"
-                  style={{
-                    fontVariationSettings:
-                      "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                  }}
                 >
                   {s.n}
                 </span>
@@ -80,10 +73,6 @@ export default function Process() {
               </div>
               <h3
                 className="mt-8 font-display text-2xl md:text-3xl text-ink tracking-[-0.01em]"
-                style={{
-                  fontVariationSettings:
-                    "'opsz' 144, 'SOFT' 30, 'WONK' 1",
-                }}
               >
                 {s.label}
               </h3>

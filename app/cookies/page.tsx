@@ -210,7 +210,6 @@ export default function CookiesPage() {
           </div>
           <h1
             className="mt-6 font-display text-ink text-[clamp(2.6rem,6vw,5.2rem)] leading-[0.96] tracking-[-0.025em] max-w-[18ch]"
-            style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
           >
             Drobné soubory,{" "}
             <span className="italic text-moss">které vás respektují.</span>
@@ -263,13 +262,11 @@ export default function CookiesPage() {
                   <div className="flex items-baseline gap-5">
                     <div
                       className="font-display num text-3xl text-brass-deep"
-                      style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                     >
                       {s.n}
                     </div>
                     <h2
                       className="font-display text-3xl md:text-4xl text-ink leading-[1.1] tracking-[-0.015em]"
-                      style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                     >
                       {s.t}
                     </h2>

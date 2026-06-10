@@ -126,7 +126,6 @@ function Slider({
         </label>
         <span
           className="font-display text-2xl text-ink num"
-          style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
         >
           {format(value)}
         </span>
@@ -209,7 +208,6 @@ function Stat({
       </div>
       <div
         className={`mt-3 font-display num text-2xl md:text-[1.7rem] leading-tight tracking-[-0.01em] ${color}`}
-        style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
       >
         {value}
       </div>

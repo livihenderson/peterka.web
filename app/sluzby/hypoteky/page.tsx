@@ -133,15 +133,13 @@ export default function HypotekyPage() {
               </div>
               <h1
                 className="mt-6 font-display text-[clamp(2.6rem,6.6vw,6rem)] leading-[0.95] tracking-[-0.025em] text-ink"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
                 <span className="block reveal">Hypotéka,</span>
                 <span
                   className="block italic text-moss reveal"
                   style={{
                     animationDelay: "120ms",
-                    fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1",
-                  }}
+                    }}
                 >
                   která vás přežije.
                 </span>
@@ -198,7 +196,6 @@ export default function HypotekyPage() {
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
-                      style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30" }}
                     >
                       Josef Albrecht
                     </div>
@@ -224,7 +221,6 @@ export default function HypotekyPage() {
                 </div>
                 <div
                   className="mt-3 font-display text-3xl italic text-moss"
-                  style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1" }}
                 >
                   Filozofie
                 </div>
@@ -235,7 +231,6 @@ export default function HypotekyPage() {
             <div className="col-span-12 lg:col-span-9 lg:pl-6 xl:pl-12">
               <h2
                 className="reveal font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.025em] text-ink max-w-[22ch]"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
                 Dobrá hypotéka v&nbsp;den podpisu
                 <br />
@@ -274,7 +269,6 @@ export default function HypotekyPage() {
               </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
                 Čtyři druhy hypoték — <span className="italic text-moss">každá pro jinou situaci.</span>
               </h2>
@@ -298,7 +292,6 @@ export default function HypotekyPage() {
                 <div className="flex items-baseline justify-between">
                   <span
                     className="font-display num text-2xl text-brass-deep"
-                    style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                   >
                     {s.n}
                   </span>
@@ -310,7 +303,6 @@ export default function HypotekyPage() {
                 </div>
                 <h3
                   className="mt-8 font-display text-[clamp(1.6rem,2.6vw,2.4rem)] leading-[1] tracking-[-0.02em] text-ink"
-                  style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                 >
                   {s.t}
                 </h3>
@@ -342,7 +334,6 @@ export default function HypotekyPage() {
               </div>
               <h2
                 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.02] tracking-[-0.025em]"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
                 Jak vybíráme<br />
                 <span className="italic text-brass-light">banku za vás.</span>
@@ -370,7 +361,6 @@ export default function HypotekyPage() {
                   <li key={c} className="flex items-baseline gap-3">
                     <span
                       className="font-display num text-brass-light text-base mt-0.5"
-                      style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -410,7 +400,6 @@ export default function HypotekyPage() {
               </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
                 Spočítejte si <span className="italic text-moss">měsíční splátku.</span>
               </h2>
@@ -438,7 +427,6 @@ export default function HypotekyPage() {
               </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-                style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
               >
                 Čtyři chyby, které <span className="italic text-moss">stojí statisíce.</span>
               </h2>
@@ -461,13 +449,11 @@ export default function HypotekyPage() {
               >
                 <div
                   className="font-display num text-4xl text-brass leading-none"
-                  style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                 >
                   {m.n}
                 </div>
                 <h3
                   className="mt-6 font-display text-2xl md:text-3xl tracking-[-0.01em] text-ink"
-                  style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 1" }}
                 >
                   {m.t}
                 </h3>
@@ -482,7 +468,6 @@ export default function HypotekyPage() {
           <div className="mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 pt-8 border-t border-rule">
             <p
               className="font-display italic text-xl md:text-2xl text-ink max-w-3xl leading-[1.3]"
-              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 100, 'WONK' 1" }}
             >
               Pokud máte hypotéku starší pěti let, stojí za&nbsp;to s&nbsp;námi
               probrat, jestli ještě dává smysl.
