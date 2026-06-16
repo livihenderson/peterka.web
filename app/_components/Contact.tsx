@@ -15,17 +15,44 @@ export default function Contact() {
   const [picked, setPicked] = useState<string[]>(["Komplexní revize"]);
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const toggle = (k: string) =>
     setPicked((p) => (p.includes(k) ? p.filter((x) => x !== k) : [...p, k]));
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError(null);
     setSubmitting(true);
-    // Stub — would post to /api/contact
-    await new Promise((r) => setTimeout(r, 700));
-    setSubmitting(false);
-    setSent(true);
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      name: String(fd.get("name") ?? ""),
+      phone: String(fd.get("phone") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      message: String(fd.get("message") ?? ""),
+      company: String(fd.get("company") ?? ""), // honeypot
+      interests: picked,
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        throw new Error(data?.error || "Zprávu se nepodařilo odeslat.");
+      }
+      setSent(true);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -99,6 +126,16 @@ export default function Contact() {
                 onSubmit={onSubmit}
                 className="bg-paper/[0.04] border border-rule-dark p-8 md:p-12"
               >
+                {/* Honeypot — hidden from humans, catches bots */}
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                />
+
                 {/* Interest pills */}
                 <fieldset>
                   <legend className="font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light">
@@ -147,6 +184,16 @@ export default function Contact() {
                     placeholder="Pár vět o vaší situaci…"
                   />
                 </div>
+
+                {error && (
+                  <p
+                    role="alert"
+                    className="mt-8 font-mono text-[11px] tracking-[0.16em] uppercase leading-relaxed"
+                    style={{ color: "#E2A79C" }}
+                  >
+                    {error}
+                  </p>
+                )}
 
                 <div className="mt-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                   <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-paper/55 max-w-sm leading-relaxed">
