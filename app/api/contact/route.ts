@@ -120,6 +120,16 @@ export async function POST(req: Request) {
     );
   }
 
+  // Host + user configured but the password secret hasn't been added yet —
+  // fail fast instead of hanging on the SMTP connection.
+  if (process.env.SMTP_USER && !process.env.SMTP_PASS) {
+    console.warn("[contact] SMTP_PASS not set — cannot send.");
+    return NextResponse.json(
+      { ok: false, error: "E-mailová služba zatím není nastavená." },
+      { status: 503 },
+    );
+  }
+
   const port = Number(process.env.SMTP_PORT ?? 587);
   const secure =
     (process.env.SMTP_SECURE ?? (port === 465 ? "true" : "false")) === "true";
@@ -132,6 +142,9 @@ export async function POST(req: Request) {
       host,
       port,
       secure,
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
       auth: process.env.SMTP_USER
         ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
         : undefined,
