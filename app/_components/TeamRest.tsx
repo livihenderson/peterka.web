@@ -20,7 +20,6 @@ const rest: RestMember[] = [
   {
     img: "/iveta_petrikova_nova.webp",
     name: "Iva Petříková",
-    dim: 0.85,
     focus: "Investice",
     years: "10 let",
     city: "Tábor",
