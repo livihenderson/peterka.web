@@ -92,7 +92,7 @@ export default function Hero() {
               style={{ animationDelay: "720ms" }}
             >
               {[
-                { v: "31", lbl: "let zkušeností v týmu" },
+                { v: "30", lbl: "let praxe mezi 3 zakladateli" },
                 { v: "04", lbl: "specializovaní poradci" },
                 { v: "04", lbl: "pobočky v Česku" },
               ].map((s) => (
@@ -135,7 +135,7 @@ export default function Hero() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Zakladatel</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>15 let</span>
+                      <span>16 let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"

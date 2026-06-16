@@ -63,12 +63,12 @@ export default function Contact() {
             </p>
 
             <div className="mt-12 space-y-7 pt-8 border-t border-rule-dark">
-              <ContactRow label="Telefon" value="+420 777 000 000" href="tel:+420777000000" />
-              <ContactRow label="E-mail" value="kolektiv@peterka.cz" href="mailto:kolektiv@peterka.cz" />
-              <ContactRow label="Praha" value="Vinohradská 184" />
-              <ContactRow label="Č. Budějovice" value="Lannova 16" />
-              <ContactRow label="Tábor" value="9. května 1282" />
-              <ContactRow label="Soběslav" value="náměstí Republiky 59" />
+              <ContactRow label="Telefon" value="+420 774 567 833" href="tel:+420774567833" />
+              <ContactRow label="E-mail" value="peterka.kolektiv@email.cz" href="mailto:peterka.kolektiv@email.cz" />
+              <ContactRow label="Praha" value="V parku 2335/20" />
+              <ContactRow label="Č. Budějovice" value="Karla IV. 93/3" />
+              <ContactRow label="Tábor" value="Kpt. Jaroše 24" />
+              <ContactRow label="Soběslav" value="Dolní nábřeží 41/5" />
             </div>
           </div>
 

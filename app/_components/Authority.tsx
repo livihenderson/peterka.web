@@ -9,7 +9,7 @@ const stats: {
   lbl: string;
   sub: string;
 }[] = [
-  { value: 31, suffix: "+", lbl: "let zkušeností", sub: "v součtu napříč týmem" },
+  { value: 30, lbl: "let zkušeností", sub: "mezi 3 zakladateli" },
   { value: 100, suffix: "%", lbl: "nezávislost", sub: "v doporučeních klientům" },
   { value: 5, lbl: "oblastí péče", sub: "pod jednou střechou" },
   { prefix: "+", value: 900, lbl: "klientů", sub: "v součtu napříč týmem" },

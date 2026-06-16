@@ -25,20 +25,20 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
         <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 text-[15px]">
           <li>
             <span className="text-ink-mute">Obchodní firma:</span>{" "}
-            <span className="text-ink">[doplnit dle obchodního rejstříku]</span>
+            <span className="text-ink">eDO finance, a.s.</span>
           </li>
           <li>
             <span className="text-ink-mute">IČO:</span>{" "}
-            <span className="text-ink">[doplnit]</span>
+            <span className="text-ink">24783421</span>
           </li>
           <li>
             <span className="text-ink-mute">Sídlo:</span>{" "}
-            <span className="text-ink">[doplnit]</span>
+            <span className="text-ink">V parku 2335/20, Chodov, 148 00 Praha 11</span>
           </li>
           <li>
             <span className="text-ink-mute">E-mail:</span>{" "}
-            <a href="mailto:kolektiv@peterka.cz" className="text-moss underline decoration-rule underline-offset-4">
-              kolektiv@peterka.cz
+            <a href="mailto:peterka.kolektiv@email.cz" className="text-moss underline decoration-rule underline-offset-4">
+              peterka.kolektiv@email.cz
             </a>
           </li>
         </ul>
@@ -199,8 +199,8 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
         <p className="mt-5">
           Žádost můžete uplatnit písemně na&nbsp;adresu sídla správce nebo
           e-mailem na{" "}
-          <a href="mailto:kolektiv@peterka.cz" className="text-moss underline decoration-rule underline-offset-4">
-            kolektiv@peterka.cz
+          <a href="mailto:peterka.kolektiv@email.cz" className="text-moss underline decoration-rule underline-offset-4">
+            peterka.kolektiv@email.cz
           </a>
           . Vyřídíme ji bez zbytečného odkladu, nejpozději do&nbsp;30&nbsp;dnů.
         </p>

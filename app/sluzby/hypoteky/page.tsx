@@ -35,7 +35,7 @@ const types = [
     body:
       "Klasická účelová hypotéka na pořízení, výstavbu nebo rekonstrukci. Daňový odpočet úroků, možnost zákonné fixace, varianty s předhypotečním úvěrem.",
     ltv: "do 90 % LTV",
-    fix: "fixace 3–10 let",
+    fix: "fixace 2–12 let",
   },
   {
     n: "02",
@@ -43,23 +43,23 @@ const types = [
     body:
       "Pro nákup nemovitosti, kterou budete pronajímat. Bance se prokazuje výnos z nájmu, jiné scoring podmínky, jiná daňová logika. Souhra s portfolem majitele.",
     ltv: "do 80 % LTV",
-    fix: "fixace 5–10 let",
+    fix: "fixace 2–12 let",
   },
   {
     n: "03",
-    t: "Refinancování",
+    t: "Retencování",
     body:
-      "Když končí fixace nebo když na trhu nabízejí podstatně výhodnější podmínky. Spočítáme reálný přínos po započtení sankcí, poplatků a&nbsp;fixačního okna.",
+      "Retenci řešíme na&nbsp;konci fixace i&nbsp;v&nbsp;jejím průběhu. U&nbsp;refixace banka obvykle nabídne horší sazbu než&nbsp;novým klientům — to&nbsp;vyjednáme. A&nbsp;když tržní sazby klesnou výrazně pod&nbsp;tu vaši ještě během fixace, často jde dohodnout snížení i&nbsp;teď. Nárok to&nbsp;není — rozhoduje argument a&nbsp;načasování.",
     ltv: "podle stávajícího úvěru",
-    fix: "nová fixace 3–10 let",
+    fix: "nová fixace 2–12 let",
   },
   {
     n: "04",
-    t: "Americká hypotéka",
+    t: "Úvěry na míru",
     body:
-      "Neúčelový úvěr zajištěný nemovitostí. Pro podnikatele, na konsolidaci, na výkup spoluvlastníků, na přechodné financování.",
-    ltv: "do 70 % LTV",
-    fix: "fixace 5–10 let",
+      "Kromě klasiky řešíme i méně obvyklé situace: úvěry ze&nbsp;stavebního spoření, podnikatelský i&nbsp;spotřebitelský úvěr, offset hypotéku, americkou hypotéku, hypotéku bez&nbsp;nemovitosti i&nbsp;štafetovou hypotéku.",
+    ltv: "podle typu úvěru",
+    fix: "fixace 2–12 let",
   },
 ];
 
@@ -180,8 +180,8 @@ export default function HypotekyPage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/albrecht_josef.webp"
-                    alt="Josef Albrecht — hypotéky a nemovitosti"
+                    src="/iveta_kosile.webp"
+                    alt="Iva Petříková — úvěry a hypotéky"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -192,15 +192,15 @@ export default function HypotekyPage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>9 let</span>
+                      <span>10 let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
                     >
-                      Josef Albrecht
+                      Iva Petříková
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      České Budějovice · Praha
+                      Tábor · Úvěry a hypotéky
                     </div>
                   </div>
                 </div>
@@ -242,9 +242,10 @@ export default function HypotekyPage() {
               <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
                 <p className="dropcap text-lg leading-[1.65] text-ink-soft">
                   Hypotéka je největší finanční rozhodnutí většiny rodin. Zároveň
-                  je to rozhodnutí, ke&nbsp;kterému je dnes nejjednodušší si zalovat
-                  sazby on-line, podepsat papír a&nbsp;zapomenout. Tím to ale
-                  nekončí — dvojnásobně, pokud máte fixaci na&nbsp;3 nebo 5 let.
+                  je to rozhodnutí, ke&nbsp;kterému si dnes stačí zavolat o&nbsp;sazby
+                  on-line, podepsat papír a&nbsp;zapomenout. Jenže tím to teprve
+                  začíná — zvlášť s&nbsp;fixací na&nbsp;tři nebo pět let, na&nbsp;jejímž
+                  konci se rozhoduje znovu.
                 </p>
                 <p className="text-lg leading-[1.65] text-ink-soft">
                   Hypotéka je živý úvěr. Mění se s&nbsp;vámi, s&nbsp;trhem,
@@ -270,13 +271,13 @@ export default function HypotekyPage() {
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
               >
-                Čtyři druhy hypoték — <span className="italic text-moss">každá pro jinou situaci.</span>
+                Čtyři druhy úvěrů — <span className="italic text-moss">každý pro jinou situaci.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
                 Banka vám zpravidla nabídne ten produkt, který má aktuálně
-                v&nbsp;kampani. My začínáme u&nbsp;otázky, který typ hypotéky se
+                v&nbsp;kampani. My začínáme u&nbsp;otázky, který typ úvěru se
                 k&nbsp;vám hodí — a&nbsp;teprve pak vybíráme banku.
               </p>
             </div>

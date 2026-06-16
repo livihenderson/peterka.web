@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Peterka & Kolektiv — Privátní finanční dům",
     description:
-      "Komplexní péče o váš majetek a vaše záměry. 31+ let zkušeností v jednom týmu.",
+      "Komplexní péče o váš majetek a vaše záměry. 30 let zkušeností mezi 3 zakladateli.",
     type: "website",
     locale: "cs_CZ",
   },

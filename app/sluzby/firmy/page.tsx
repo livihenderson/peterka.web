@@ -48,11 +48,11 @@ const okruhy = [
   },
   {
     n: "03",
-    t: "Ochrana a předání",
+    t: "Ochrana a revize",
     body:
-      "Pojištění klíčových osob a&nbsp;manažerské odpovědnosti, zajištění rodiny majitele — a&nbsp;včasná příprava mezigeneračního předání firmy. Nástupnictví je proces na&nbsp;roky, ne&nbsp;na&nbsp;jednu schůzku u&nbsp;notáře.",
+      "Pojištění klíčových osob a&nbsp;manažerské odpovědnosti, ochrana rodiny majitele. Pravidelná revize smluv, pojistných podmínek a&nbsp;aktualizace krytí — aby ochrana držela krok s&nbsp;tím, jak firma roste.",
     from: "klíčové osoby i rodina",
-    horizon: "horizont 10+ let",
+    horizon: "revize 1× ročně",
   },
 ];
 
@@ -148,9 +148,9 @@ export default function FirmyPage() {
 
               <p className="reveal mt-10 max-w-xl text-lg md:text-xl leading-[1.55] text-ink-soft" style={{ animationDelay: "260ms" }}>
                 Majitel firmy nemá oddělené světy. Odměna jednatele, úvěr
-                na&nbsp;halu, pojistka klíčového člověka i&nbsp;budoucí předání —
-                to&nbsp;všechno jsou jedny peníze. Staráme se o&nbsp;ně
-                jako&nbsp;o&nbsp;celek.
+                na&nbsp;halu, pojistka klíčového člověka i&nbsp;revize firemních
+                smluv — to&nbsp;všechno jsou jedny peníze. Staráme se o&nbsp;ně
+                jako&nbsp;o&nbsp;celek — a&nbsp;stojí za&nbsp;námi korporátní oddělení.
               </p>
 
               <div
@@ -194,7 +194,7 @@ export default function FirmyPage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>15 let</span>
+                      <span>16 let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
@@ -202,7 +202,7 @@ export default function FirmyPage() {
                       Tomáš Peterka
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      Praha · Zakladatel
+                      Tábor · Zakladatel
                     </div>
                   </div>
                 </div>

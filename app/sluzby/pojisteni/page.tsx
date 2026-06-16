@@ -50,9 +50,9 @@ const okruhy = [
     n: "03",
     t: "Odpovědnost a podnikání",
     body:
-      "Občanská i&nbsp;profesní odpovědnost, korporátní programy, pojištění podnikatelských rizik. A&nbsp;když se něco stane, řešíme škodní událost s&nbsp;vámi — od&nbsp;nahlášení po&nbsp;vyplacení.",
+      "Občanská i&nbsp;profesní odpovědnost, korporátní programy, pojištění podnikatelských rizik. Krytí, které drží krok s&nbsp;tím, jak rostete — od&nbsp;prvního zaměstnance po&nbsp;celé portfolio firem.",
     from: "pro rodiny i firmy",
-    horizon: "vedeme i škodní události",
+    horizon: "revize pojistných smluv",
   },
 ];
 
@@ -182,8 +182,8 @@ export default function PojisteniPage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/lukashorejsi_profilovka.webp"
-                    alt="Lukáš Hořejší — pojištění a ochrana majetku"
+                    src="/kozel.webp"
+                    alt="Dušan Kozel — pojištění a úvěry"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -199,10 +199,10 @@ export default function PojisteniPage() {
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
                     >
-                      Lukáš Hořejší
+                      Dušan Kozel
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      Tábor · Ochrana majetku
+                      Soběslav · Pojištění a úvěry
                     </div>
                   </div>
                 </div>
@@ -249,9 +249,9 @@ export default function PojisteniPage() {
                 <p className="text-lg leading-[1.65] text-ink-soft">
                   Stavíme to obráceně: nejdřív velká rizika — příjem, střecha
                   nad&nbsp;hlavou, odpovědnost — pořádně a&nbsp;levně. Drobnosti
-                  jen tam, kde dávají smysl. A&nbsp;když se něco stane, nejste
-                  na&nbsp;telefonu s&nbsp;pojišťovnou sami — škodní událost
-                  vedeme s&nbsp;vámi až&nbsp;do&nbsp;vyplacení.
+                  jen tam, kde dávají smysl. A&nbsp;smlouvy pravidelně revidujeme,
+                  aby krytí drželo krok s&nbsp;vaším životem, ne&nbsp;se&nbsp;stavem
+                  z&nbsp;doby podpisu.
                 </p>
               </div>
             </div>

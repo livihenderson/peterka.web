@@ -7,8 +7,8 @@ const cities = [
   {
     id: "praha",
     name: "Praha",
-    addr: "Vinohradská 184, Praha 3",
-    lead: "Tomáš Peterka · Dušan Kozel",
+    addr: "V parku 2335/20, Chodov, 148 00 Praha",
+    lead: "Lukáš Hořejší",
     cx: 1877,
     cy: 1242,
     note: "Centrální pobočka",
@@ -16,8 +16,8 @@ const cities = [
   {
     id: "tabor",
     name: "Tábor",
-    addr: "9. května 1282, Tábor",
-    lead: "Lukáš Hořejší",
+    addr: "Kpt. Jaroše 24, 390 03 Tábor – Klokoty",
+    lead: "Tomáš Peterka",
     cx: 2047,
     cy: 2030,
     note: "Jihočeský region",
@@ -25,8 +25,8 @@ const cities = [
   {
     id: "cb",
     name: "České Budějovice",
-    addr: "Lannova třída 16, Č. Budějovice",
-    lead: "Josef Albrecht",
+    addr: "Karla IV. 93/3, 370 01 České Budějovice",
+    lead: "Jakub Záleský",
     cx: 1905,
     cy: 2554,
     note: "Jihočeský region",
@@ -34,8 +34,8 @@ const cities = [
   {
     id: "sobeslav",
     name: "Soběslav",
-    addr: "náměstí Republiky 59, Soběslav",
-    lead: "Jakub Záleský",
+    addr: "Dolní nábřeží 41/5, 392 01 Soběslav",
+    lead: "Dušan Kozel",
     cx: 2020,
     cy: 2270,
     note: "Jihočeský region",

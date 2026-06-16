@@ -18,8 +18,8 @@ const team: Member[] = [
     img: "/peterka_profile.webp",
     name: "Tomáš Peterka",
     role: "Zakladatel · Privátní finance",
-    years: "15",
-    city: "Praha",
+    years: "16",
+    city: "Tábor",
     note:
       "Strategie, mezigenerační péče, klienti s komplexním majetkem. Garant kvality v týmu.",
     accent: true,
@@ -27,29 +27,20 @@ const team: Member[] = [
   {
     img: "/kozel.webp",
     name: "Dušan Kozel",
-    role: "Investice · Privátní portfolia",
-    years: "10",
-    city: "Praha",
+    role: "Úvěry · Pojištění",
+    years: "7",
+    city: "Soběslav",
     note:
-      "Investiční dohled nad&nbsp;portfolii, dlouhodobé strategie rodin a&nbsp;podnikatelských skupin.",
-  },
-  {
-    img: "/albrecht_josef.webp",
-    name: "Josef Albrecht",
-    role: "Hypotéky · Nemovitosti",
-    years: "9",
-    city: "České Budějovice",
-    note:
-      "Komplexní financování bydlení a&nbsp;investičních nemovitostí. Vlastní realitní vertikála.",
+      "Úvěry a&nbsp;pojištění rodin i&nbsp;podnikatelských skupin. Dlouhodobý dohled nad&nbsp;smlouvami.",
   },
   {
     img: "/lukashorejsi_profilovka.webp",
     name: "Lukáš Hořejší",
-    role: "Pojištění · Ochrana majetku",
+    role: "Investice · Privátní portfolia",
     years: "7",
-    city: "Tábor",
+    city: "Praha",
     note:
-      "Životní a&nbsp;majetkové pojištění, korporátní programy, řešení škodních událostí.",
+      "Investiční dohled nad&nbsp;portfolii, dlouhodobé strategie rodin a&nbsp;podnikatelských skupin.",
   },
 ];
 
@@ -79,8 +70,8 @@ export default function Team() {
           </div>
         </div>
 
-        {/* Featured founder + 3 advisors grid */}
-        <div className="grid grid-cols-12 gap-y-6 md:gap-y-8 lg:gap-x-8">
+        {/* Featured founder + 2 co-founders grid */}
+        <div className="grid grid-cols-12 gap-y-6 md:gap-y-8 lg:gap-x-8 lg:items-stretch">
           {/* Founder large */}
           <article className="reveal col-span-12 lg:col-span-7 group">
             <div className="relative aspect-[4/5] md:aspect-[5/6] w-full overflow-hidden bg-moss-deep">
@@ -96,7 +87,7 @@ export default function Team() {
               {/* Brass tag */}
               <div className="absolute top-6 left-6 flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light">
                 <span className="inline-block w-3 h-px bg-brass" />
-                Zakladatel · Praha
+                Zakladatel · Tábor
               </div>
               {/* Identity */}
               <div className="absolute left-7 right-7 bottom-7 text-paper">
@@ -112,18 +103,18 @@ export default function Team() {
                 <div className="mt-6 flex items-center gap-6 font-mono text-[10px] tracking-[0.3em] uppercase text-paper/65">
                   <span>{team[0].role}</span>
                   <span className="inline-block w-6 h-px bg-paper/40" />
-                  <span className="num">15 let praxe</span>
+                  <span className="num">16 let praxe</span>
                 </div>
               </div>
             </div>
           </article>
 
-          {/* 3 stacked advisors — overlay style on mobile/tablet, side-by-side on desktop */}
-          <div className="col-span-12 lg:col-span-5 grid grid-cols-1 gap-6 md:gap-8">
+          {/* 2 co-founders — overlay style on mobile/tablet, side-by-side on desktop */}
+          <div className="col-span-12 lg:col-span-5 grid grid-cols-1 lg:grid-rows-2 gap-6 md:gap-8">
             {team.slice(1).map((m, i) => (
               <article
                 key={m.name}
-                className="reveal"
+                className="reveal lg:h-full"
                 style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
                 {/* MOBILE / TABLET: full-bleed photo with text overlay */}
@@ -173,18 +164,18 @@ export default function Team() {
                 </div>
 
                 {/* DESKTOP: side-by-side photo + text */}
-                <div className="hidden lg:grid grid-cols-12 gap-6 items-stretch group">
-                  <div className="col-span-5 relative aspect-[3/4] overflow-hidden bg-moss-deep">
+                <div className="hidden lg:grid grid-cols-12 gap-6 items-stretch group lg:h-full">
+                  <div className="col-span-6 relative lg:h-full min-h-[300px] overflow-hidden bg-moss-deep">
                     <Image
                       src={m.img}
                       alt={m.name}
                       fill
                       sizes="25vw"
-                      className="object-cover portrait-treatment-strong"
+                      className="object-cover object-top portrait-treatment-strong"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
                   </div>
-                  <div className="col-span-7 flex flex-col justify-between py-1">
+                  <div className="col-span-6 flex flex-col justify-between py-1">
                     <div>
                       <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-brass-deep">
                         {m.city}
@@ -234,8 +225,8 @@ export default function Team() {
           <p
             className="font-display italic text-2xl md:text-3xl text-ink max-w-3xl leading-[1.25]"
           >
-            Spolu více než <span className="num text-moss">31</span> let
-            v&nbsp;oboru — a&nbsp;ani&nbsp;jeden den ve&nbsp;společnosti, kde&nbsp;by se
+            Spolu <span className="num text-moss">30</span>{" "}let praxe
+            mezi&nbsp;3&nbsp;zakladateli — a&nbsp;ani&nbsp;jeden den ve&nbsp;společnosti, kde&nbsp;by se
             kvótami platilo za&nbsp;pohodlí klienta.
           </p>
           <a

@@ -11,12 +11,12 @@ const services = [
   },
   {
     n: "02",
-    t: "Hypotéky",
-    short: "Vlastní bydlení i investiční",
+    t: "Úvěry",
+    short: "Hypotéky i podnikatelské úvěry",
     body:
-      "Srovnání nabídek napříč všemi bankami. Refinancování, předhypotéční úvěry, americké hypotéky pro podnikatele.",
-    detail: ["Hypotéka pro vlastní bydlení", "Investiční hypotéky", "Refinancování"],
-    cta: "Jak vybíráme hypotéky",
+      "Srovnání nabídek napříč všemi bankami. Hypotéky, retencování, podnikatelské i&nbsp;spotřebitelské úvěry.",
+    detail: ["Hypotéka pro vlastní bydlení", "Investiční hypotéky", "Podnikatelský, spotřebitelský úvěr"],
+    cta: "Jak vybíráme úvěry",
     href: "/sluzby/hypoteky",
   },
   {
@@ -34,7 +34,7 @@ const services = [
     t: "Nemovitosti",
     short: "Nákup, prodej, správa",
     body:
-      "Spolupracujeme s vlastní realitní vertikálou. Od prohlídky přes právní servis až po hypotéku — jeden klient, jeden tým.",
+      "Spolupracujeme s vlastní realitní společností. Od prohlídky přes právní servis až po hypotéku — jeden klient, jeden tým.",
     detail: ["Nákup a prodej", "Investiční portfolio", "Předání majetku"],
     cta: "Domluvit konzultaci o nemovitostech",
     href: "/#kontakt",
@@ -44,8 +44,8 @@ const services = [
     t: "Firmy",
     short: "Péče o majitele i podnik",
     body:
-      "Optimalizace odměn, financování růstu, ochrana klíčových osob, mezigenerační předání. Pro majitele firem a&nbsp;jejich rodiny.",
-    detail: ["Manažerské pojištění", "Firemní financování", "Předání majetku"],
+      "Optimalizace odměn, financování růstu, ochrana klíčových osob. Stojí za námi korporátní oddělení — pro majitele firem i&nbsp;jejich rodiny.",
+    detail: ["Likvidace pojistných událostí", "Firemní financování", "Pojištění manažerů"],
     cta: "Jak pečujeme o firmy",
     href: "/sluzby/firmy",
   },

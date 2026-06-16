@@ -1,29 +1,29 @@
 const steps = [
   {
     n: "I",
-    label: "Seznámení",
-    when: "60–90 minut · zdarma",
+    label: "Seznámení a hloubková analýza",
+    when: "úvodní schůzka · zdarma",
     body:
-      "Posloucháme. Zjišťujeme, kde stojíte a&nbsp;kam chcete jít. Bez prezentací, bez nátlaku, bez závazku.",
+      "Posloucháme a&nbsp;mapujeme celý finanční obraz — bydlení, příjmy, závazky, ochrana, investice. Najdeme slepá místa. Bez prezentací, bez&nbsp;závazku.",
   },
   {
     n: "II",
-    label: "Hloubková analýza",
-    when: "1–2 týdny",
-    body:
-      "Zmapujeme celý finanční obraz — bydlení, příjmy, závazky, ochrana, investice. Najdeme slepá místa.",
-  },
-  {
-    n: "III",
-    label: "Strategie & doporučení",
-    when: "Společná schůzka",
+    label: "Strategie a doporučení",
+    when: "do 1 týdne",
     body:
       "Předkládáme návrh — konkrétní kroky, alternativy, rizika a očekávané dopady. Vy rozhodujete o&nbsp;tempu.",
   },
   {
+    n: "III",
+    label: "Realizace projektu",
+    when: "do 2 týdnů",
+    body:
+      "Zařídíme realizaci — sjednání, papírování i&nbsp;jednání s&nbsp;bankami a&nbsp;pojišťovnami. Provedeme vás každým krokem.",
+  },
+  {
     n: "IV",
     label: "Dlouhodobá péče",
-    when: "Ročně i ad-hoc",
+    when: "ročně i ad-hoc",
     body:
       "Pravidelná revize, reakce na životní změny, daňový kalendář. Tým, který znáte, vás drží na&nbsp;cestě.",
   },

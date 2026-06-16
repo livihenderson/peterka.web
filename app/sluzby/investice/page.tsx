@@ -35,7 +35,7 @@ const okruhy = [
     n: "01",
     t: "Začínám investovat",
     body:
-      "Začínáte budovat. Měsíční úložky, dlouhý horizont, jednoduché a&nbsp;levné nástroje (zpravidla ETF). Ideální pro&nbsp;mladé, kteří už vydělávají dost na&nbsp;to, aby si&nbsp;část příjmu pravidelně odkládali, pro&nbsp;rodiče, kteří spoří dětem, i&nbsp;pro&nbsp;klienty před padesátkou se&nbsp;střednědobým cílem.",
+      "Začínáte budovat. Měsíční úložky, dlouhý horizont, jednoduché a&nbsp;levné nástroje (ETF, OPF, krátkodobé investiční nástroje). Ideální pro&nbsp;mladé, kteří už vydělávají dost na&nbsp;to, aby si&nbsp;část příjmu pravidelně odkládali, pro&nbsp;rodiče, kteří spoří dětem, i&nbsp;pro&nbsp;klienty před padesátkou se&nbsp;střednědobým cílem.",
     from: "od 1 000 Kč / měs.",
     horizon: "horizont 7+ let",
   },
@@ -182,8 +182,8 @@ export default function InvesticePage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/kozel.webp"
-                    alt="Dušan Kozel — investice a privátní portfolia"
+                    src="/lukashorejsi_profilovka.webp"
+                    alt="Lukáš Hořejší — investice a privátní portfolia"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -194,12 +194,12 @@ export default function InvesticePage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>10 let</span>
+                      <span>7 let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
                     >
-                      Dušan Kozel
+                      Lukáš Hořejší
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
                       Praha · Privátní portfolia

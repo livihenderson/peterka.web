@@ -37,17 +37,17 @@ export default function Manifesto() {
 
             <div className="reveal mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl">
               <p className="dropcap text-lg leading-[1.65] text-ink-soft">
-                Tomáš Peterka strávil patnáct let ve světě financí. Patnáct
+                Tomáš Peterka strávil šestnáct let ve světě financí. Šestnáct
                 let, ve kterých pozoroval, jak se lidský přístup k&nbsp;penězům
                 drolí pod tlakem produktových kvót, čtvrtletních cílů
                 a&nbsp;rotujících poradců. V&nbsp;jednu chvíli to nešlo dál.
                 Ne se ctí, ne pro klienty.
               </p>
               <p className="text-lg leading-[1.65] text-ink-soft">
-                Odešel z poslední společnosti s jediným cílem: postavit
-                tým lidí, kteří k&nbsp;povolání přistupují stejně. Tým, kde
-                rozhodují roky zkušeností, ne týdenní žebříček prodejů. Tak
-                vzniklo Peterka&nbsp;&amp;&nbsp;Kolektiv — pod střechou skupiny
+                Spolu s&nbsp;dalšími dvěma zakladateli proto postavil tým lidí,
+                kteří k&nbsp;povolání přistupují stejně. Tým, kde rozhodují roky
+                zkušeností, ne týdenní žebříček prodejů. Tak vzniklo
+                Peterka&nbsp;&amp;&nbsp;Kolektiv — pod střechou skupiny
                 Edo&nbsp;Finance, která dává nezávislosti reálnou strukturu.
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function Manifesto() {
                 {
                   n: "III.",
                   t: "Důvěra",
-                  b: "Klienta převezmou kolegové, ne nový poradce každého půl roku. Vztah se buduje desetiletími.",
+                  b: "Když je potřeba, klienta převezme specialista z týmu — ne nový poradce každého půl roku. Vztah se buduje desetiletími.",
                 },
               ].map((p, i) => (
                 <div

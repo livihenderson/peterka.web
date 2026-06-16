@@ -59,16 +59,16 @@ export default function Footer() {
             </div>
             <ul className="mt-5 flex flex-col gap-3 text-ink">
               <li>
-                <a className="hover:text-moss" href="tel:+420777000000">
-                  +420 777 000 000
+                <a className="hover:text-moss" href="tel:+420774567833">
+                  +420 774 567 833
                 </a>
               </li>
               <li>
                 <a
                   className="hover:text-moss underline decoration-rule underline-offset-4"
-                  href="mailto:kolektiv@peterka.cz"
+                  href="mailto:peterka.kolektiv@email.cz"
                 >
-                  kolektiv@peterka.cz
+                  peterka.kolektiv@email.cz
                 </a>
               </li>
             </ul>
@@ -77,10 +77,10 @@ export default function Footer() {
               Pobočky
             </div>
             <ul className="mt-3 text-sm text-ink-soft space-y-1.5">
-              <li>Praha — Vinohradská 184</li>
-              <li>České Budějovice — Lannova 16</li>
-              <li>Tábor — 9. května 1282</li>
-              <li>Soběslav — náměstí Republiky 59</li>
+              <li>Praha — V parku 2335/20</li>
+              <li>České Budějovice — Karla IV. 93/3</li>
+              <li>Tábor — Kpt. Jaroše 24</li>
+              <li>Soběslav — Dolní nábřeží 41/5</li>
             </ul>
           </div>
         </div>
