@@ -18,10 +18,9 @@ type RestMember = {
 
 const rest: RestMember[] = [
   {
-    img: "/iveta_kosile.webp",
+    img: "/iveta_petrikova_nova.webp",
     name: "Iva Petříková",
-    soft: true,
-    dim: 0.9,
+    dim: 0.85,
     focus: "Investice",
     years: "10 let",
     city: "Tábor",
