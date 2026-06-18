@@ -131,8 +131,10 @@ export async function POST(req: Request) {
   }
 
   const port = Number(process.env.SMTP_PORT ?? 587);
+  // Port 465 is always implicit TLS; 587 uses STARTTLS (connect plain, upgrade).
+  // Derive from the port so a mis-set SMTP_SECURE can't break the connection.
   const secure =
-    (process.env.SMTP_SECURE ?? (port === 465 ? "true" : "false")) === "true";
+    port === 465 ? true : (process.env.SMTP_SECURE ?? "false") === "true";
   const fromAddr = process.env.MAIL_FROM || process.env.SMTP_USER || "";
   const fromName = process.env.MAIL_FROM_NAME || "Peterka & Kolektiv";
 
