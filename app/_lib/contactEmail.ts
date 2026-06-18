@@ -84,18 +84,21 @@ function row(label: string, valueHtml: string): string {
     </tr>`;
 }
 
+function pills(interests?: string[]): string {
+  if (!interests || !interests.length)
+    return `<span style="color:${C.inkMute};font-style:italic;">Neuvedeno</span>`;
+  return interests
+    .map(
+      (i) =>
+        `<span style="display:inline-block;font-family:${MONO};font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:${C.moss};background:${C.boneWarm};border:1px solid ${C.rule};padding:5px 11px;margin:0 6px 6px 0;border-radius:2px;">${esc(
+          i,
+        )}</span>`,
+    )
+    .join("");
+}
+
 export function contactEmailHtml(d: ContactSubmission): string {
-  const interests =
-    d.interests && d.interests.length
-      ? d.interests
-          .map(
-            (i) =>
-              `<span style="display:inline-block;font-family:${MONO};font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:${C.moss};background:${C.boneWarm};border:1px solid ${C.rule};padding:5px 11px;margin:0 6px 6px 0;border-radius:2px;">${esc(
-                i,
-              )}</span>`,
-          )
-          .join("")
-      : `<span style="color:${C.inkMute};font-style:italic;">Neuvedeno</span>`;
+  const interests = pills(d.interests);
 
   const messageBlock =
     d.message && d.message.trim()
@@ -193,6 +196,136 @@ export function contactEmailHtml(d: ContactSubmission): string {
                   : ""
               }<br>
               Odpovědět lze přímo na tento e-mail.
+            </div>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`;
+}
+
+// ---------------------------------------------------------------------------
+// Auto-reply / confirmation sent to the person who filled in the form.
+// ---------------------------------------------------------------------------
+
+export function confirmationSubject(): string {
+  return "Děkujeme za vaši zprávu — Peterka & Kolektiv";
+}
+
+export function contactConfirmationText(d: ContactSubmission): string {
+  const first = d.name.split(" ")[0];
+  const lines = [
+    `Dobrý den ${first},`,
+    "",
+    "děkujeme za vaši zprávu. Vaši poptávku jsme přijali a ozveme se vám nejpozději do dvou pracovních dnů — nezávazně a bez tlaku.",
+  ];
+  if (d.interests && d.interests.length)
+    lines.push("", `Co řešíte: ${d.interests.join(", ")}`);
+  if (d.message && d.message.trim())
+    lines.push("", "Vaše zpráva:", d.message.trim());
+  lines.push(
+    "",
+    "Peterka & Kolektiv",
+    "Tel: +420 774 567 833",
+    "E-mail: peterka.kolektiv@email.cz",
+    "",
+    "Toto je automatické potvrzení o přijetí vaší zprávy.",
+  );
+  return lines.join("\n");
+}
+
+export function contactConfirmationHtml(d: ContactSubmission): string {
+  const first = esc(d.name.split(" ")[0]);
+  const interests = pills(d.interests);
+  const messageBlock =
+    d.message && d.message.trim()
+      ? `
+    <tr>
+      <td style="padding:0 40px;">
+        <div style="font-family:${MONO};font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:${C.brassDeep};padding-top:26px;">Vaše zpráva</div>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+          <tr>
+            <td style="border-left:2px solid ${C.brass};background:${C.bone};padding:16px 20px;font-family:${SERIF};font-size:17px;line-height:1.6;color:${C.inkSoft};font-style:italic;">${esc(
+              d.message.trim(),
+            ).replace(/\n/g, "<br>")}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>`
+      : "";
+
+  return `<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>Děkujeme za vaši zprávu</title>
+</head>
+<body style="margin:0;padding:0;background:${C.bone};">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Vaši zprávu jsme přijali — ozveme se vám do dvou pracovních dnů.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.bone};padding:32px 16px;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:${C.paper};border-top:3px solid ${C.brass};">
+
+        <!-- Header band -->
+        <tr>
+          <td style="background:${C.moss};padding:38px 40px 32px;">
+            <div style="font-family:${MONO};font-size:10px;letter-spacing:3px;text-transform:uppercase;color:${C.brassLight};">
+              <span style="display:inline-block;width:22px;height:1px;background:${C.brass};vertical-align:middle;margin-right:10px;"></span>Potvrzení poptávky
+            </div>
+            <div style="font-family:${SERIF};font-size:36px;line-height:1.05;color:${C.paper};padding-top:18px;letter-spacing:-0.5px;">
+              Děkujeme, <span style="font-style:italic;color:${C.brassLight};">${first}.</span>
+            </div>
+            <div style="font-family:${SANS};font-size:14px;line-height:1.55;color:rgba(251,247,238,0.72);padding-top:14px;max-width:400px;">
+              Vaši zprávu jsme přijali. Ozveme se vám nejpozději do dvou pracovních dnů — nezávazně a bez tlaku.
+            </div>
+          </td>
+        </tr>
+
+        <!-- Intro -->
+        <tr>
+          <td style="padding:30px 40px 0;">
+            <p style="margin:0;font-family:${SANS};font-size:16px;line-height:1.65;color:${C.inkSoft};">
+              Jeden z&nbsp;našich poradců si projde vaši poptávku a&nbsp;brzy se vám ozve. Společně pak najdeme termín nezávazné konzultace — bez prezentací a&nbsp;bez závazku.
+            </p>
+            <div style="border-bottom:1px solid ${C.rule};margin-top:24px;line-height:1px;font-size:0;">&nbsp;</div>
+          </td>
+        </tr>
+
+        <!-- Recap: interests -->
+        <tr>
+          <td style="padding:0 40px;">
+            <div style="font-family:${MONO};font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:${C.brassDeep};padding-top:26px;">Co řešíte</div>
+            <div style="padding-top:11px;">${interests}</div>
+          </td>
+        </tr>
+        ${messageBlock}
+
+        <!-- Signature / contact -->
+        <tr>
+          <td style="padding:30px 40px 4px;">
+            <div style="border-top:1px solid ${C.rule};padding-top:24px;">
+              <div style="font-family:${SERIF};font-size:22px;color:${C.ink};">Peterka <span style="font-style:italic;color:${C.moss};">&amp; Kolektiv</span></div>
+              <div style="font-family:${SANS};font-size:14px;line-height:1.7;color:${C.inkSoft};padding-top:8px;">
+                <a href="tel:+420774567833" style="color:${C.moss};text-decoration:none;">+420 774 567 833</a>
+                &nbsp;·&nbsp;
+                <a href="mailto:peterka.kolektiv@email.cz" style="color:${C.moss};text-decoration:underline;">peterka.kolektiv@email.cz</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="padding:24px 40px 30px;">
+            <div style="font-family:${MONO};font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:${C.inkMute};line-height:1.7;">
+              Toto je automatické potvrzení o&nbsp;přijetí vaší zprávy. V&nbsp;případě dotazů můžete odpovědět přímo na&nbsp;tento e-mail.
             </div>
           </td>
         </tr>

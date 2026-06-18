@@ -1,11 +1,16 @@
-import { contactEmailHtml, type ContactSubmission } from "../../../_lib/contactEmail";
+import {
+  contactEmailHtml,
+  contactConfirmationHtml,
+  type ContactSubmission,
+} from "../../../_lib/contactEmail";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// Dev-only preview of the contact-form e-mail with sample data.
-// Open http://localhost:3000/api/contact/preview
-export async function GET() {
+// Dev-only preview of the contact-form e-mails with sample data.
+//   http://localhost:3000/api/contact/preview                 → team notification
+//   http://localhost:3000/api/contact/preview?type=confirmation → sender auto-reply
+export async function GET(req: Request) {
   if (process.env.NODE_ENV === "production") {
     return new Response("Not found", { status: 404 });
   }
@@ -22,7 +27,12 @@ export async function GET() {
       timeZone: "Europe/Prague",
     }).format(new Date()),
   };
-  return new Response(contactEmailHtml(sample), {
+  const type = new URL(req.url).searchParams.get("type");
+  const html =
+    type === "confirmation"
+      ? contactConfirmationHtml(sample)
+      : contactEmailHtml(sample);
+  return new Response(html, {
     headers: { "Content-Type": "text/html; charset=utf-8" },
   });
 }

@@ -3,6 +3,9 @@ import {
   contactEmailHtml,
   contactEmailText,
   contactSubject,
+  confirmationSubject,
+  contactConfirmationHtml,
+  contactConfirmationText,
   type ContactSubmission,
 } from "../../_lib/contactEmail";
 
@@ -150,6 +153,7 @@ export async function POST(req: Request) {
         ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
         : undefined,
     });
+    // 1) Notification to the team (the critical send).
     await transport.sendMail({
       from: fromAddr ? `"${fromName}" <${fromAddr}>` : undefined,
       to,
@@ -158,6 +162,22 @@ export async function POST(req: Request) {
       text,
       html,
     });
+
+    // 2) Auto-reply / confirmation to the person who filled in the form.
+    //    Best-effort — a failure here must not fail the whole request.
+    try {
+      await transport.sendMail({
+        from: fromAddr ? `"${fromName}" <${fromAddr}>` : undefined,
+        to: `"${name}" <${email}>`,
+        replyTo: fromAddr || undefined,
+        subject: confirmationSubject(),
+        text: contactConfirmationText(submission),
+        html: contactConfirmationHtml(submission),
+      });
+    } catch (e) {
+      console.error("[contact] confirmation send failed:", e);
+    }
+
     return NextResponse.json({ ok: true, delivered: true });
   } catch (e) {
     console.error("[contact] send failed:", e);
