@@ -221,7 +221,7 @@ export function contactConfirmationText(d: ContactSubmission): string {
   const lines = [
     `Dobrý den ${first},`,
     "",
-    "děkujeme za vaši zprávu. Vaši poptávku jsme přijali a ozveme se vám nejpozději do dvou pracovních dnů — nezávazně a bez tlaku.",
+    "děkujeme za vaši zprávu. Vaši poptávku jsme přijali a ozveme se vám nejpozději do dvou pracovních dnů.",
   ];
   if (d.interests && d.interests.length)
     lines.push("", `Co řešíte: ${d.interests.join(", ")}`);
@@ -283,7 +283,7 @@ export function contactConfirmationHtml(d: ContactSubmission): string {
               Děkujeme, <span style="font-style:italic;color:${C.brassLight};">${first}.</span>
             </div>
             <div style="font-family:${SANS};font-size:14px;line-height:1.55;color:rgba(251,247,238,0.72);padding-top:14px;max-width:400px;">
-              Vaši zprávu jsme přijali. Ozveme se vám nejpozději do dvou pracovních dnů — nezávazně a bez tlaku.
+              Vaši zprávu jsme přijali. Ozveme se vám nejpozději do dvou pracovních dnů.
             </div>
           </td>
         </tr>
