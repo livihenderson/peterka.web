@@ -17,16 +17,32 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 24);
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(h > 0 ? Math.min(1, y / h) : 0);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        setScrolled(y > 24);
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        setProgress(h > 0 ? Math.min(1, y / h) : 0);
+        ticking = false;
+      });
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Close the mobile menu on Escape for keyboard users.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
     <header
@@ -83,7 +99,9 @@ export default function Navigation() {
           <button
             onClick={() => setOpen((v) => !v)}
             className="md:hidden flex flex-col gap-1.5 p-2"
-            aria-label="Menu"
+            aria-label={open ? "Zavřít menu" : "Otevřít menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             <span
               className={`block h-px w-6 bg-ink transition-transform ${
@@ -105,7 +123,10 @@ export default function Navigation() {
       />
 
       {open && (
-        <div className="md:hidden bg-bone border-t border-rule/60 px-6 py-8 flex flex-col gap-5">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-bone border-t border-rule/60 px-6 py-8 flex flex-col gap-5"
+        >
           {links.map((l) => (
             <Link
               key={l.href}

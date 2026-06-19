@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "../../_components/Contact";
+import { servicePageGraph, jsonLdString } from "../../_lib/structuredData";
+import lukasPortrait from "../../../public/lukashorejsi_profilovka.webp";
 import Calculator from "../../_components/Calculator";
 import StatValue from "../../_components/StatValue";
 
@@ -106,6 +108,19 @@ const mistakes = [
 export default function InvesticePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdString(
+            servicePageGraph({
+              slug: "investice",
+              name: "Investice",
+              description:
+                "Privátní investiční portfolia a dlouhodobé strategie — od pravidelných úložek po správu většího majetku.",
+            }),
+          ),
+        }}
+      />
       {/* HERO */}
       <section className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
         <div className="grain absolute inset-0 pointer-events-none" />
@@ -128,7 +143,7 @@ export default function InvesticePage() {
             <span className="text-ink">Investice</span>
           </nav>
 
-          <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-12">
+          <div className="grid grid-cols-12 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
                 § Investice · 01 / 05
@@ -182,12 +197,13 @@ export default function InvesticePage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/lukashorejsi_profilovka.webp"
+                    src={lukasPortrait}
                     alt="Lukáš Hořejší — investice a privátní portfolia"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
-                    priority
+                    placeholder="blur"
+                    preload
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent" />
                   <div className="absolute left-5 bottom-5 right-5 text-paper">
@@ -215,7 +231,7 @@ export default function InvesticePage() {
       {/* MANIFESTO */}
       <section className="relative py-24 md:py-32 bg-bone">
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-10">
+          <div className="grid grid-cols-12 md:gap-x-12 gap-y-10">
             <aside className="col-span-12 lg:col-span-3">
               <div className="lg:sticky lg:top-32">
                 <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">

@@ -78,7 +78,7 @@ export default function Authority() {
       <div className="mx-auto max-w-[88rem] px-6 md:px-10 py-20 md:py-28">
         <div className="grid grid-cols-12 gap-y-12 md:gap-x-10">
           <div className="col-span-12 md:col-span-4">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass">
+            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
               § 01 — Výchozí body
             </div>
             <h2

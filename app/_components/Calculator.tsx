@@ -173,6 +173,12 @@ export default function Calculator() {
               <svg
                 viewBox={`0 0 ${W} ${H}`}
                 className="absolute inset-0 w-full h-full"
+                role="img"
+                aria-label={`Graf vývoje portfolia: po ${years} letech celková hodnota ${formatCZK(
+                  finalValue,
+                )}, z toho vlastní vklady ${formatCZK(
+                  totalContrib,
+                )} a zisk z úročení ${formatCZK(gain)}.`}
               >
                 <defs>
                   <linearGradient id="totalFill" x1="0" y1="0" x2="0" y2="1">
@@ -336,9 +342,10 @@ function Slider({
           background: `linear-gradient(to right, var(--moss) 0%, var(--moss) ${pct}%, var(--rule) ${pct}%, var(--rule) 100%)`,
         }}
         aria-label={label}
+        aria-valuetext={format(value)}
       />
       {note && (
-        <p className="mt-2 font-mono text-[10px] tracking-[0.18em] uppercase text-ink-mute/80">
+        <p className="mt-2 font-mono text-[10px] tracking-[0.18em] uppercase text-ink-mute">
           {note}
         </p>
       )}

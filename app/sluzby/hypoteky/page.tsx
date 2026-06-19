@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Contact from "../../_components/Contact";
 import HypotekaCalculator from "./_HypotekaCalculator";
+import { servicePageGraph, jsonLdString } from "../../_lib/structuredData";
+import ivaPortrait from "../../../public/iveta_petrikova_nova.webp";
 
 export const metadata: Metadata = {
   title: "Hypotéky — vlastní bydlení i investiční",
@@ -104,6 +106,19 @@ const mistakes = [
 export default function HypotekyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdString(
+            servicePageGraph({
+              slug: "hypoteky",
+              name: "Hypotéky",
+              description:
+                "Hypotéka, která vám slouží 30 let — srovnání všech bank na trhu, refinancování, investiční a americké hypotéky.",
+            }),
+          ),
+        }}
+      />
       {/* HERO */}
       <section className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
         <div className="grain absolute inset-0 pointer-events-none" />
@@ -126,7 +141,7 @@ export default function HypotekyPage() {
             <span className="text-ink">Hypotéky</span>
           </nav>
 
-          <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-12">
+          <div className="grid grid-cols-12 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
               <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
                 § Hypotéky · 02 / 05
@@ -180,12 +195,13 @@ export default function HypotekyPage() {
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-brass z-10" />
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/iveta_petrikova_nova.webp"
+                    src={ivaPortrait}
                     alt="Iva Petříková — úvěry a hypotéky"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
-                    priority
+                    placeholder="blur"
+                    preload
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent" />
                   <div className="absolute left-5 bottom-5 right-5 text-paper">
@@ -213,7 +229,7 @@ export default function HypotekyPage() {
       {/* MANIFESTO */}
       <section className="relative py-24 md:py-32 bg-bone">
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-10">
+          <div className="grid grid-cols-12 md:gap-x-12 gap-y-10">
             <aside className="col-span-12 lg:col-span-3">
               <div className="lg:sticky lg:top-32">
                 <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">

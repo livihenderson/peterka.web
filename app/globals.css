@@ -25,7 +25,7 @@
   /* Brass — secondary accent */
   --brass:       #A6814E;   /* aged brass */
   --brass-light: #C9A471;   /* lighter brass */
-  --brass-deep:  #7B5C36;   /* deeper brass */
+  --brass-deep:  #6F5230;   /* deeper brass — darkened for AA contrast on warm/grained surfaces */
 
   /* Hairlines */
   --rule:        #C5B89D;   /* hairline rule on bone */
@@ -83,6 +83,14 @@
   ::selection {
     background: var(--selection);
     color: var(--ink);
+  }
+
+  /* Keyboard focus — a visible ring on every interactive element. Brass reads
+     on both the bone and forest surfaces. Pointer clicks stay ring-free. */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+    border-radius: 1px;
   }
 
   /* Subtle parchment grain — applied selectively */

@@ -1,8 +1,11 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import TeamRest from "./TeamRest";
+import peterkaPortrait from "../../public/peterka_profile.webp";
+import kozelPortrait from "../../public/kozel.webp";
+import lukasPortrait from "../../public/lukashorejsi_profilovka.webp";
 
 type Member = {
-  img: string;
+  img: StaticImageData;
   name: string;
   role: string;
   years: string;
@@ -15,7 +18,7 @@ type Member = {
 
 const team: Member[] = [
   {
-    img: "/peterka_profile.webp",
+    img: peterkaPortrait,
     name: "Tomáš Peterka",
     role: "Zakladatel · Privátní finance",
     years: "16",
@@ -25,7 +28,7 @@ const team: Member[] = [
     accent: true,
   },
   {
-    img: "/kozel.webp",
+    img: kozelPortrait,
     name: "Dušan Kozel",
     role: "Úvěry · Pojištění",
     years: "7",
@@ -34,7 +37,7 @@ const team: Member[] = [
       "Úvěry a&nbsp;pojištění rodin i&nbsp;podnikatelských skupin. Dlouhodobý dohled nad&nbsp;smlouvami.",
   },
   {
-    img: "/lukashorejsi_profilovka.webp",
+    img: lukasPortrait,
     name: "Lukáš Hořejší",
     role: "Investice · Privátní portfolia",
     years: "7",
@@ -77,9 +80,11 @@ export default function Team() {
             <div className="relative aspect-[4/5] md:aspect-[5/6] w-full overflow-hidden bg-moss-deep">
               <Image
                 src={team[0].img}
-                alt={team[0].name}
+                alt={`${team[0].name} — ${team[0].role}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
+                placeholder="blur"
+                unoptimized
                 className="object-cover portrait-treatment-strong"
               />
               {/* Overlay */}
@@ -121,9 +126,11 @@ export default function Team() {
                 <div className="lg:hidden group relative aspect-[4/5] sm:aspect-[16/9] w-full overflow-hidden bg-moss-deep">
                   <Image
                     src={m.img}
-                    alt={m.name}
+                    alt={`${m.name} — ${m.role}`}
                     fill
                     sizes="100vw"
+                    placeholder="blur"
+                    unoptimized
                     className="object-cover object-top portrait-treatment-strong"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent" />
@@ -168,9 +175,11 @@ export default function Team() {
                   <div className="col-span-6 relative lg:h-full min-h-[300px] overflow-hidden bg-moss-deep">
                     <Image
                       src={m.img}
-                      alt={m.name}
+                      alt={`${m.name} — ${m.role}`}
                       fill
                       sizes="25vw"
+                      placeholder="blur"
+                      unoptimized
                       className="object-cover object-top portrait-treatment-strong"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />

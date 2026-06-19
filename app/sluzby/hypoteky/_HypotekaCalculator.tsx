@@ -142,9 +142,10 @@ function Slider({
           background: `linear-gradient(to right, var(--moss) 0%, var(--moss) ${pct}%, var(--rule) ${pct}%, var(--rule) 100%)`,
         }}
         aria-label={label}
+        aria-valuetext={format(value)}
       />
       {note && (
-        <p className="mt-2 font-mono text-[10px] tracking-[0.18em] uppercase text-ink-mute/80">
+        <p className="mt-2 font-mono text-[10px] tracking-[0.18em] uppercase text-ink-mute">
           {note}
         </p>
       )}

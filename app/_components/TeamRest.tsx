@@ -1,7 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useRef } from "react";
+import Image, { type StaticImageData } from "next/image";
+import ivaImg from "../../public/iveta_petrikova_nova.webp";
+import albrechtImg from "../../public/albrecht_josef.webp";
+import mrazekImg from "../../public/mrazek.webp";
+import lacinaImg from "../../public/lacina.webp";
+import jakubImg from "../../public/jakub.webp";
+import ivetaImg from "../../public/iveta.webp";
+import bolitoImg from "../../public/bolito.webp";
+import tomasImg from "../../public/tomas_profile.webp";
+import modreVlasyImg from "../../public/modre_vlasy.webp";
+
+// Already-compressed WebP served `unoptimized` (no /_next/image round-trip);
+// static imports give an automatic blur placeholder for free.
+const PORTRAITS: Record<string, StaticImageData> = {
+  "/iveta_petrikova_nova.webp": ivaImg,
+  "/albrecht_josef.webp": albrechtImg,
+  "/mrazek.webp": mrazekImg,
+  "/lacina.webp": lacinaImg,
+  "/jakub.webp": jakubImg,
+  "/iveta.webp": ivetaImg,
+  "/bolito.webp": bolitoImg,
+  "/tomas_profile.webp": tomasImg,
+  "/modre_vlasy.webp": modreVlasyImg,
+};
 
 type RestMember = {
   img: string;
@@ -94,6 +117,18 @@ const rest: RestMember[] = [
 
 export default function TeamRest() {
   const [open, setOpen] = useState(false);
+  const prefetched = useRef(false);
+
+  // Warm the roster portraits the moment the user shows intent (hover/focus
+  // the toggle) so they are decoded before the panel expands.
+  const prefetchRoster = () => {
+    if (prefetched.current) return;
+    prefetched.current = true;
+    for (const m of rest) {
+      const img = new window.Image();
+      img.src = PORTRAITS[m.img].src;
+    }
+  };
 
   return (
     <div className="mt-14 md:mt-20">
@@ -101,6 +136,8 @@ export default function TeamRest() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
+        onMouseEnter={prefetchRoster}
+        onFocus={prefetchRoster}
         aria-expanded={open}
         aria-controls="tym-zbytek"
         className="group flex w-full items-center gap-5 border-t border-b border-rule py-5 text-left transition-colors hover:border-rule-dark"
@@ -147,10 +184,12 @@ export default function TeamRest() {
               >
                 <div className="relative w-36 sm:w-44 lg:w-40 xl:w-52 aspect-[3/4] shrink-0 overflow-hidden bg-moss-deep">
                   <Image
-                    src={m.img}
-                    alt={m.name}
+                    src={PORTRAITS[m.img]}
+                    alt={`${m.name} — ${m.focus}`}
                     fill
                     sizes="(max-width: 640px) 144px, (max-width: 1280px) 176px, 208px"
+                    placeholder="blur"
+                    unoptimized
                     className={`object-cover ${m.soft ? "portrait-treatment" : "portrait-treatment-strong"}`}
                     style={
                       m.dim

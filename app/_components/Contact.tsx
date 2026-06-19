@@ -149,6 +149,7 @@ export default function Contact() {
                           key={k}
                           type="button"
                           onClick={() => toggle(k)}
+                          aria-pressed={on}
                           className={`px-4 py-2 text-[12px] tracking-[0.14em] uppercase border transition-colors duration-300 ${
                             on
                               ? "bg-brass-light text-ink border-brass-light"
@@ -164,23 +165,39 @@ export default function Contact() {
 
                 {/* Name */}
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <Field label="Jméno" name="name" required />
-                  <Field label="Telefon" name="phone" type="tel" required />
+                  <Field label="Jméno" name="name" required autoComplete="name" />
+                  <Field
+                    label="Telefon"
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                  />
                 </div>
 
                 <div className="mt-8">
-                  <Field label="E-mail" name="email" type="email" required />
+                  <Field
+                    label="E-mail"
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                  />
                 </div>
 
                 {/* Message */}
                 <div className="mt-8">
-                  <label className="font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light">
+                  <label
+                    htmlFor="message"
+                    className="font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light"
+                  >
                     Krátká zpráva
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     rows={4}
-                    className="mt-3 w-full bg-transparent border-b border-rule-dark py-3 text-paper placeholder-paper/30 focus:outline-none focus:border-brass-light transition-colors resize-none font-sans"
+                    className="mt-3 w-full bg-transparent border-b border-rule-dark py-3 text-paper placeholder-paper/30 focus:border-brass-light transition-colors resize-none font-sans"
                     placeholder="Pár vět o vaší situaci…"
                   />
                 </div>
@@ -255,23 +272,32 @@ function Field({
   name,
   type = "text",
   required,
+  autoComplete,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  autoComplete?: string;
 }) {
+  const id = `field-${name}`;
   return (
     <div>
-      <label className="font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light">
+      <label
+        htmlFor={id}
+        className="font-mono text-[10px] tracking-[0.3em] uppercase text-brass-light"
+      >
         {label}
         {required && <span className="text-paper/40">&nbsp;*</span>}
       </label>
       <input
+        id={id}
         name={name}
         type={type}
         required={required}
-        className="mt-3 w-full bg-transparent border-b border-rule-dark py-3 text-paper placeholder-paper/30 focus:outline-none focus:border-brass-light transition-colors font-sans"
+        aria-required={required}
+        autoComplete={autoComplete}
+        className="mt-3 w-full bg-transparent border-b border-rule-dark py-3 text-paper placeholder-paper/30 focus:border-brass-light transition-colors font-sans"
       />
     </div>
   );

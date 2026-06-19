@@ -34,6 +34,8 @@ export default function Footer() {
                 { l: "Služby", h: "/#sluzby" },
                 { l: "Hypotéky", h: "/sluzby/hypoteky" },
                 { l: "Investice", h: "/sluzby/investice" },
+                { l: "Pojištění", h: "/sluzby/pojisteni" },
+                { l: "Firmy", h: "/sluzby/firmy" },
                 { l: "Tým", h: "/#tym" },
                 { l: "Pobočky", h: "/#mapa" },
                 { l: "Proces", h: "/#proces" },

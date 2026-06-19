@@ -7,7 +7,7 @@ export default function Manifesto() {
       <div className="grain absolute inset-0 pointer-events-none" />
 
       <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
-        <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-16">
+        <div className="grid grid-cols-12 md:gap-x-12 gap-y-16">
           {/* Sticky chapter mark */}
           <aside className="col-span-12 lg:col-span-3">
             <div className="lg:sticky lg:top-32">

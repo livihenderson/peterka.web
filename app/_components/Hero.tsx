@@ -1,4 +1,5 @@
 import Image from "next/image";
+import peterkaPortrait from "../../public/peterka_profile.webp";
 
 export default function Hero() {
   return (
@@ -32,7 +33,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-x-6 md:gap-x-10 gap-y-10">
+        <div className="grid grid-cols-12 md:gap-x-10 gap-y-10">
           {/* Left — Headline & lede */}
           <div className="col-span-12 lg:col-span-7">
             <h1
@@ -121,10 +122,12 @@ export default function Hero() {
 
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
-                    src="/peterka_profile.webp"
+                    src={peterkaPortrait}
                     alt="Tomáš Peterka, zakladatel"
                     fill
-                    priority
+                    preload
+                    placeholder="blur"
+                    quality={65}
                     sizes="(max-width: 1024px) 90vw, 480px"
                     className="object-cover portrait-treatment"
                   />
