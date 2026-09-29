@@ -16,7 +16,7 @@ const cities = [
   {
     id: "tabor",
     name: "Tábor",
-    addr: "Kpt. Jaroše 24, 390 03 Tábor – Klokoty",
+    addr: "Kpt. Jaroše 24, 390 03\u00A0Tábor\u00A0- Klokoty",
     lead: "Tomáš Peterka",
     cx: 2047,
     cy: 2030,
@@ -25,7 +25,7 @@ const cities = [
   {
     id: "cb",
     name: "České Budějovice",
-    addr: "Karla IV. 93/3, 370 01 České Budějovice",
+    addr: "Karla IV. 93/3, 370 01\u00A0České Budějovice",
     lead: "Jakub Záleský",
     cx: 1905,
     cy: 2554,
@@ -34,7 +34,7 @@ const cities = [
   {
     id: "sobeslav",
     name: "Soběslav",
-    addr: "Dolní nábřeží 41/5, 392 01 Soběslav",
+    addr: "Dolní nábřeží 41/5, 392 01\u00A0Soběslav",
     lead: "Dušan Kozel",
     cx: 2020,
     cy: 2270,
@@ -42,7 +42,7 @@ const cities = [
   },
 ];
 
-// Scale factor relative to original 800-wide viewBox is ~6.68 — every
+// Scale factor relative to original 800-wide viewBox is ~6.68 - every
 // stroke/font/marker is multiplied so on-screen rendering matches before.
 const S = 6.68;
 
@@ -68,9 +68,6 @@ export default function Locations() {
       <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
         <div className="grid grid-cols-12 gap-y-12 md:gap-x-12 mb-12 md:mb-16">
           <div className="col-span-12 md:col-span-5">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-              § 05 — Lokality
-            </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em]"
             >
@@ -79,11 +76,17 @@ export default function Locations() {
             </h2>
           </div>
           <div className="col-span-12 md:col-span-6 md:col-start-7 md:flex md:items-end">
-            <p className="text-lg leading-[1.6] text-paper/80 max-w-md">
-              Klienty obsluhujeme po&nbsp;celé republice — osobně, i&nbsp;online.
-              Kdykoli chcete potřesení rukou, najdete nás v&nbsp;Praze,
-              Českých Budějovicích, Táboře nebo&nbsp;Soběslavi.
-            </p>
+            <div className="text-lg leading-[1.6] text-paper/80 max-w-md">
+              <p>
+                Klientům jsme k&nbsp;dispozici po&nbsp;celé České republice,
+                osobně i&nbsp;online.
+              </p>
+              <p className="mt-4">
+                Naše kanceláře najdete v&nbsp;Praze, Českých Budějovicích,
+                Táboře a&nbsp;Soběslavi. Pokud Vám více vyhovuje osobní setkání
+                u&nbsp;Vás, přijedeme za&nbsp;Vámi.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -115,7 +118,7 @@ export default function Locations() {
                   </pattern>
                 </defs>
 
-                {/* Country fill — hatched */}
+                {/* Country fill - hatched */}
                 <path
                   d={CZ_OUTLINE_D}
                   fill="url(#hatch)"
@@ -195,7 +198,7 @@ export default function Locations() {
                   );
                 })}
 
-                {/* Compass rose — top right corner */}
+                {/* Compass rose - top right corner */}
                 <g transform={`translate(${5342 - 280}, 200)`}>
                   <circle
                     cx="0"
@@ -241,7 +244,7 @@ export default function Locations() {
                   </text>
                 </g>
 
-                {/* Tiny attribution — required by CC BY-SA source */}
+                {/* Tiny attribution - required by CC BY-SA source */}
                 <g transform={`translate(${5342 - 80}, ${3123 - 30})`}>
                   <text
                     textAnchor="end"

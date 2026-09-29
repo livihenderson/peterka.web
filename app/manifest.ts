@@ -3,10 +3,10 @@ import { SITE_NAME, SITE_TAGLINE } from "./_lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    name: `${SITE_NAME} - ${SITE_TAGLINE}`,
     short_name: "Peterka",
     description:
-      "Komplexní soukromá péče o váš majetek, vaši rodinu a vaše záměry — investice, hypotéky, pojištění a nemovitosti pod jednou střechou.",
+      "Komplexní soukromá péče o\u00A0Váš majetek, Vaši rodinu a\u00A0Vaše cíle\u00A0- investice, úvěry, pojištění a\u00A0nemovitosti pod jednou střechou.",
     start_url: "/",
     display: "standalone",
     lang: "cs",

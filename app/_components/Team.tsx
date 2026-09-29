@@ -24,7 +24,7 @@ const team: Member[] = [
     years: "16",
     city: "Tábor",
     note:
-      "Strategie, mezigenerační péče, klienti s komplexním majetkem. Garant kvality v týmu.",
+      "Strategie, mezigenerační péče, klienti s\u00A0komplexním majetkem. Garant kvality v\u00A0týmu.",
     accent: true,
   },
   {
@@ -54,20 +54,17 @@ export default function Team() {
         {/* Header row */}
         <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 items-end mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-7">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-              § 04 — Tým
-            </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
             >
-              Dvanáct lidí.<br />
+              Deset lidí.<br />
               <span className="italic text-moss">Jeden&nbsp;standard.</span>
             </h2>
           </div>
           <div className="col-span-12 md:col-span-5">
             <p className="text-lg leading-[1.6] text-ink-soft max-w-md ml-auto">
-              Každý člen kolektivu má svou doménu — investice, hypotéky,
-              pojištění, nemovitosti. Spolu tvoří síť, která vás provází
+              Každý člen kolektivu má svou doménu&nbsp;- investice, hypotéky,
+              pojištění, nemovitosti. Spolu tvoří síť, která Vás provází
               celým&nbsp;životem.
             </p>
           </div>
@@ -80,7 +77,7 @@ export default function Team() {
             <div className="relative aspect-[4/5] md:aspect-[5/6] w-full overflow-hidden bg-moss-deep">
               <Image
                 src={team[0].img}
-                alt={`${team[0].name} — ${team[0].role}`}
+                alt={`${team[0].name} - ${team[0].role}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 placeholder="blur"
@@ -108,13 +105,13 @@ export default function Team() {
                 <div className="mt-6 flex items-center gap-6 font-mono text-[10px] tracking-[0.3em] uppercase text-paper/65">
                   <span>{team[0].role}</span>
                   <span className="inline-block w-6 h-px bg-paper/40" />
-                  <span className="num">16 let praxe</span>
+                  <span className="num">16&nbsp;let praxe</span>
                 </div>
               </div>
             </div>
           </article>
 
-          {/* 2 co-founders — overlay style on mobile/tablet, side-by-side on desktop */}
+          {/* 2 co-founders - overlay style on mobile/tablet, side-by-side on desktop */}
           <div className="col-span-12 lg:col-span-5 grid grid-cols-1 lg:grid-rows-2 gap-6 md:gap-8">
             {team.slice(1).map((m, i) => (
               <article
@@ -126,7 +123,7 @@ export default function Team() {
                 <div className="lg:hidden group relative aspect-[4/5] sm:aspect-[16/9] w-full overflow-hidden bg-moss-deep">
                   <Image
                     src={m.img}
-                    alt={`${m.name} — ${m.role}`}
+                    alt={`${m.name} - ${m.role}`}
                     fill
                     sizes="100vw"
                     placeholder="blur"
@@ -175,7 +172,7 @@ export default function Team() {
                   <div className="col-span-6 relative lg:h-full min-h-[300px] overflow-hidden bg-moss-deep">
                     <Image
                       src={m.img}
-                      alt={`${m.name} — ${m.role}`}
+                      alt={`${m.name} - ${m.role}`}
                       fill
                       sizes="25vw"
                       placeholder="blur"
@@ -224,7 +221,7 @@ export default function Team() {
           </div>
         </div>
 
-        {/* Rest of the team — expandable roster */}
+        {/* Rest of the team - expandable roster */}
         <TeamRest />
 
         {/* Bottom signature line */}
@@ -235,7 +232,7 @@ export default function Team() {
             className="font-display italic text-2xl md:text-3xl text-ink max-w-3xl leading-[1.25]"
           >
             Spolu <span className="num text-moss">30</span>{" "}let praxe
-            mezi&nbsp;3&nbsp;zakladateli — a&nbsp;ani&nbsp;jeden den ve&nbsp;společnosti, kde&nbsp;by se
+            mezi&nbsp;3&nbsp;zakladateli&nbsp;- a&nbsp;ani&nbsp;jeden den ve&nbsp;společnosti, kde&nbsp;by se
             kvótami platilo za&nbsp;pohodlí klienta.
           </p>
           <a

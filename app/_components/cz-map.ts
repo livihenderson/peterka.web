@@ -1,6 +1,6 @@
 // Czech Republic outline path data.
 // Source: https://commons.wikimedia.org/wiki/File:Czechia_-_outline_map.svg
-// Author: David Liuzzo et al. — License: CC BY-SA 3.0
+// Author: David Liuzzo et al. - License: CC BY-SA 3.0
 // viewBox space: 0 0 5342 3123
 //
 // City coordinates approximate (equirectangular projection of the source):

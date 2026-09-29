@@ -60,7 +60,7 @@ export default function HypotekaCalculator() {
           step={0.1}
           onChange={setRate}
           format={(v) => `${v.toFixed(1)} % p.a.`}
-          note="orientačně, dnešní tržní rozpětí 4,3–5,8 %"
+          note="orientačně, dnešní tržní rozpětí 4,3-5,8\u00A0%"
         />
         <Slider
           label="Splatnost"
@@ -78,17 +78,17 @@ export default function HypotekaCalculator() {
           <Stat label="Měsíční splátka" value={formatCZK(calc.monthly)} accent="moss" />
           <Stat label="Výše úvěru" value={formatCZK(calc.loan)} />
           <Stat label="Celkem zaplaceno" value={formatCZK(calc.total)} />
-          <Stat label="Z toho úroky" value={formatCZK(calc.overpay)} accent="brass" />
+          <Stat label="Z\u00A0toho úroky" value={formatCZK(calc.overpay)} accent="brass" />
         </div>
 
         <div className="mt-10 max-w-md">
           <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-brass-deep">
-            Co vám tato kalkulačka neřekne
+            Co Vám tato kalkulačka neřekne
           </div>
           <p className="mt-3 text-[15px] leading-[1.65] text-ink-soft">
             Pojištění schopnosti splácet, daňový odpočet úroků, sankce
             za&nbsp;předčasné splacení, podmínky fixace, refinancovací okno.
-            Toto všechno řešíme s&nbsp;vámi osobně — protože rozdíl mezi
+            Toto všechno řešíme s&nbsp;Vámi osobně&nbsp;- protože rozdíl mezi
             podobnými nabídkami často znamená stovky tisíc za&nbsp;celý
             horizont.
           </p>

@@ -7,9 +7,9 @@ import kozelPortrait from "../../../public/kozel.webp";
 import StatValue from "../../_components/StatValue";
 
 export const metadata: Metadata = {
-  title: "Pojištění — životní, majetkové, odpovědnost",
+  title: "Pojištění\u00A0- životní, majetkové, odpovědnost",
   description:
-    "Pojistka, která dává smysl — bez balastu, který se nikdy nevyplatí. Ochrana příjmu a rodiny, majetek a domácnost, odpovědnost a podnikání. Peterka & Kolektiv.",
+    "Pojistka, která dává smysl\u00A0- bez balastu, který se nikdy nevyplatí. Ochrana příjmu a\u00A0rodiny, majetek a\u00A0domácnost, odpovědnost a\u00A0podnikání. Peterka & Kolektiv.",
   keywords: [
     "pojištění",
     "životní pojištění",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pojištění · Peterka & Kolektiv",
     description:
-      "Pojištění pro dny, které nikdo neplánuje — bez balastu, který se nikdy nevyplatí.",
+      "Pojištění pro dny, které nikdo neplánuje\u00A0- bez balastu, který se nikdy nevyplatí.",
     type: "article",
   },
 };
@@ -34,25 +34,25 @@ export const metadata: Metadata = {
 const okruhy = [
   {
     n: "01",
-    t: "Ochrana příjmu a rodiny",
+    t: "Ochrana příjmu a\u00A0rodiny",
     body:
-      "Životní a&nbsp;úrazové pojištění postavené od&nbsp;největšího rizika: výpadek příjmu živitele. Invalidita, vážné nemoci, smrt — v&nbsp;tomto pořadí, protože v&nbsp;tomto pořadí přicházejí. Bez&nbsp;připojištění, která se nikdy nevyplatí.",
+      "Životní a\u00A0úrazové pojištění zaměřujeme především na rizika, která mohou nejvíce ovlivnit Váš příjem a\u00A0finanční stabilitu. Invalidita, vážná onemocnění a\u00A0úmrtí tvoří základ ochrany. Doplňková rizika nastavujeme podle Vašich skutečných potřeb.",
     from: "pro živitele rodin",
     horizon: "revize při životních změnách",
   },
   {
     n: "02",
-    t: "Majetek a domácnost",
+    t: "Majetek a\u00A0domácnost",
     body:
-      "Dům, byt, domácnost, auto. Hlídáme hlavně pojistné částky — ceny staveb rostou rychleji, než&nbsp;se smlouvy aktualizují, a&nbsp;podpojištěný dům znamená krácené plnění přesně ve&nbsp;chvíli, kdy potřebujete celou částku.",
+      "Dům, byt, domácnost i\u00A0auto potřebují odpovídající pojistné krytí. Zaměřujeme se především na správné pojistné částky a\u00A0jejich pravidelnou aktualizaci, aby pojištění odpovídalo aktuální hodnotě majetku a\u00A0poskytlo dostatečnou ochranu v\u00A0případě škody.",
     from: "dům · byt · auto",
     horizon: "aktualizace 1× za 3 roky",
   },
   {
     n: "03",
-    t: "Odpovědnost a podnikání",
+    t: "Odpovědnost a\u00A0podnikání",
     body:
-      "Občanská i&nbsp;profesní odpovědnost, korporátní programy, pojištění podnikatelských rizik. Krytí, které drží krok s&nbsp;tím, jak rostete — od&nbsp;prvního zaměstnance po&nbsp;celé portfolio firem.",
+      "Občanská a\u00A0profesní odpovědnost, podnikatelská rizika i\u00A0korporátní pojištění. Nastavujeme ochranu podle velikosti a\u00A0charakteru Vašeho podnikání a\u00A0průběžně ji přizpůsobujeme tomu, jak se Vaše firma vyvíjí.",
     from: "pro rodiny i firmy",
     horizon: "revize pojistných smluv",
   },
@@ -60,47 +60,24 @@ const okruhy = [
 
 const realityNumbers = [
   {
-    v: "4×",
-    lbl: "pravděpodobnější je invalidita než smrt",
-    sub: "v produktivním věku — a pojišťuje se nejméně",
+    v: "324 tis.",
+    lbl: "pojistných událostí v\u00A0životním pojištění za první pololetí 2026",
+    sub: "vyplaceno 18,56\u00A0miliardy Kč",
   },
   {
-    v: "60 %",
+    v: "70 %",
     lbl: "českých nemovitostí je podpojištěno",
-    sub: "pojistné částky neodpovídají cenám staveb",
+    sub: "v\u00A0průměru o\u00A042\u00A0%",
   },
   {
-    v: "1/3",
-    lbl: "pojistného často platí balast",
-    sub: "připojištění s minimální šancí na plnění",
+    v: "1/4",
+    lbl: "Čechů si aktualizovala pojištění nemovitosti",
+    sub: "v\u00A0loňském roce",
   },
   {
-    v: "0 Kč",
+    v: "0\u00A0Kč",
     lbl: "stojí revize stávajících smluv",
     sub: "druhý názor na to, co už platíte",
-  },
-];
-
-const mistakes = [
-  {
-    n: "I",
-    t: "Investiční životko jako spoření",
-    b: "Smíchat pojištění s&nbsp;investicí znamená přeplatit obojí. Pojištění má chránit, investice zhodnocovat — každé zvlášť, průhledně a&nbsp;za&nbsp;férový poplatek.",
-  },
-  {
-    n: "II",
-    t: "Pojištěná smrt, nepojištěná invalidita",
-    b: "Invalidita je v&nbsp;produktivním věku výrazně pravděpodobnější než&nbsp;smrt — a&nbsp;finančně bolí déle: příjem zmizí, výdaje vzrostou. Přesto bývá v&nbsp;pojistkách na&nbsp;posledním místě.",
-  },
-  {
-    n: "III",
-    t: "Podpojištěný dům",
-    b: "Pojistná částka z&nbsp;doby koupě dnes nepostaví ani&nbsp;hrubou stavbu. Při&nbsp;podpojištění pojišťovna krátí plnění — i&nbsp;malou škodu pak platíte z&nbsp;větší části sami.",
-  },
-  {
-    n: "IV",
-    t: "Smlouva, na kterou se nesahá",
-    b: "Pojistka z&nbsp;roku 2012 nezná vaši hypotéku, děti ani&nbsp;podnikání. Život se mění každých pár let — smlouva, která se nemění s&nbsp;ním, chrání minulost, ne&nbsp;vás.",
   },
 ];
 
@@ -115,7 +92,7 @@ export default function PojisteniPage() {
               slug: "pojisteni",
               name: "Pojištění",
               description:
-                "Životní i neživotní pojištění — ochrana příjmu, majetku i odpovědnosti rodin i podnikatelů.",
+                "Životní i\u00A0neživotní pojištění\u00A0- ochrana příjmu, majetku i\u00A0odpovědnosti rodin i\u00A0podnikatelů.",
             }),
           ),
         }}
@@ -144,9 +121,6 @@ export default function PojisteniPage() {
 
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § Pojištění · 03 / 05
-              </div>
               <h1
                 className="mt-6 font-display text-[clamp(2.6rem,6.6vw,6rem)] leading-[0.95] tracking-[-0.025em] text-ink"
               >
@@ -162,10 +136,11 @@ export default function PojisteniPage() {
               </h1>
 
               <p className="reveal mt-10 max-w-xl text-lg md:text-xl leading-[1.55] text-ink-soft" style={{ animationDelay: "260ms" }}>
-                Dobrá pojistka se nepozná podle ceny ani&nbsp;podle počtu
-                připojištění. Pozná se v&nbsp;jediný den — když má zaplatit.
-                Stavíme smlouvy, které ten den ustojí, a&nbsp;škrtáme balast,
-                který se nikdy nevyplatí.
+                Kvalitní pojištění se nepozná podle ceny ani počtu
+                připojištění. Jeho hodnotu ukáže až situace, kdy ho skutečně
+                potřebujete. Nastavujeme pojištění tak, aby poskytlo
+                odpovídající ochranu v&nbsp;důležitých životních situacích
+                a&nbsp;zároveň neobsahovalo zbytečná krytí.
               </p>
 
               <div
@@ -176,7 +151,7 @@ export default function PojisteniPage() {
                   href="/#kontakt"
                   className="group inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 text-[12.5px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
                 >
-                  Sjednat konzultaci o pojištění
+                  Sjednat konzultaci o&nbsp;pojištění
                   <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                     →
                   </span>
@@ -198,7 +173,7 @@ export default function PojisteniPage() {
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
                     src={kozelPortrait}
-                    alt="Dušan Kozel — pojištění a úvěry"
+                    alt="Dušan Kozel\u00A0- pojištění a\u00A0úvěry"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -210,7 +185,7 @@ export default function PojisteniPage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>7 let</span>
+                      <span>7&nbsp;let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
@@ -218,7 +193,7 @@ export default function PojisteniPage() {
                       Dušan Kozel
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      Soběslav · Pojištění a úvěry
+                      Soběslav · Pojištění a&nbsp;úvěry
                     </div>
                   </div>
                 </div>
@@ -234,9 +209,6 @@ export default function PojisteniPage() {
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-10">
             <aside className="col-span-12 lg:col-span-3">
               <div className="lg:sticky lg:top-32">
-                <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                  § 01
-                </div>
                 <div
                   className="mt-3 font-display text-3xl italic text-moss"
                 >
@@ -250,24 +222,20 @@ export default function PojisteniPage() {
               <h2
                 className="reveal font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.025em] text-ink max-w-[24ch]"
               >
-                Pojišťujeme <span className="italic text-moss">katastrofy, </span>
-                ne&nbsp;nepříjemnosti.
+                Chráníme to, <span className="italic text-moss">co je pro&nbsp;Vás důležité.</span>
               </h2>
 
               <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
                 <p className="dropcap text-lg leading-[1.65] text-ink-soft">
-                  Rozbitý displej přežijete. Deset let invalidního důchodu
-                  s&nbsp;hypotékou a&nbsp;dvěma dětmi nikoliv. Přesto se běžné
-                  pojistky plní drobnostmi, které se dobře prodávají,
-                  a&nbsp;šetří na&nbsp;rizicích, která umí rodinu skutečně
-                  položit.
+                  Pojištění má především chránit to, co je pro&nbsp;Vás skutečně
+                  důležité. Proto se nejprve zaměřujeme na&nbsp;zásadní rizika,
+                  jako je výpadek příjmu, zajištění bydlení nebo odpovědnost.
+                  Doplňková rizika řešíme podle Vašich skutečných potřeb.
                 </p>
                 <p className="text-lg leading-[1.65] text-ink-soft">
-                  Stavíme to obráceně: nejdřív velká rizika — příjem, střecha
-                  nad&nbsp;hlavou, odpovědnost — pořádně a&nbsp;levně. Drobnosti
-                  jen tam, kde dávají smysl. A&nbsp;smlouvy pravidelně revidujeme,
-                  aby krytí drželo krok s&nbsp;vaším životem, ne&nbsp;se&nbsp;stavem
-                  z&nbsp;doby podpisu.
+                  Pojištění navíc pravidelně revidujeme, aby odpovídalo Vašemu
+                  aktuálnímu životu, příjmům a&nbsp;závazkům, nejen situaci,
+                  která platila v&nbsp;den podpisu smlouvy.
                 </p>
               </div>
             </div>
@@ -280,9 +248,6 @@ export default function PojisteniPage() {
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 02 — Tři okruhy
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
               >
@@ -291,9 +256,10 @@ export default function PojisteniPage() {
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Příjem, majetek, odpovědnost. Každá vrstva chrání jinou část
-                života — a&nbsp;každá má svá pravidla, podle kterých se pozná
-                dobrá smlouva od&nbsp;drahého papíru.
+                Příjem, majetek a&nbsp;odpovědnost představují tři klíčové
+                oblasti, které má pojištění chránit. Každá z&nbsp;nich má svá
+                specifika a&nbsp;vyžaduje správně nastavené krytí podle Vaší
+                konkrétní situace.
               </p>
             </div>
           </div>
@@ -346,21 +312,19 @@ export default function PojisteniPage() {
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 mb-12 md:mb-16">
             <div className="col-span-12 md:col-span-5">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-                § 03 — Pravdivá čísla
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.02] tracking-[-0.025em]"
               >
-                Co pojistky kryjí —<br />
-                <span className="italic text-brass-light">a co doopravdy hrozí.</span>
+                Co pojistky kryjí -<br />
+                <span className="italic text-brass-light">a&nbsp;co doopravdy hrozí.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-6 md:col-start-7 flex md:items-end">
               <p className="text-paper/80 leading-relaxed max-w-md">
-                Pojištění je matematika pravděpodobností, ne&nbsp;katalog
-                produktů. Tahle čísla rozhodují o&nbsp;tom, jestli vaše
-                smlouva chrání vás — nebo statistiku pojišťovny.
+                Pojištění není o&nbsp;počtu produktů, ale o&nbsp;správném
+                nastavení rizik. Pracujeme s&nbsp;pravděpodobností a&nbsp;finančním
+                dopadem jednotlivých rizik, aby Vaše pojištění poskytovalo
+                smysluplnou ochranu tam, kde ji skutečně potřebujete.
               </p>
             </div>
           </div>
@@ -387,74 +351,6 @@ export default function PojisteniPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COMMON MISTAKES */}
-      <section className="relative py-24 md:py-32 bg-bone-warm">
-        <div className="mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
-            <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 04 — Chyby
-              </div>
-              <h2
-                className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              >
-                Čtyři chyby, které <span className="italic text-moss">se neodpouštějí.</span>
-              </h2>
-            </div>
-            <div className="col-span-12 md:col-span-5">
-              <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                U&nbsp;pojištění se chyba pozná až&nbsp;ve&nbsp;chvíli, kdy ji
-                nelze napravit. Proto se vyplatí najít ji dnes — dokud je to
-                jen řádek ve&nbsp;smlouvě.
-              </p>
-            </div>
-          </div>
-
-          <ol className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule border border-rule">
-            {mistakes.map((m, i) => (
-              <li
-                key={m.n}
-                className="reveal bg-bone-warm p-8 md:p-10"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div
-                  className="font-display num text-4xl text-brass leading-none"
-                >
-                  {m.n}
-                </div>
-                <h3
-                  className="mt-6 font-display text-2xl md:text-3xl tracking-[-0.01em] text-ink"
-                >
-                  {m.t}
-                </h3>
-                <p
-                  className="mt-3 text-[15px] leading-[1.65] text-ink-soft max-w-md"
-                  dangerouslySetInnerHTML={{ __html: m.b }}
-                />
-              </li>
-            ))}
-          </ol>
-
-          <div className="mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 pt-8 border-t border-rule">
-            <p
-              className="font-display italic text-xl md:text-2xl text-ink max-w-3xl leading-[1.3]"
-            >
-              Dobrá pojistka je ta, na&nbsp;kterou roky nesáhnete —
-              a&nbsp;pak vás podrží.
-            </p>
-            <Link
-              href="/#kontakt"
-              className="group inline-flex items-center gap-3 self-start md:self-auto whitespace-nowrap bg-ink text-paper px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
-            >
-              Konzultace o pojištění
-              <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
-                →
-              </span>
-            </Link>
           </div>
         </div>
       </section>

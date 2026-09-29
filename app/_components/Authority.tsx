@@ -10,9 +10,9 @@ const stats: {
   sub: string;
 }[] = [
   { value: 30, lbl: "let zkušeností", sub: "mezi 3 zakladateli" },
-  { value: 100, suffix: "%", lbl: "nezávislost", sub: "v doporučeních klientům" },
+  { value: 100, suffix: "%", lbl: "nezávislost", sub: "v\u00A0doporučeních klientům" },
   { value: 5, lbl: "oblastí péče", sub: "pod jednou střechou" },
-  { prefix: "+", value: 900, lbl: "klientů", sub: "v součtu napříč týmem" },
+  { prefix: "+", value: 900, lbl: "klientů", sub: "v\u00A0součtu napříč týmem" },
 ];
 
 function CountUp({
@@ -78,9 +78,6 @@ export default function Authority() {
       <div className="mx-auto max-w-[88rem] px-6 md:px-10 py-20 md:py-28">
         <div className="grid grid-cols-12 gap-y-12 md:gap-x-10">
           <div className="col-span-12 md:col-span-4">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-              § 01 — Výchozí body
-            </div>
             <h2
               className="mt-6 font-display text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]"
             >
@@ -88,7 +85,7 @@ export default function Authority() {
             </h2>
             <p className="mt-6 max-w-md text-paper/75 leading-relaxed">
               Naši klienti nepřicházejí pro produkt. Přicházejí proto, že hledají
-              tým, který bude jejich dlouhodobým partnerem — v dobrých i&nbsp;složitých
+              tým, který bude jejich dlouhodobým partnerem&nbsp;- v&nbsp;dobrých i&nbsp;složitých
               chvílích života.
             </p>
           </div>

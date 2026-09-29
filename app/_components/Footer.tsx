@@ -15,8 +15,8 @@ export default function Footer() {
               <span className="italic text-moss">&amp;&nbsp;Kolektiv</span>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-[1.6] text-ink-soft">
-              Privátní finanční dům — komplexní péče o&nbsp;váš majetek
-              a&nbsp;vaši rodinu. Praha · České Budějovice · Tábor · Soběslav.
+              Privátní finanční dům&nbsp;- komplexní péče o&nbsp;Váš majetek
+              a&nbsp;Vaši rodinu. Praha · České Budějovice · Tábor · Soběslav.
             </p>
             <div className="mt-6 font-mono text-[10px] tracking-[0.28em] uppercase text-ink-mute">
               Pod střechou Edo&nbsp;Finance · Est.&nbsp;MMX
@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="mt-5 flex flex-col gap-3 text-ink">
               <li>
                 <a className="hover:text-moss" href="tel:+420774567833">
-                  +420 774 567 833
+                  +420&nbsp;774&nbsp;567&nbsp;833
                 </a>
               </li>
               <li>
@@ -79,10 +79,10 @@ export default function Footer() {
               Pobočky
             </div>
             <ul className="mt-3 text-sm text-ink-soft space-y-1.5">
-              <li>Praha — V parku 2335/20</li>
-              <li>České Budějovice — Karla IV. 93/3</li>
-              <li>Tábor — Kpt. Jaroše 24</li>
-              <li>Soběslav — Dolní nábřeží 41/5</li>
+              <li>Praha&nbsp;- V&nbsp;parku 2335/20</li>
+              <li>České Budějovice&nbsp;- Karla IV. 93/3</li>
+              <li>Tábor&nbsp;- Kpt. Jaroše 24</li>
+              <li>Soběslav&nbsp;- Dolní nábřeží 41/5</li>
             </ul>
           </div>
         </div>

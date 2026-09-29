@@ -4,12 +4,13 @@ import Link from "next/link";
 import Contact from "../../_components/Contact";
 import HypotekaCalculator from "./_HypotekaCalculator";
 import { servicePageGraph, jsonLdString } from "../../_lib/structuredData";
+import { PARTNER_BANKS } from "../../_lib/site";
 import ivaPortrait from "../../../public/iveta_petrikova_nova.webp";
 
 export const metadata: Metadata = {
-  title: "Hypotéky — vlastní bydlení i investiční",
+  title: "Hypotéky\u00A0- vlastní bydlení i\u00A0investiční",
   description:
-    "Hypotéka, která vám slouží 30 let. Srovnání všech 12 bank na trhu, refinancování, investiční a americké hypotéky. Privátní finanční dům Peterka & Kolektiv.",
+    "Hypotéka srozumitelně a\u00A0bez zbytečných starostí. Srovnání všech hypotečních věřitelů na trhu, retence a\u00A0refinancování, investiční i\u00A0americké hypotéky. Peterka & Kolektiv.",
   keywords: [
     "hypotéka",
     "hypotéky",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hypotéky · Peterka & Kolektiv",
     description:
-      "Hypotéka, která vám slouží 30 let — ne jenom v den podpisu.",
+      "Hypotéka srozumitelně a\u00A0bez zbytečných starostí.",
     type: "article",
   },
 };
@@ -35,71 +36,25 @@ const types = [
     n: "01",
     t: "Hypotéka pro vlastní bydlení",
     body:
-      "Klasická účelová hypotéka na pořízení, výstavbu nebo rekonstrukci. Daňový odpočet úroků, možnost zákonné fixace, varianty s předhypotečním úvěrem.",
-    ltv: "do 90 % LTV",
-    fix: "fixace 2–12 let",
+      "Klasická účelová hypotéka na pořízení, výstavbu nebo rekonstrukci. Daňový odpočet úroků, možnosti fixací, varianty s\u00A0předhypotečním úvěrem.",
   },
   {
     n: "02",
     t: "Investiční hypotéka",
     body:
-      "Pro nákup nemovitosti, kterou budete pronajímat. Bance se prokazuje výnos z nájmu, jiné scoring podmínky, jiná daňová logika. Souhra s portfolem majitele.",
-    ltv: "do 80 % LTV",
-    fix: "fixace 2–12 let",
+      "Pro nákup nemovitosti, kterou budete pronajímat. Scoring podmínky, jiná daňová logika. Souhra s\u00A0portfoliem klienta.",
   },
   {
     n: "03",
-    t: "Retencování",
+    t: "Retence i\u00A0refinancování",
     body:
-      "Retenci řešíme na&nbsp;konci fixace i&nbsp;v&nbsp;jejím průběhu. U&nbsp;refixace banka obvykle nabídne horší sazbu než&nbsp;novým klientům — to&nbsp;vyjednáme. A&nbsp;když tržní sazby klesnou výrazně pod&nbsp;tu vaši ještě během fixace, často jde dohodnout snížení i&nbsp;teď. Nárok to&nbsp;není — rozhoduje argument a&nbsp;načasování.",
-    ltv: "podle stávajícího úvěru",
-    fix: "nová fixace 2–12 let",
+      "Retenci či refinancování řešíme na konci fixace i\u00A0v\u00A0jejím průběhu. Porovnáváme, co je pro Vás v\u00A0danou chvíli výhodnější.",
   },
   {
     n: "04",
     t: "Úvěry na míru",
     body:
-      "Kromě klasiky řešíme i méně obvyklé situace: úvěry ze&nbsp;stavebního spoření, podnikatelský i&nbsp;spotřebitelský úvěr, offset hypotéku, americkou hypotéku, hypotéku bez&nbsp;nemovitosti i&nbsp;štafetovou hypotéku.",
-    ltv: "podle typu úvěru",
-    fix: "fixace 2–12 let",
-  },
-];
-
-const banks = [
-  "Česká spořitelna",
-  "ČSOB",
-  "Komerční banka",
-  "UniCredit",
-  "Raiffeisenbank",
-  "MONETA",
-  "Hypoteční banka",
-  "Air Bank",
-  "Fio",
-  "Equa bank",
-  "mBank",
-  "Wüstenrot",
-];
-
-const mistakes = [
-  {
-    n: "I",
-    t: "Volba podle nejnižší sazby",
-    b: "Rozdíl 0,2 % zní málo. Při hypotéce 6&nbsp;mil. Kč na 30&nbsp;let to znamená 250&nbsp;000 Kč. Ale ještě větší rozdíl umí udělat sankce za&nbsp;předčasné splacení nebo podmínky fixace — a&nbsp;ty sazba neukazuje.",
-  },
-  {
-    n: "II",
-    t: "Spěch jedné nabídky",
-    b: `„Sazba platí jen do&nbsp;pátku“ je nejstarší trik. Banky nabídku obnoví. Lepší je mít na&nbsp;stole 4–5 nabídek a&nbsp;vybrat z&nbsp;nich, než&nbsp;si vzít první proto, že&nbsp;vás postrkují.`,
-  },
-  {
-    n: "III",
-    t: "Nepojištěná hypotéka",
-    b: "Pojistka schopnosti splácet je často odmítaná pro&nbsp;připlatek. Statisticky se ale životní událost (úraz, nemoc, ztráta zaměstnání) v&nbsp;30letém horizontu týká skoro každé rodiny. Levnější je řešit teď&nbsp;než&nbsp;pak.",
-  },
-  {
-    n: "IV",
-    t: "Stará hypotéka po 5+ letech",
-    b: "Mnoho klientů má hypotéku z&nbsp;období sazeb 2–3 % a&nbsp;nikdy ji od&nbsp;té&nbsp;doby neaktualizovali. Po&nbsp;skončení fixace běží často na&nbsp;tržní sazbě bez&nbsp;upozornění — a&nbsp;přeplatí desítky tisíc ročně.",
+      "Kromě klasiky řešíme i\u00A0méně obvyklé situace: úvěry ze&nbsp;stavebního spoření, podnikatelský i&nbsp;spotřebitelský úvěr, offset hypotéku, americkou hypotéku, hypotéku bez&nbsp;nemovitosti i&nbsp;štafetovou hypotéku.",
   },
 ];
 
@@ -114,7 +69,7 @@ export default function HypotekyPage() {
               slug: "hypoteky",
               name: "Hypotéky",
               description:
-                "Hypotéka, která vám slouží 30 let — srovnání všech bank na trhu, refinancování, investiční a americké hypotéky.",
+                "Hypotéka, která Vám slouží 30\u00A0let\u00A0- srovnání všech bank na trhu, refinancování, investiční a\u00A0americké hypotéky.",
             }),
           ),
         }}
@@ -143,27 +98,24 @@ export default function HypotekyPage() {
 
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § Hypotéky · 02 / 05
-              </div>
               <h1
                 className="mt-6 font-display text-[clamp(2.6rem,6.6vw,6rem)] leading-[0.95] tracking-[-0.025em] text-ink"
               >
-                <span className="block reveal">Hypotéka,</span>
+                <span className="block reveal">Hypotéka srozumitelně</span>
                 <span
                   className="block italic text-moss reveal"
                   style={{
                     animationDelay: "120ms",
                     }}
                 >
-                  která vás přežije.
+                  a&nbsp;bez zbytečných starostí.
                 </span>
               </h1>
 
               <p className="reveal mt-10 max-w-xl text-lg md:text-xl leading-[1.55] text-ink-soft" style={{ animationDelay: "260ms" }}>
-                Banky vám prodají hypotéku za&nbsp;hodinu. My ji s&nbsp;vámi
-                navrhneme tak, aby vám sloužila třicet let — a&nbsp;pomohla vám
-                něco vybudovat, ne jen dlužit.
+                Dobrá hypotéka má dávat smysl dnes i&nbsp;za&nbsp;desítky let.
+                Pomůžeme Vám ji nastavit tak, aby odpovídala Vašim možnostem,
+                plánům i&nbsp;dlouhodobým cílům.
               </p>
 
               <div
@@ -174,7 +126,7 @@ export default function HypotekyPage() {
                   href="/#kontakt"
                   className="group inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 text-[12.5px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
                 >
-                  Sjednat schůzku k hypotéce
+                  Sjednat schůzku k&nbsp;hypotéce
                   <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
                     →
                   </span>
@@ -196,7 +148,7 @@ export default function HypotekyPage() {
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
                     src={ivaPortrait}
-                    alt="Iva Petříková — úvěry a hypotéky"
+                    alt="Iva Petříková\u00A0- úvěry a\u00A0hypotéky"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -208,7 +160,7 @@ export default function HypotekyPage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>10 let</span>
+                      <span>10&nbsp;let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
@@ -216,7 +168,7 @@ export default function HypotekyPage() {
                       Iva Petříková
                     </div>
                     <div className="mt-1 font-mono text-[10px] tracking-[0.28em] uppercase text-paper/70">
-                      Tábor · Úvěry a hypotéky
+                      Tábor · Úvěry a&nbsp;hypotéky
                     </div>
                   </div>
                 </div>
@@ -232,9 +184,6 @@ export default function HypotekyPage() {
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-10">
             <aside className="col-span-12 lg:col-span-3">
               <div className="lg:sticky lg:top-32">
-                <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                  § 01
-                </div>
                 <div
                   className="mt-3 font-display text-3xl italic text-moss"
                 >
@@ -248,27 +197,27 @@ export default function HypotekyPage() {
               <h2
                 className="reveal font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.05] tracking-[-0.025em] text-ink max-w-[22ch]"
               >
-                Dobrá hypotéka v&nbsp;den podpisu
+                Výhodná hypotéka dnes
                 <br />
                 <span className="italic text-moss">
-                  není dobrá hypotéka v&nbsp;pátém roce.
+                  nemusí znamenat to samé za&nbsp;5&nbsp;let.
                 </span>
               </h2>
 
               <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
                 <p className="dropcap text-lg leading-[1.65] text-ink-soft">
-                  Hypotéka je největší finanční rozhodnutí většiny rodin. Zároveň
-                  je to rozhodnutí, ke&nbsp;kterému si dnes stačí zavolat o&nbsp;sazby
-                  on-line, podepsat papír a&nbsp;zapomenout. Jenže tím to teprve
-                  začíná — zvlášť s&nbsp;fixací na&nbsp;tři nebo pět let, na&nbsp;jejímž
-                  konci se rozhoduje znovu.
+                  Hypotéka patří mezi nejvýznamnější finanční rozhodnutí, která
+                  většina rodin během života dělá. Nejde přitom jen o&nbsp;výběr
+                  úrokové sazby a&nbsp;podpis smlouvy. Hypotéka je dlouhodobý
+                  závazek, který se v&nbsp;průběhu let může měnit spolu s&nbsp;Vaší
+                  životní situací i&nbsp;podmínkami na&nbsp;trhu.
                 </p>
                 <p className="text-lg leading-[1.65] text-ink-soft">
-                  Hypotéka je živý úvěr. Mění se s&nbsp;vámi, s&nbsp;trhem,
-                  s&nbsp;daňovou legislativou. Naše práce nekončí podpisem
-                  smlouvy — pokračuje při každém konci fixace, při každé změně
-                  rodinné situace, při každém zlomu na&nbsp;trhu sazeb. To je
-                  rozdíl, který dělá z&nbsp;hypotéky nástroj, ne&nbsp;břemeno.
+                  Proto naše práce podpisem smlouvy nekončí. Pomáháme Vám
+                  hypotéku průběžně řešit a&nbsp;vyhodnocovat: při konci fixace,
+                  změně Vašich potřeb i&nbsp;při významných změnách na&nbsp;finančním
+                  trhu. Naším cílem je, aby Vaše financování dlouhodobě
+                  odpovídalo Vašim možnostem a&nbsp;plánům.
                 </p>
               </div>
             </div>
@@ -281,20 +230,17 @@ export default function HypotekyPage() {
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 02 — Druhy
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
               >
-                Čtyři druhy úvěrů — <span className="italic text-moss">každý pro jinou situaci.</span>
+                Čtyři druhy řešení, <span className="italic text-moss">každé pro jinou situaci.</span>
               </h2>
             </div>
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Banka vám zpravidla nabídne ten produkt, který má aktuálně
-                v&nbsp;kampani. My začínáme u&nbsp;otázky, který typ úvěru se
-                k&nbsp;vám hodí — a&nbsp;teprve pak vybíráme banku.
+                Nenabízíme produkt, který je aktuálně v&nbsp;kampani. Začínáme
+                u&nbsp;otázky, který typ úvěru se k&nbsp;Vám hodí, a&nbsp;teprve
+                pak vybíráme banku.
               </p>
             </div>
           </div>
@@ -306,18 +252,11 @@ export default function HypotekyPage() {
                 className="reveal relative bg-bone p-8 md:p-10 min-h-[280px] flex flex-col"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
-                <div className="flex items-baseline justify-between">
-                  <span
-                    className="font-display num text-2xl text-brass-deep"
-                  >
-                    {s.n}
-                  </span>
-                  <div className="flex items-center gap-3 font-mono text-[10px] tracking-[0.22em] uppercase text-ink-mute">
-                    <span>{s.ltv}</span>
-                    <span className="inline-block w-2 h-px bg-rule" />
-                    <span>{s.fix}</span>
-                  </div>
-                </div>
+                <span
+                  className="font-display num text-2xl text-brass-deep"
+                >
+                  {s.n}
+                </span>
                 <h3
                   className="mt-8 font-display text-[clamp(1.6rem,2.6vw,2.4rem)] leading-[1] tracking-[-0.02em] text-ink"
                 >
@@ -346,19 +285,16 @@ export default function HypotekyPage() {
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-10 md:gap-x-12">
             <div className="col-span-12 lg:col-span-5">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-                § 03 — Postup
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.02] tracking-[-0.025em]"
               >
-                Jak vybíráme<br />
-                <span className="italic text-brass-light">banku za vás.</span>
+                Jak s&nbsp;Vámi<br />
+                <span className="italic text-brass-light">vybíráme hypotéku.</span>
               </h2>
               <p className="mt-6 max-w-md text-paper/75 leading-relaxed">
-                Srovnáváme všech 12 hypotečních věřitelů na&nbsp;trhu — ne&nbsp;tři,
-                kteří dnes zrovna mají kampaň. Hodnotíme šest kritérií, ne&nbsp;jen
-                sazbu. Připravujeme alternativy, ne&nbsp;jednu nabídku.
+                Srovnáváme všechny hypoteční věřitele na&nbsp;trhu. Hodnotíme
+                šest kritérií, ne&nbsp;jen sazbu. Připravujeme alternativy,
+                ne&nbsp;jednu nabídku.
               </p>
             </div>
 
@@ -369,11 +305,11 @@ export default function HypotekyPage() {
               <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-10">
                 {[
                   "Úroková sazba & RPSN",
-                  "Délka a podmínky fixace",
+                  "Délka a\u00A0podmínky fixace",
                   "Sankce za předčasné splacení",
                   "Možnost mimořádných splátek",
                   "Pojištění schopnosti splácet",
-                  "Daňové a doplňkové benefity",
+                  "Daňové a\u00A0doplňkové benefity",
                 ].map((c, i) => (
                   <li key={c} className="flex items-baseline gap-3">
                     <span
@@ -389,13 +325,13 @@ export default function HypotekyPage() {
               {/* Bank list */}
               <div className="mt-12 pt-8 border-t border-rule-dark">
                 <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-                  Banky, se&nbsp;kterými pracujeme
+                  Banky, se&nbsp;kterými spolupracujeme
                 </div>
                 <div className="mt-5 flex flex-wrap gap-x-3 gap-y-2 text-sm text-paper/80">
-                  {banks.map((b, i) => (
+                  {PARTNER_BANKS.map((b, i) => (
                     <span key={b} className="flex items-center gap-3">
                       {b}
-                      {i < banks.length - 1 && (
+                      {i < PARTNER_BANKS.length - 1 && (
                         <span className="text-brass-light/40">·</span>
                       )}
                     </span>
@@ -412,9 +348,6 @@ export default function HypotekyPage() {
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 04 — Hypoteční kalkulačka
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
               >
@@ -424,81 +357,13 @@ export default function HypotekyPage() {
             <div className="col-span-12 md:col-span-5">
               <p className="text-base leading-[1.6] text-ink-soft max-w-md">
                 Modelová kalkulačka pro&nbsp;představu rozpočtu. Skutečnou
-                nabídku vám připravíme po&nbsp;hodinové schůzce, ve&nbsp;které
+                nabídku Vám připravíme po&nbsp;hodinové schůzce, ve&nbsp;které
                 projdeme i&nbsp;věci, které tato kalkulačka nezná.
               </p>
             </div>
           </div>
 
           <HypotekaCalculator />
-        </div>
-      </section>
-
-      {/* COMMON MISTAKES */}
-      <section className="relative py-24 md:py-32 bg-bone-warm">
-        <div className="mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
-            <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 05 — Chyby
-              </div>
-              <h2
-                className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              >
-                Čtyři chyby, které <span className="italic text-moss">stojí statisíce.</span>
-              </h2>
-            </div>
-            <div className="col-span-12 md:col-span-5">
-              <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                S&nbsp;klienty, kteří k&nbsp;nám přicházejí na&nbsp;refinancování,
-                vidíme tyto čtyři chyby opakovaně. Jsou to drahé chyby — ale
-                naštěstí téměř všechny lze ještě napravit.
-              </p>
-            </div>
-          </div>
-
-          <ol className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule border border-rule">
-            {mistakes.map((m, i) => (
-              <li
-                key={m.n}
-                className="reveal bg-bone-warm p-8 md:p-10"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div
-                  className="font-display num text-4xl text-brass leading-none"
-                >
-                  {m.n}
-                </div>
-                <h3
-                  className="mt-6 font-display text-2xl md:text-3xl tracking-[-0.01em] text-ink"
-                >
-                  {m.t}
-                </h3>
-                <p
-                  className="mt-3 text-[15px] leading-[1.65] text-ink-soft max-w-md"
-                  dangerouslySetInnerHTML={{ __html: m.b }}
-                />
-              </li>
-            ))}
-          </ol>
-
-          <div className="mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 pt-8 border-t border-rule">
-            <p
-              className="font-display italic text-xl md:text-2xl text-ink max-w-3xl leading-[1.3]"
-            >
-              Pokud máte hypotéku starší pěti let, stojí za&nbsp;to s&nbsp;námi
-              probrat, jestli ještě dává smysl.
-            </p>
-            <Link
-              href="/#kontakt"
-              className="group inline-flex items-center gap-3 self-start md:self-auto whitespace-nowrap bg-ink text-paper px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
-            >
-              Revize hypotéky zdarma
-              <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
-                →
-              </span>
-            </Link>
-          </div>
         </div>
       </section>
 

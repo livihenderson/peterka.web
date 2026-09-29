@@ -1,31 +1,31 @@
 const steps = [
   {
     n: "I",
-    label: "Seznámení a hloubková analýza",
+    label: "Seznámení a\u00A0hloubková analýza",
     when: "úvodní schůzka · zdarma",
     body:
-      "Posloucháme a&nbsp;mapujeme celý finanční obraz — bydlení, příjmy, závazky, ochrana, investice. Najdeme slepá místa. Bez prezentací, bez&nbsp;závazku.",
+      "Posloucháme a&nbsp;mapujeme celý finanční obraz\u00A0- bydlení, příjmy, závazky, ochrana, investice. Najdeme slepá místa. Bez prezentací, bez&nbsp;závazku.",
   },
   {
     n: "II",
-    label: "Strategie a doporučení",
-    when: "do 1 týdne",
+    label: "Strategie a\u00A0doporučení",
+    when: "do 1\u00A0týdne",
     body:
-      "Předkládáme návrh — konkrétní kroky, alternativy, rizika a očekávané dopady. Vy rozhodujete o&nbsp;tempu.",
+      "Předkládáme návrh\u00A0- konkrétní kroky, alternativy, rizika a\u00A0očekávané dopady. Vy rozhodujete o&nbsp;tempu.",
   },
   {
     n: "III",
     label: "Realizace projektu",
-    when: "do 2 týdnů",
+    when: "do 2\u00A0týdnů",
     body:
-      "Zařídíme realizaci — sjednání, papírování i&nbsp;jednání s&nbsp;bankami a&nbsp;pojišťovnami. Provedeme vás každým krokem.",
+      "Zařídíme realizaci\u00A0- sjednání, papírování i&nbsp;jednání s&nbsp;bankami a&nbsp;pojišťovnami. Provedeme Vás každým krokem.",
   },
   {
     n: "IV",
     label: "Dlouhodobá péče",
-    when: "ročně i ad-hoc",
+    when: "ročně i\u00A0ad-hoc",
     body:
-      "Pravidelná revize, reakce na životní změny, daňový kalendář. Tým, který znáte, vás drží na&nbsp;cestě.",
+      "Pravidelná revize, reakce na životní změny, daňový kalendář. Tým, který znáte, Vás drží na&nbsp;cestě.",
   },
 ];
 
@@ -35,9 +35,6 @@ export default function Process() {
       <div className="mx-auto max-w-[88rem] px-6 md:px-10">
         <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 mb-16 md:mb-20">
           <div className="col-span-12 md:col-span-7">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-              § 06 — Proces
-            </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
             >
@@ -46,11 +43,14 @@ export default function Process() {
             </h2>
           </div>
           <div className="col-span-12 md:col-span-5">
-            <p className="text-lg leading-[1.6] text-ink-soft max-w-md">
-              První schůzka nikdy nestojí korunu. Vyjádření zájmu je jediný
-              závazek, který od&nbsp;vás potřebujeme — všechno ostatní je
-              na&nbsp;nás.
-            </p>
+            <div className="text-lg leading-[1.6] text-ink-soft max-w-md">
+              <p>
+                Začít můžete nezávaznou a&nbsp;bezplatnou konzultací.
+              </p>
+              <p className="mt-4">
+                Stačí se ozvat. O&nbsp;vše ostatní se postaráme společně.
+              </p>
+            </div>
           </div>
         </div>
 

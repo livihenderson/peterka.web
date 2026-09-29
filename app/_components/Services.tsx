@@ -4,17 +4,18 @@ const services = [
     t: "Investice",
     short: "Tvorba portfolia a dohled",
     body:
-      "Dlouhodobá strategie postavená na vašich cílech, ne na produktovém katalogu. Diversifikace, daňová optimalizace, pravidelná revize.",
-    detail: ["Akciová a dluhopisová portfolia", "Pravidelné investice", "Investiční dohled"],
-    cta: "Náš přístup k investicím",
+      "Dlouhodobá strategie postavená na Vašich cílech, ne na produktovém katalogu. Diversifikace, aktivní i\u00A0pasivní správa, pravidelná revize.",
+    detail: ["Akciová a\u00A0dluhopisová portfolia", "Pravidelné investice", "Investiční dohled"],
+    cta: "Náš přístup k\u00A0investicím",
     href: "/sluzby/investice",
   },
   {
     n: "02",
     t: "Úvěry",
-    short: "Hypotéky i podnikatelské úvěry",
+    short: "Hypotéky i\u00A0podnikatelské úvěry",
     body:
-      "Srovnání nabídek napříč všemi bankami. Hypotéky, retencování, podnikatelské i&nbsp;spotřebitelské úvěry.",
+      "Srovnání nabídek napříč všemi bankami. Hypotéky, retence, podnikatelské i&nbsp;spotřebitelské úvěry.",
+    banks: PARTNER_BANKS,
     detail: ["Hypotéka pro vlastní bydlení", "Investiční hypotéky", "Podnikatelský, spotřebitelský úvěr"],
     cta: "Jak vybíráme úvěry",
     href: "/sluzby/hypoteky",
@@ -24,8 +25,8 @@ const services = [
     t: "Pojištění",
     short: "Životní, majetkové, podnikatelské",
     body:
-      "Pojistka, která dává smysl — bez balastu, který nikdy nevyplatí. Pravidelná aktualizace dle životních situací.",
-    detail: ["Životní a úrazové", "Nemovitosti a domácnost", "Odpovědnost a podnikání"],
+      "Pojistka, která dává smysl\u00A0- bez balastu, který nikdy nevyplatí. Pravidelná aktualizace dle životních situací.",
+    detail: ["Životní a\u00A0úrazové", "Nemovitosti a\u00A0domácnost", "Odpovědnost a\u00A0podnikání"],
     cta: "Jak stavíme pojištění",
     href: "/sluzby/pojisteni",
   },
@@ -34,24 +35,25 @@ const services = [
     t: "Nemovitosti",
     short: "Nákup, prodej, správa",
     body:
-      "Spolupracujeme s vlastní realitní společností. Od prohlídky přes právní servis až po hypotéku — jeden klient, jeden tým.",
-    detail: ["Nákup a prodej", "Investiční portfolio", "Předání majetku"],
+      "Spolupracujeme s\u00A0vlastní realitní společností. Od prohlídky přes právní servis až po hypotéku\u00A0- jeden klient, jeden tým.",
+    detail: ["Nákup a\u00A0prodej", "Investiční portfolio", "Předání majetku"],
     cta: "Domluvit konzultaci o nemovitostech",
     href: "/#kontakt",
   },
   {
     n: "05",
     t: "Firmy",
-    short: "Péče o majitele i podnik",
+    short: "Péče o\u00A0majitele i\u00A0podnik",
     body:
-      "Optimalizace odměn, financování růstu, ochrana klíčových osob. Stojí za námi korporátní oddělení — pro majitele firem i&nbsp;jejich rodiny.",
+      "Optimalizace odměn, financování růstu, ochrana klíčových osob. Stojí za námi korporátní oddělení\u00A0- pro majitele firem i&nbsp;jejich rodiny.",
     detail: ["Likvidace pojistných událostí", "Firemní financování", "Pojištění manažerů"],
-    cta: "Jak pečujeme o firmy",
+    cta: "Jak pečujeme o\u00A0firmy",
     href: "/sluzby/firmy",
   },
 ];
 
 import Link from "next/link";
+import { PARTNER_BANKS } from "../_lib/site";
 
 export default function Services() {
   return (
@@ -62,9 +64,6 @@ export default function Services() {
       <div className="mx-auto max-w-[88rem] px-6 md:px-10">
         <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-5">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-              § 03 — Komplexnost
-            </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,4.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
             >
@@ -74,10 +73,10 @@ export default function Services() {
           </div>
           <div className="col-span-12 md:col-span-6 md:col-start-7 flex md:items-end">
             <p className="text-lg leading-[1.6] text-ink-soft max-w-md">
-              Nestaráme se jen o&nbsp;jednu věc. Staráme se o&nbsp;celek.
-              Klient, který si u&nbsp;nás kupuje hypotéku, často zjistí,
-              že&nbsp;mu vyřešíme i&nbsp;pojištění auta, investice dětí
-              a&nbsp;daňové optimalizace s.r.o. Jedním rozhovorem.
+              Nestaráme se jen o&nbsp;jednu věc, staráme se o&nbsp;celek.
+              Klient, který s&nbsp;námi řeší hypotéku, často zjistí,
+              že&nbsp;mu pomůžeme vyřešit i&nbsp;pojištění auta, investice,
+              zajištění dětí i&nbsp;daňové optimalizace jedním rozhovorem.
             </p>
           </div>
         </div>
@@ -128,6 +127,17 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
+
+                {s.banks && (
+                  <div className="mt-8">
+                    <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-brass-deep">
+                      Banky, se kterými spolupracujeme
+                    </div>
+                    <p className="mt-3 text-[13px] leading-[1.7] text-ink-soft">
+                      {s.banks.join(" · ")}
+                    </p>
+                  </div>
+                )}
 
                 {/* Bottom CTA */}
                 <div className="mt-10 md:mt-auto pt-9 border-t border-rule/55">

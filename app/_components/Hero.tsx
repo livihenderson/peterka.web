@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background grain */}
       <div className="grain absolute inset-0 pointer-events-none" />
 
-      {/* Subtle radial gradient — warm light from top-left */}
+      {/* Subtle radial gradient - warm light from top-left */}
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
@@ -21,20 +21,16 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
-        {/* Top eyebrow line — date + position */}
+        {/* Top eyebrow line - date + position */}
         <div className="flex items-center justify-between mb-10 md:mb-14">
           <div className="flex items-center gap-3 font-mono text-[11px] tracking-[0.3em] uppercase text-ink-mute">
             <span className="inline-block w-8 h-px bg-rule" />
             <span>MMXXVI · Praha</span>
           </div>
-          <div className="hidden md:flex items-center gap-3 font-mono text-[11px] tracking-[0.3em] uppercase text-ink-mute">
-            <span>Privátní finanční dům</span>
-            <span className="inline-block w-8 h-px bg-rule" />
-          </div>
         </div>
 
         <div className="grid grid-cols-12 md:gap-x-10 gap-y-10">
-          {/* Left — Headline & lede */}
+          {/* Left - Headline & lede */}
           <div className="col-span-12 lg:col-span-7">
             <h1
               className="font-display text-ink text-[clamp(2.6rem,7vw,6.4rem)] leading-[0.92] tracking-[-0.025em]"
@@ -48,10 +44,10 @@ export default function Hero() {
                   animationDelay: "120ms",
                   }}
               >
-                v rukou,&nbsp;
+                v&nbsp;rukou,&nbsp;
               </span>
               <span className="block reveal" style={{ animationDelay: "240ms" }}>
-                kterým záleží.
+                kterým na Vás záleží.
               </span>
             </h1>
 
@@ -60,9 +56,9 @@ export default function Hero() {
               style={{ animationDelay: "420ms" }}
             >
               <p className="font-sans text-lg md:text-xl leading-[1.55] text-ink-soft">
-                Komplexní privátní péče o váš majetek, vaši rodinu a vaše záměry —
-                investice, hypotéky, pojištění a&nbsp;nemovitosti pod jednou
-                střechou. Bez kompromisů v kvalitě.
+                Komplexní privátní péče o&nbsp;Váš majetek, Vaši rodinu a&nbsp;Vaše cíle:
+                investice, úvěry, pojištění a&nbsp;nemovitosti pod jednou
+                střechou. S&nbsp;důrazem na kvalitu.
               </p>
             </div>
 
@@ -94,8 +90,8 @@ export default function Hero() {
             >
               {[
                 { v: "30", lbl: "let praxe mezi 3 zakladateli" },
-                { v: "04", lbl: "specializovaní poradci" },
-                { v: "04", lbl: "pobočky v Česku" },
+                { v: "03", lbl: "specializovaní poradci" },
+                { v: "04", lbl: "pobočky v\u00A0Česku" },
               ].map((s) => (
                 <div key={s.lbl}>
                   <div
@@ -111,7 +107,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — Founder portrait */}
+          {/* Right - Founder portrait */}
           <div className="col-span-12 lg:col-span-5 lg:pl-6 xl:pl-12">
             <div className="relative reveal-slow">
               {/* Frame */}
@@ -138,7 +134,7 @@ export default function Hero() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Zakladatel</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>16 let</span>
+                      <span>16&nbsp;let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"

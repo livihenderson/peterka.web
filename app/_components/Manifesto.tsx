@@ -11,15 +11,12 @@ export default function Manifesto() {
           {/* Sticky chapter mark */}
           <aside className="col-span-12 lg:col-span-3">
             <div className="lg:sticky lg:top-32">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 02
-              </div>
               <div className="mt-3 font-display text-3xl italic text-moss">
                 Filozofie
               </div>
               <div className="mt-6 h-px w-16 bg-rule rule-draw" />
               <div className="mt-6 max-w-[14rem] text-sm leading-relaxed text-ink-mute">
-                O&nbsp;tom, proč Tomáš Peterka opustil zaběhnutou kariéru —
+                O&nbsp;tom, proč Tomáš Peterka opustil zaběhnutou kariéru -
                 a&nbsp;začal znovu, po svém.
               </div>
             </div>
@@ -39,16 +36,16 @@ export default function Manifesto() {
               <p className="dropcap text-lg leading-[1.65] text-ink-soft">
                 Tomáš Peterka strávil šestnáct let ve světě financí. Šestnáct
                 let, ve kterých pozoroval, jak se lidský přístup k&nbsp;penězům
-                drolí pod tlakem produktových kvót, čtvrtletních cílů
-                a&nbsp;rotujících poradců. V&nbsp;jednu chvíli to nešlo dál.
-                Ne se ctí, ne pro klienty.
+                drolí pod tlakem na prodej jednotlivých produktů, čtvrtletních
+                cílů a&nbsp;rotujících poradců. V&nbsp;jednu chvíli to nešlo dál.
+                Ne s&nbsp;kvalitou, kterou chtěl doručit.
               </p>
               <p className="text-lg leading-[1.65] text-ink-soft">
-                Spolu s&nbsp;dalšími dvěma zakladateli proto postavil tým lidí,
-                kteří k&nbsp;povolání přistupují stejně. Tým, kde rozhodují roky
-                zkušeností, ne týdenní žebříček prodejů. Tak vzniklo
-                Peterka&nbsp;&amp;&nbsp;Kolektiv — pod střechou skupiny
-                Edo&nbsp;Finance, která dává nezávislosti reálnou strukturu.
+                Proto postavil tým lidí, kteří k&nbsp;povolání přistupují
+                stejně. Tým, kde rozhodují roky zkušeností, ne týdenní žebříček
+                prodejů. Tak vzniklo Peterka&nbsp;&amp;&nbsp;Kolektiv, pod
+                střechou skupiny Edo&nbsp;Finance, která dává nezávislosti
+                reálnou strukturu.
               </p>
             </div>
 
@@ -65,8 +62,7 @@ export default function Manifesto() {
                 className="relative font-display italic text-ink text-[clamp(1.6rem,3.2vw,2.6rem)] leading-[1.25] tracking-[-0.01em]"
               >
                 Lidé si nepamatují produkt, který jste jim prodali.
-                Pamatují si, jak se vedle vás cítili — ve&nbsp;chvíli, kdy se
-                rozhodovali o&nbsp;věcech, které je přesahují.
+                Pamatují si, jak se vedle vás cítili.
               </blockquote>
               <figcaption className="mt-10 flex items-center gap-4 font-mono text-[11px] tracking-[0.28em] uppercase text-ink-mute">
                 <span className="inline-block w-10 h-px bg-brass" />
@@ -80,17 +76,17 @@ export default function Manifesto() {
                 {
                   n: "I.",
                   t: "Komplexnost",
-                  b: "Jeden tým pro celý život — finance, bydlení, ochrana, předání majetku. Bez tříštění do agentur.",
+                  b: "Jeden tým pro celé portfolio. Odbornost ve financích i\u00A0bydlení. Ochrana portfolia i\u00A0pomoc například s\u00A0likvidací pojistných událostí.",
                 },
                 {
                   n: "II.",
                   t: "Nezávislost",
-                  b: "Doporučujeme to, co je nejlepší pro vás. Ne to, co má dnes nejvyšší provizi.",
+                  b: "Doporučujeme to, co je nejlepší pro Vás. Ne to, co má dnes nejvyšší provizi.",
                 },
                 {
                   n: "III.",
                   t: "Důvěra",
-                  b: "Když je potřeba, klienta převezme specialista z týmu — ne nový poradce každého půl roku. Vztah se buduje desetiletími.",
+                  b: "Vztah se buduje roky a\u00A0zkušeností klienta s\u00A0poradcem.",
                 },
               ].map((p, i) => (
                 <div

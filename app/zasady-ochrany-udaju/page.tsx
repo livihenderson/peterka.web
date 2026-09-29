@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Zásady ochrany osobních údajů",
   description:
-    "Jak Peterka & Kolektiv zpracovává osobní údaje klientů a návštěvníků webu — v souladu s GDPR a českými předpisy.",
+    "Jak Peterka & Kolektiv zpracovává osobní údaje klientů a\u00A0návštěvníků webu\u00A0- v\u00A0souladu s\u00A0GDPR a\u00A0českými předpisy.",
   alternates: { canonical: "/zasady-ochrany-udaju" },
   robots: { index: true, follow: true },
 };
@@ -33,7 +33,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
           </li>
           <li>
             <span className="text-ink-mute">Sídlo:</span>{" "}
-            <span className="text-ink">V parku 2335/20, Chodov, 148 00 Praha 11</span>
+            <span className="text-ink">V&nbsp;parku 2335/20, Chodov, 148 00&nbsp;Praha 11</span>
           </li>
           <li>
             <span className="text-ink-mute">E-mail:</span>{" "}
@@ -61,15 +61,15 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
           v&nbsp;průběhu naší spolupráce:
         </p>
         <ul className="mt-5 space-y-2 text-[15px]">
-          <li>— jméno a&nbsp;příjmení,</li>
-          <li>— telefonní číslo a&nbsp;e-mailovou adresu,</li>
-          <li>— oblasti, ke&nbsp;kterým nás chcete oslovit,</li>
-          <li>— další informace, které nám dobrovolně sdělíte ve&nbsp;zprávě nebo při schůzce.</li>
+          <li>- jméno a&nbsp;příjmení,</li>
+          <li>- telefonní číslo a&nbsp;e-mailovou adresu,</li>
+          <li>- oblasti, ke&nbsp;kterým nás chcete oslovit,</li>
+          <li>- další informace, které nám dobrovolně sdělíte ve&nbsp;zprávě nebo při schůzce.</li>
         </ul>
         <p className="mt-5">
           Po&nbsp;uzavření smluvního vztahu zpracováváme rovněž údaje vyžadované
           příslušnými právními předpisy v&nbsp;oblasti finančního zprostředkování
-          — typicky datum narození, adresu bydliště, doklad totožnosti,
+         &nbsp;- typicky datum narození, adresu bydliště, doklad totožnosti,
           finanční a&nbsp;majetkové poměry v&nbsp;rozsahu nezbytném pro posouzení
           vhodnosti služby.
         </p>
@@ -78,7 +78,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
   },
   {
     n: "III.",
-    t: "Účely a právní základy zpracování",
+    t: "Účely a\u00A0právní základy zpracování",
     body: (
       <>
         <ul className="space-y-5 text-[15px]">
@@ -87,9 +87,9 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
               Vyřízení poptávky a&nbsp;komunikace
             </div>
             <div className="mt-1 text-ink-soft">
-              Právní základ — oprávněný zájem správce odpovědět na&nbsp;poptávku
-              (čl.&nbsp;6 odst.&nbsp;1 písm.&nbsp;f GDPR), případně jednání
-              o&nbsp;smlouvě (čl.&nbsp;6 odst.&nbsp;1 písm.&nbsp;b GDPR).
+              Právní základ&nbsp;- oprávněný zájem správce odpovědět na&nbsp;poptávku
+              (čl.&nbsp;6&nbsp;odst.&nbsp;1&nbsp;písm.&nbsp;f GDPR), případně jednání
+              o&nbsp;smlouvě (čl.&nbsp;6&nbsp;odst.&nbsp;1&nbsp;písm.&nbsp;b GDPR).
             </div>
           </li>
           <li>
@@ -97,8 +97,8 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
               Zprostředkování finančních produktů
             </div>
             <div className="mt-1 text-ink-soft">
-              Právní základ — plnění smlouvy (čl.&nbsp;6 odst.&nbsp;1 písm.&nbsp;b
-              GDPR) a&nbsp;splnění právních povinností správce (čl.&nbsp;6 odst.&nbsp;1
+              Právní základ&nbsp;- plnění smlouvy (čl.&nbsp;6&nbsp;odst.&nbsp;1&nbsp;písm.&nbsp;b
+              GDPR) a&nbsp;splnění právních povinností správce (čl.&nbsp;6&nbsp;odst.&nbsp;1
               písm.&nbsp;c GDPR), zejména dle zákona č.&nbsp;170/2018&nbsp;Sb.,
               č.&nbsp;257/2016&nbsp;Sb. a&nbsp;č.&nbsp;253/2008&nbsp;Sb.
             </div>
@@ -108,7 +108,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
               Vedení interní evidence a&nbsp;účetnictví
             </div>
             <div className="mt-1 text-ink-soft">
-              Právní základ — splnění právních povinností (čl.&nbsp;6 odst.&nbsp;1
+              Právní základ&nbsp;- splnění právních povinností (čl.&nbsp;6&nbsp;odst.&nbsp;1
               písm.&nbsp;c GDPR).
             </div>
           </li>
@@ -117,7 +117,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
               Provoz webu a&nbsp;jeho zabezpečení
             </div>
             <div className="mt-1 text-ink-soft">
-              Právní základ — oprávněný zájem správce (čl.&nbsp;6 odst.&nbsp;1
+              Právní základ&nbsp;- oprávněný zájem správce (čl.&nbsp;6&nbsp;odst.&nbsp;1
               písm.&nbsp;f GDPR). Více v&nbsp;sekci{" "}
               <Link href="/cookies" className="text-moss underline decoration-rule underline-offset-4">
                 Cookies
@@ -139,16 +139,16 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
           účel:
         </p>
         <ul className="mt-5 space-y-2 text-[15px]">
-          <li>— u&nbsp;poptávek bez navazující smlouvy nejdéle 24&nbsp;měsíců od&nbsp;posledního kontaktu,</li>
-          <li>— u&nbsp;klientů po&nbsp;dobu trvání smluvního vztahu a&nbsp;následně po&nbsp;dobu vyžadovanou právními předpisy (zpravidla 10&nbsp;let),</li>
-          <li>— u&nbsp;účetních a&nbsp;daňových dokladů po&nbsp;dobu stanovenou zákonem.</li>
+          <li>- u&nbsp;poptávek bez navazující smlouvy nejdéle 24&nbsp;měsíců od&nbsp;posledního kontaktu,</li>
+          <li>- u&nbsp;klientů po&nbsp;dobu trvání smluvního vztahu a&nbsp;následně po&nbsp;dobu vyžadovanou právními předpisy (zpravidla 10&nbsp;let),</li>
+          <li>- u&nbsp;účetních a&nbsp;daňových dokladů po&nbsp;dobu stanovenou zákonem.</li>
         </ul>
       </>
     ),
   },
   {
     n: "V.",
-    t: "Příjemci a zpracovatelé",
+    t: "Příjemci a\u00A0zpracovatelé",
     body: (
       <>
         <p>
@@ -157,11 +157,11 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
           osobních údajů je můžeme zpřístupnit:
         </p>
         <ul className="mt-5 space-y-2 text-[15px]">
-          <li>— skupině Edo&nbsp;Finance jako mateřské struktuře,</li>
-          <li>— finančním institucím (banky, pojišťovny, investiční společnosti) pro účely zprostředkování konkrétního produktu,</li>
-          <li>— poskytovatelům IT a&nbsp;e-mailových služeb v&nbsp;rozsahu provozního zázemí,</li>
-          <li>— účetní kanceláři a&nbsp;právním poradcům správce,</li>
-          <li>— orgánům veřejné moci, pokud nám to ukládá zákon (zejména ČNB, FAÚ, finanční úřad).</li>
+          <li>- skupině Edo&nbsp;Finance jako mateřské struktuře,</li>
+          <li>- finančním institucím (banky, pojišťovny, investiční společnosti) pro účely zprostředkování konkrétního produktu,</li>
+          <li>- poskytovatelům IT a&nbsp;e-mailových služeb v&nbsp;rozsahu provozního zázemí,</li>
+          <li>- účetní kanceláři a&nbsp;právním poradcům správce,</li>
+          <li>- orgánům veřejné moci, pokud nám to ukládá zákon (zejména ČNB, FAÚ, finanční úřad).</li>
         </ul>
         <p className="mt-5">
           Údaje nepředáváme do&nbsp;třetích zemí mimo EHP.
@@ -176,15 +176,15 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
       <>
         <p>V&nbsp;souladu s&nbsp;GDPR máte zejména následující práva:</p>
         <ul className="mt-5 space-y-2 text-[15px]">
-          <li>— právo na&nbsp;přístup k&nbsp;osobním údajům,</li>
-          <li>— právo na&nbsp;opravu nepřesných údajů,</li>
-          <li>— právo na&nbsp;výmaz („právo být zapomenut“),</li>
-          <li>— právo na&nbsp;omezení zpracování,</li>
-          <li>— právo na&nbsp;přenositelnost údajů,</li>
-          <li>— právo vznést námitku proti zpracování založenému na&nbsp;oprávněném zájmu,</li>
-          <li>— právo odvolat udělený souhlas,</li>
+          <li>- právo na&nbsp;přístup k&nbsp;osobním údajům,</li>
+          <li>- právo na&nbsp;opravu nepřesných údajů,</li>
+          <li>- právo na&nbsp;výmaz („právo být zapomenut“),</li>
+          <li>- právo na&nbsp;omezení zpracování,</li>
+          <li>- právo na&nbsp;přenositelnost údajů,</li>
+          <li>- právo vznést námitku proti zpracování založenému na&nbsp;oprávněném zájmu,</li>
+          <li>- právo odvolat udělený souhlas,</li>
           <li>
-            — právo podat stížnost u&nbsp;dozorového úřadu, kterým je{" "}
+           &nbsp;- právo podat stížnost u&nbsp;dozorového úřadu, kterým je{" "}
             <a
               href="https://www.uoou.cz"
               target="_blank"
@@ -215,7 +215,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
         <p>
           Přijali jsme přiměřená technická a&nbsp;organizační opatření,
           která chrání osobní údaje před neoprávněným přístupem, ztrátou,
-          zničením a&nbsp;zneužitím — od&nbsp;šifrované komunikace přes
+          zničením a&nbsp;zneužitím&nbsp;- od&nbsp;šifrované komunikace přes
           řízení přístupových oprávnění až po&nbsp;pravidelné zálohování.
         </p>
       </>
@@ -251,20 +251,12 @@ export default function PrivacyPage() {
           }}
         />
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-            § Právní část — Soukromí
-          </div>
           <h1
             className="mt-6 font-display text-ink text-[clamp(2.6rem,6vw,5.2rem)] leading-[0.96] tracking-[-0.025em] max-w-[18ch]"
           >
             Zásady ochrany{" "}
             <span className="italic text-moss">osobních údajů.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-[1.6] text-ink-soft">
-            Vaše údaje jsou s&nbsp;námi v&nbsp;bezpečí — zpracováváme je
-            transparentně, v&nbsp;souladu s&nbsp;GDPR a&nbsp;jen v&nbsp;rozsahu,
-            který je nezbytný pro&nbsp;naši práci pro&nbsp;vás.
-          </p>
           <div className="mt-10 font-mono text-[10px] tracking-[0.28em] uppercase text-ink-mute">
             Účinné od&nbsp;MMXXVI · Naposledy aktualizováno&nbsp;[doplnit]
           </div>

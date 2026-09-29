@@ -16,7 +16,7 @@ function formatNumber(n: number) {
   }).format(Math.round(n));
 }
 
-// Compact axis label, e.g. 5_177_098 → "5,2 mil." — fits in narrow gutter
+// Compact axis label, e.g. 5_177_098 → "5,2 mil." - fits in narrow gutter
 function formatCompact(n: number) {
   if (n >= 1_000_000) {
     const v = (n / 1_000_000).toFixed(1).replace(".", ",");
@@ -88,9 +88,6 @@ export default function Calculator() {
       <div className="mx-auto max-w-[88rem] px-6 md:px-10">
         <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 mb-12 md:mb-20">
           <div className="col-span-12 md:col-span-7">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-              § 07 — Nástroj
-            </div>
             <h2
               className="mt-6 font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.02] tracking-[-0.025em] text-ink"
             >
@@ -100,8 +97,8 @@ export default function Calculator() {
           <div className="col-span-12 md:col-span-5 flex md:items-end">
             <p className="text-lg leading-[1.6] text-ink-soft max-w-md">
               Posuňte parametry a&nbsp;podívejte se, jak se chová složené úročení.
-              Jde o&nbsp;modelovou ilustraci — na osobní strategii navrhneme
-              vám&nbsp;na míru.
+              Jde o&nbsp;modelovou ilustraci&nbsp;- na osobní strategii navrhneme
+              Vám&nbsp;na míru.
             </p>
           </div>
         </div>
@@ -144,7 +141,7 @@ export default function Calculator() {
               step={0.5}
               onChange={setRate}
               format={(v) => `${v.toFixed(1)} %`}
-              note="historický průměr akciového trhu se pohybuje kolem 7–9 % p.a."
+              note="historický průměr akciového trhu se pohybuje kolem 7-9\u00A0% p.a."
             />
           </div>
 
@@ -162,9 +159,10 @@ export default function Calculator() {
                 value={formatCZK(totalContrib)}
               />
               <Stat
-                label="Zisk z úročení"
+                label="Zisk z\u00A0úročení"
                 value={formatCZK(gain)}
                 accent="brass"
+                highlight
               />
             </div>
 
@@ -176,9 +174,9 @@ export default function Calculator() {
                 role="img"
                 aria-label={`Graf vývoje portfolia: po ${years} letech celková hodnota ${formatCZK(
                   finalValue,
-                )}, z toho vlastní vklady ${formatCZK(
+                )}, z\u00A0toho vlastní vklady ${formatCZK(
                   totalContrib,
-                )} a zisk z úročení ${formatCZK(gain)}.`}
+                )} a\u00A0zisk z\u00A0úročení ${formatCZK(gain)}.`}
               >
                 <defs>
                   <linearGradient id="totalFill" x1="0" y1="0" x2="0" y2="1">
@@ -391,10 +389,12 @@ function Stat({
   label,
   value,
   accent,
+  highlight,
 }: {
   label: string;
   value: string;
   accent?: "moss" | "brass";
+  highlight?: boolean;
 }) {
   const color =
     accent === "moss"
@@ -403,12 +403,16 @@ function Stat({
       ? "text-brass-deep"
       : "text-ink";
   return (
-    <div className="bg-bone p-5 md:p-6">
-      <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-ink-mute">
+    <div
+      className={`p-5 md:p-6 ${highlight ? "bg-brass/15 shadow-[inset_0_-2px_0_var(--color-brass)]" : "bg-bone"}`}
+    >
+      <div
+        className={`font-mono text-[10px] tracking-[0.24em] uppercase ${highlight ? "text-brass-deep" : "text-ink-mute"}`}
+      >
         {label}
       </div>
       <div
-        className={`mt-3 font-display num text-2xl md:text-[1.7rem] leading-tight tracking-[-0.01em] ${color}`}
+        className={`mt-3 font-display num leading-tight tracking-[-0.01em] ${highlight ? "text-3xl md:text-[2.1rem] font-semibold" : "text-2xl md:text-[1.7rem]"} ${color}`}
       >
         {value}
       </div>

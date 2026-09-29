@@ -54,7 +54,7 @@ export async function POST(req: Request) {
     );
   }
 
-  // Honeypot — bots fill hidden fields; silently accept and drop.
+  // Honeypot - bots fill hidden fields; silently accept and drop.
   if (String(body.company ?? "").trim()) {
     return NextResponse.json({ ok: true });
   }
@@ -69,7 +69,7 @@ export async function POST(req: Request) {
 
   if (!name || !phone || !email) {
     return NextResponse.json(
-      { ok: false, error: "Vyplňte prosím jméno, telefon i e-mail." },
+      { ok: false, error: "Vyplňte prosím jméno, telefon i\u00A0e-mail." },
       { status: 422 },
     );
   }
@@ -113,7 +113,7 @@ export async function POST(req: Request) {
   if (!host) {
     if (process.env.NODE_ENV !== "production") {
       console.log(
-        `\n[contact] SMTP not configured — would send to ${to}\nSubject: ${subject}\n\n${text}\n`,
+        `\n[contact] SMTP not configured - would send to ${to}\nSubject: ${subject}\n\n${text}\n`,
       );
       return NextResponse.json({ ok: true, delivered: false });
     }
@@ -123,10 +123,10 @@ export async function POST(req: Request) {
     );
   }
 
-  // Host + user configured but the password secret hasn't been added yet —
+  // Host + user configured but the password secret hasn't been added yet -
   // fail fast instead of hanging on the SMTP connection.
   if (process.env.SMTP_USER && !process.env.SMTP_PASS) {
-    console.warn("[contact] SMTP_PASS not set — cannot send.");
+    console.warn("[contact] SMTP_PASS not set - cannot send.");
     return NextResponse.json(
       { ok: false, error: "E-mailová služba zatím není nastavená." },
       { status: 503 },
@@ -164,7 +164,7 @@ export async function POST(req: Request) {
     });
 
     // 2) Auto-reply / confirmation to the person who filled in the form.
-    //    Best-effort — a failure here must not fail the whole request.
+    //    Best-effort - a failure here must not fail the whole request.
     try {
       await transport.sendMail({
         from: fromAddr ? `"${fromName}" <${fromAddr}>` : undefined,

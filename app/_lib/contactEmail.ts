@@ -1,5 +1,5 @@
 // Branded HTML e-mail for contact-form submissions.
-// Palette mirrors app/globals.css ("Heritage Library" — bone parchment,
+// Palette mirrors app/globals.css ("Heritage Library" - bone parchment,
 // deep forest, aged brass). Table-based + inline styles for e-mail clients.
 
 const C = {
@@ -46,13 +46,13 @@ function esc(s: unknown): string {
 
 export function contactSubject(d: ContactSubmission): string {
   const topic =
-    d.interests && d.interests.length ? ` — ${d.interests.join(", ")}` : "";
-  return `Nová poptávka z webu — ${d.name}${topic}`;
+    d.interests && d.interests.length ? ` - ${d.interests.join(", ")}` : "";
+  return `Nová poptávka z\u00A0webu\u00A0- ${d.name}${topic}`;
 }
 
 export function contactEmailText(d: ContactSubmission): string {
   const lines = [
-    "NOVÁ POPTÁVKA Z WEBU — Peterka & Kolektiv",
+    "NOVÁ POPTÁVKA Z\u00A0WEBU\u00A0- Peterka & Kolektiv",
     "",
     `Jméno:   ${d.name}`,
     `Telefon: ${d.phone}`,
@@ -64,7 +64,7 @@ export function contactEmailText(d: ContactSubmission): string {
   if (d.submittedAt) lines.push("", `Odesláno: ${d.submittedAt}`);
   lines.push(
     "",
-    "Tato zpráva přišla z kontaktního formuláře na webu.",
+    "Tato zpráva přišla z\u00A0kontaktního formuláře na webu.",
     "Odpovědět můžete přímo na tento e-mail.",
   );
   return lines.join("\n");
@@ -127,7 +127,7 @@ export function contactEmailHtml(d: ContactSubmission): string {
 <title>Nová poptávka</title>
 </head>
 <body style="margin:0;padding:0;background:${C.bone};">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Nová poptávka z kontaktního formuláře — ${esc(
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Nová poptávka z\u00A0kontaktního formuláře\u00A0- ${esc(
     d.name,
   )}, ${esc(d.phone)}.</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.bone};padding:32px 16px;">
@@ -213,7 +213,7 @@ export function contactEmailHtml(d: ContactSubmission): string {
 // ---------------------------------------------------------------------------
 
 export function confirmationSubject(): string {
-  return "Děkujeme za vaši zprávu — Peterka & Kolektiv";
+  return "Děkujeme za Vaši zprávu\u00A0- Peterka & Kolektiv";
 }
 
 export function contactConfirmationText(d: ContactSubmission): string {
@@ -221,7 +221,7 @@ export function contactConfirmationText(d: ContactSubmission): string {
   const lines = [
     `Dobrý den ${first},`,
     "",
-    "děkujeme za vaši zprávu. Vaši poptávku jsme přijali a ozveme se vám nejpozději do dvou pracovních dnů.",
+    "děkujeme za Vaši zprávu. Vaši poptávku jsme přijali a\u00A0ozveme se Vám nejpozději do dvou pracovních dnů.",
   ];
   if (d.interests && d.interests.length)
     lines.push("", `Co řešíte: ${d.interests.join(", ")}`);
@@ -233,7 +233,7 @@ export function contactConfirmationText(d: ContactSubmission): string {
     "Tel: +420 774 567 833",
     "E-mail: peterka.kolektiv@email.cz",
     "",
-    "Toto je automatické potvrzení o přijetí vaší zprávy.",
+    "Toto je automatické potvrzení o\u00A0přijetí Vaší zprávy.",
   );
   return lines.join("\n");
 }
@@ -264,10 +264,10 @@ export function contactConfirmationHtml(d: ContactSubmission): string {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="x-apple-disable-message-reformatting">
-<title>Děkujeme za vaši zprávu</title>
+<title>Děkujeme za Vaši zprávu</title>
 </head>
 <body style="margin:0;padding:0;background:${C.bone};">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Vaši zprávu jsme přijali — ozveme se vám do dvou pracovních dnů.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Vaši zprávu jsme přijali\u00A0- ozveme se Vám do dvou pracovních dnů.</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${C.bone};padding:32px 16px;">
   <tr>
     <td align="center">
@@ -283,7 +283,7 @@ export function contactConfirmationHtml(d: ContactSubmission): string {
               Děkujeme, <span style="font-style:italic;color:${C.brassLight};">${first}.</span>
             </div>
             <div style="font-family:${SANS};font-size:14px;line-height:1.55;color:rgba(251,247,238,0.72);padding-top:14px;max-width:400px;">
-              Vaši zprávu jsme přijali. Ozveme se vám nejpozději do dvou pracovních dnů.
+              Vaši zprávu jsme přijali. Ozveme se Vám nejpozději do dvou pracovních dnů.
             </div>
           </td>
         </tr>
@@ -292,7 +292,7 @@ export function contactConfirmationHtml(d: ContactSubmission): string {
         <tr>
           <td style="padding:30px 40px 0;">
             <p style="margin:0;font-family:${SANS};font-size:16px;line-height:1.65;color:${C.inkSoft};">
-              Jeden z&nbsp;našich poradců si projde vaši poptávku a&nbsp;brzy se vám ozve. Společně pak najdeme termín nezávazné konzultace — bez prezentací a&nbsp;bez závazku.
+              Jeden z&nbsp;našich poradců si projde Vaši poptávku a&nbsp;brzy se Vám ozve. Společně pak najdeme termín nezávazné konzultace\u00A0- bez prezentací a&nbsp;bez závazku.
             </p>
             <div style="border-bottom:1px solid ${C.rule};margin-top:24px;line-height:1px;font-size:0;">&nbsp;</div>
           </td>
@@ -325,7 +325,7 @@ export function contactConfirmationHtml(d: ContactSubmission): string {
         <tr>
           <td style="padding:24px 40px 30px;">
             <div style="font-family:${MONO};font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:${C.inkMute};line-height:1.7;">
-              Toto je automatické potvrzení o&nbsp;přijetí vaší zprávy. V&nbsp;případě dotazů můžete odpovědět přímo na&nbsp;tento e-mail.
+              Toto je automatické potvrzení o&nbsp;přijetí Vaší zprávy. V&nbsp;případě dotazů můžete odpovědět přímo na&nbsp;tento e-mail.
             </div>
           </td>
         </tr>

@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * Animates every number inside a stat string from 0 to its final value
- * once the element scrolls into view — text around the numbers stays put,
- * so values like "70 %", "−40 %", "7–9 %", "2 světy" or "0 Kč" all work.
+ * once the element scrolls into view - text around the numbers stays put,
+ * so values like "70 %", "−40 %", "7-9 %", "2 světy" or "0 Kč" all work.
  */
 export default function StatValue({
   value,

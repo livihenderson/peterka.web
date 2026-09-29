@@ -72,11 +72,8 @@ export default function Contact() {
 
       <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
         <div className="grid grid-cols-12 gap-y-12 lg:gap-16 items-start">
-          {/* Left — invite */}
+          {/* Left - invite */}
           <div className="col-span-12 lg:col-span-5">
-            <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-              § 09 — Kontakt
-            </div>
             <h2
               className="mt-6 font-display text-[clamp(2.6rem,6vw,5.6rem)] leading-[0.98] tracking-[-0.025em]"
             >
@@ -99,7 +96,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <div className="col-span-12 lg:col-span-7 lg:pl-8">
             {sent ? (
               <div className="bg-paper/5 border border-rule-dark p-10 md:p-14 min-h-[480px] flex flex-col justify-center">
@@ -126,7 +123,7 @@ export default function Contact() {
                 onSubmit={onSubmit}
                 className="bg-paper/[0.04] border border-rule-dark p-8 md:p-12"
               >
-                {/* Honeypot — hidden from humans, catches bots */}
+                {/* Honeypot - hidden from humans, catches bots */}
                 <input
                   type="text"
                   name="company"
@@ -198,7 +195,7 @@ export default function Contact() {
                     name="message"
                     rows={4}
                     className="mt-3 w-full bg-transparent border-b border-rule-dark py-3 text-paper placeholder-paper/30 focus:border-brass-light transition-colors resize-none font-sans"
-                    placeholder="Pár vět o vaší situaci…"
+                    placeholder="Pár vět o\u00A0Vaší situaci…"
                   />
                 </div>
 

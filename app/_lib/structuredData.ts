@@ -23,7 +23,7 @@ const FOUNDERS = [
   {
     name: "Tomáš Peterka",
     jobTitle: "Zakladatel · Privátní finance",
-    knowsAbout: ["Privátní finance", "Investice", "Mezigenerační péče o majetek"],
+    knowsAbout: ["Privátní finance", "Investice", "Mezigenerační péče o\u00A0majetek"],
   },
   {
     name: "Lukáš Hořejší",
@@ -61,7 +61,7 @@ export function organizationGraph() {
         logo: LOGO,
         image: LOGO,
         description:
-          "Komplexní soukromá péče o váš majetek, vaši rodinu a vaše záměry — investice, hypotéky, pojištění a nemovitosti pod jednou střechou.",
+          "Komplexní soukromá péče o\u00A0Váš majetek, Vaši rodinu a\u00A0Vaše cíle\u00A0- investice, úvěry, pojištění a\u00A0nemovitosti pod jednou střechou.",
         telephone: CONTACT.phone,
         email: CONTACT.email,
         parentOrganization: { "@type": "Organization", name: "Edo Finance" },
@@ -78,7 +78,7 @@ export function organizationGraph() {
         location: BRANCHES.map((b) => ({
           "@type": "FinancialService",
           "@id": `${SITE_URL}/#branch-${b.id}`,
-          name: `${SITE_NAME} — ${b.name}`,
+          name: `${SITE_NAME} - ${b.name}`,
           parentOrganization: { "@id": ORG_ID },
           address: postalAddress(b),
           telephone: CONTACT.phone,

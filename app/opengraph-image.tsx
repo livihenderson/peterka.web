@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Peterka & Kolektiv — Privátní finanční dům. Praha · České Budějovice · Tábor · Soběslav.";
+  "Peterka & Kolektiv\u00A0- Privátní finanční dům. Praha · České Budějovice · Tábor · Soběslav.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,7 +15,7 @@ const BRASS_DEEP = "#7B5C36";
 /**
  * Fetch a TrueType font from Google Fonts for Satori. A plain server-side
  * fetch (no browser User-Agent) makes css2 return `format('truetype')`, which
- * Satori can parse. Returns null on any failure so the build never breaks —
+ * Satori can parse. Returns null on any failure so the build never breaks -
  * ImageResponse then falls back to its bundled default font.
  */
 async function loadFraunces(text: string): Promise<ArrayBuffer | null> {
@@ -38,7 +38,7 @@ async function loadFraunces(text: string): Promise<ArrayBuffer | null> {
 
 export default async function Image() {
   const text =
-    "Peterka & KolektivPrivátní finanční důmKomplexní péče o váš majetek a vaše záměry.PRAHAČESKÉBUDĚJOVICETÁBORSOBĚSLAVEST. MMX0123456789·—";
+    "Peterka & KolektivPrivátní finanční důmKomplexní péče o\u00A0Váš majetek a\u00A0Vaše cíle.PRAHAČESKÉBUDĚJOVICETÁBORSOBĚSLAVEST. MMX0123456789·-";
   const fraunces = await loadFraunces(text);
 
   return new ImageResponse(
@@ -105,7 +105,7 @@ export default async function Image() {
               maxWidth: 760,
             }}
           >
-            Komplexní péče o váš majetek a vaše záměry.
+            Komplexní péče o&nbsp;Váš majetek a&nbsp;Vaše cíle.
           </div>
         </div>
 

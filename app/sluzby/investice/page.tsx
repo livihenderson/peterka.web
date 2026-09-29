@@ -8,9 +8,9 @@ import Calculator from "../../_components/Calculator";
 import StatValue from "../../_components/StatValue";
 
 export const metadata: Metadata = {
-  title: "Investice — privátní portfolia, pravidelné investice, investiční dohled",
+  title: "Investice\u00A0- privátní portfolia, pravidelné investice, investiční dohled",
   description:
-    "Dlouhodobá investiční strategie, kterou jste schopni dodržet i ve špatném roce. Privátní portfolia, pravidelné investice, investiční dohled poradce. Peterka & Kolektiv.",
+    "Dlouhodobá investiční strategie, kterou jste schopni dodržet i\u00A0ve špatném roce. Privátní portfolia, pravidelné investice, investiční dohled poradce. Peterka & Kolektiv.",
   keywords: [
     "investice",
     "investiční poradce",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Investice · Peterka & Kolektiv",
     description:
-      "Strategie, kterou stojí za to dodržet — i ve chvíli, kdy zprávy panikaří.",
+      "Strategie, kterou stojí za to dodržet\u00A0- i\u00A0ve chvíli, kdy zprávy panikaří.",
     type: "article",
   },
 };
@@ -38,70 +38,47 @@ const okruhy = [
     t: "Začínám investovat",
     body:
       "Začínáte budovat. Měsíční úložky, dlouhý horizont, jednoduché a&nbsp;levné nástroje (ETF, OPF, krátkodobé investiční nástroje). Ideální pro&nbsp;mladé, kteří už vydělávají dost na&nbsp;to, aby si&nbsp;část příjmu pravidelně odkládali, pro&nbsp;rodiče, kteří spoří dětem, i&nbsp;pro&nbsp;klienty před padesátkou se&nbsp;střednědobým cílem.",
-    from: "od 1 000 Kč / měs.",
-    horizon: "horizont 7+ let",
+    from: "od 1\u00A0000\u00A0Kč / měs.",
+    horizon: "horizont 3+ roky",
   },
   {
     n: "02",
     t: "Chci plánovat strategii",
     body:
-      "Máte volné prostředky a&nbsp;hledáte strategii. Sestavujeme strukturované portfolio přizpůsobené vašemu cíli, horizontu a&nbsp;rizikové toleranci. Pravidelná revize a&nbsp;rebalancování.",
-    from: "od 100 000 Kč",
+      "Máte volné prostředky a&nbsp;hledáte strategii. Sestavujeme strukturované portfolio přizpůsobené Vašemu cíli, horizontu a&nbsp;rizikové toleranci. Pravidelná revize a&nbsp;rebalancování.",
+    from: "od 100\u00A0000\u00A0Kč",
     horizon: "horizont 5+ let",
   },
   {
     n: "03",
     t: "Chci investiční dohled",
     body:
-      "Program průběžné konzultační péče. Vaše portfolio i&nbsp;dění na&nbsp;trzích sledujeme nepřetržitě a&nbsp;sami se ozýváme s&nbsp;konkrétním doporučením — konečné rozhodnutí je vždy na&nbsp;vás. Vhodné pro&nbsp;klienty s&nbsp;velkým majetkem, kteří chtějí jistotu, že&nbsp;nic nepropásnou.",
-    from: "od 1 mil. Kč",
+      "Program průběžné konzultační péče. Vaše portfolio i&nbsp;dění na&nbsp;trzích sledujeme nepřetržitě a&nbsp;sami se ozýváme s&nbsp;konkrétním doporučením\u00A0- konečné rozhodnutí je vždy na&nbsp;Vás. Vhodné pro&nbsp;klienty s&nbsp;velkým majetkem, kteří chtějí jistotu, že&nbsp;nic nepropásnou.",
+    from: "od 1\u00A0mil. Kč",
     horizon: "horizont 10+ let",
   },
 ];
 
 const realityNumbers = [
   {
-    v: "7–9 %",
+    v: "7-9 %",
     lbl: "průměrný roční výnos akciového trhu",
     sub: "dlouhodobý průměr za 100+ let, MSCI World",
   },
   {
     v: "−40 %",
     lbl: "nejhorší pokles, který musíte ustát",
-    sub: "v průměru jednou za 10–15 let — vždy se vrátí",
+    sub: "v\u00A0průměru jednou za 10-15\u00A0let\u00A0- vždy se vrátí",
   },
   {
     v: "8×",
     lbl: "kolikrát se peníze zhodnotí",
-    sub: "při 7 % p.a. za 30 let — síla složeného úročení",
+    sub: "při 7\u00A0% p.a. za 30\u00A0let\u00A0- síla složeného úročení",
   },
   {
     v: "0",
     lbl: "lidí, kteří umí trh načasovat",
-    sub: "akademický výzkum 60 let mlčky souhlasí",
-  },
-];
-
-const mistakes = [
-  {
-    n: "I",
-    t: "Snaha o načasování trhu",
-    b: `„Počkám, až to spadne.“ Statisticky největší ztráty si investoři způsobují tím, že stojí mimo trh během deseti nejlepších dní v&nbsp;dekádě. Pravidelnost dlouhodobě poráží odhady.`,
-  },
-  {
-    n: "II",
-    t: "Drahé aktivně řízené fondy",
-    b: `Fond s&nbsp;poplatkem 2,5 % p.a. musí trh každý rok porazit o&nbsp;víc než&nbsp;2,5 %, jen aby vám něco vydělal. Většina nedokáže ani to. Levné ETF s&nbsp;poplatkem 0,1 % zpravidla výkon poměřuje, ne&nbsp;kazí.`,
-  },
-  {
-    n: "III",
-    t: "Příliš mnoho fondů",
-    b: "Klient s&nbsp;deseti fondy v&nbsp;portfoliu obvykle drží stejné akcie třikrát zaplacené třem správcům. Diversifikace je&nbsp;v&nbsp;tom, co fondy obsahují, ne&nbsp;v&nbsp;jejich počtu.",
-  },
-  {
-    n: "IV",
-    t: "Daňová slepota",
-    b: "Tříletý časový test, daňová ztráta z&nbsp;jiných investic, zápočet — to&nbsp;všechno mění reálný výnos o&nbsp;jednotky procent. Nejde o&nbsp;optimalizaci, jde o&nbsp;to neplatit dvakrát to, co se dá zaplatit jednou.",
+    sub: "akademický výzkum 60\u00A0let mlčky souhlasí",
   },
 ];
 
@@ -116,7 +93,7 @@ export default function InvesticePage() {
               slug: "investice",
               name: "Investice",
               description:
-                "Privátní investiční portfolia a dlouhodobé strategie — od pravidelných úložek po správu většího majetku.",
+                "Privátní investiční portfolia a\u00A0dlouhodobé strategie\u00A0- od pravidelných úložek po správu většího majetku.",
             }),
           ),
         }}
@@ -145,9 +122,6 @@ export default function InvesticePage() {
 
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § Investice · 01 / 05
-              </div>
               <h1
                 className="mt-6 font-display text-[clamp(2.6rem,6.6vw,6rem)] leading-[0.95] tracking-[-0.025em] text-ink"
               >
@@ -163,9 +137,9 @@ export default function InvesticePage() {
               </h1>
 
               <p className="reveal mt-10 max-w-xl text-lg md:text-xl leading-[1.55] text-ink-soft" style={{ animationDelay: "260ms" }}>
-                Investování není o&nbsp;hledání zázračných akcií. Je to disciplína —
+                Investování není o&nbsp;hledání zázračných akcií. Je to disciplína -
                 pravidelnost, čas, daňová efektivita a&nbsp;klid během poklesů.
-                To&nbsp;poslední vás v&nbsp;bance nenaučí.
+                To&nbsp;poslední Vás v&nbsp;bance nenaučí.
               </p>
 
               <div
@@ -198,7 +172,7 @@ export default function InvesticePage() {
                 <div className="relative w-full h-full overflow-hidden bg-moss-deep">
                   <Image
                     src={lukasPortrait}
-                    alt="Lukáš Hořejší — investice a privátní portfolia"
+                    alt="Lukáš Hořejší\u00A0- investice a\u00A0privátní portfolia"
                     fill
                     sizes="(max-width: 1024px) 90vw, 440px"
                     className="object-cover portrait-treatment"
@@ -210,7 +184,7 @@ export default function InvesticePage() {
                     <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase opacity-80">
                       <span>Vede oblast</span>
                       <span className="w-6 h-px bg-paper/60" />
-                      <span>7 let</span>
+                      <span>7&nbsp;let</span>
                     </div>
                     <div
                       className="mt-2 font-display text-2xl md:text-3xl tracking-tight"
@@ -234,9 +208,6 @@ export default function InvesticePage() {
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-10">
             <aside className="col-span-12 lg:col-span-3">
               <div className="lg:sticky lg:top-32">
-                <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                  § 01
-                </div>
                 <div
                   className="mt-3 font-display text-3xl italic text-moss"
                 >
@@ -257,17 +228,17 @@ export default function InvesticePage() {
               <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
                 <p className="dropcap text-lg leading-[1.65] text-ink-soft">
                   Většina investorů neprohrává kvůli špatné volbě nástroje, ale
-                  kvůli své vlastní psychologii. Vystoupí v&nbsp;krizi, vrátí se
+                  kvůli své vlastní psychice. Vystoupí v&nbsp;krizi, vrátí se
                   po&nbsp;vrcholu, hledají zkratky, kupují to, o&nbsp;čem se píše,
-                  a&nbsp;prodávají to, co bolí. Ne proto, že&nbsp;jsou hloupí —
-                  proto, že&nbsp;jsou lidé.
+                  a&nbsp;prodávají to, co bolí. Ne proto, že&nbsp;jsou hloupí,
+                  ale proto, že&nbsp;do&nbsp;toho vstupují emoce.
                 </p>
                 <p className="text-lg leading-[1.65] text-ink-soft">
-                  Naše práce je dvojí: postavit s&nbsp;vámi strategii, která
-                  matematicky dává smysl, a&nbsp;potom stát vedle vás
-                  ve&nbsp;chvíli, kdy hlavní zprávy panikaří. Investice
-                  bez&nbsp;disciplíny je sázka. Investice s&nbsp;disciplínou je
-                  spořicí účet, který se násobí časem.
+                  Naše práce je dvojí: postavit s&nbsp;Vámi strategii, která
+                  matematicky dává smysl, a&nbsp;potom stát vedle Vás
+                  ve&nbsp;chvíli, kdy ostatní panikaří. Investice
+                  bez&nbsp;disciplíny je sázka. Investice s&nbsp;disciplínou se
+                  stává v&nbsp;čase jistotou.
                 </p>
               </div>
             </div>
@@ -280,9 +251,6 @@ export default function InvesticePage() {
         <div className="mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
             <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 02 — Tři okruhy
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.05] tracking-[-0.025em] text-ink"
               >
@@ -346,9 +314,6 @@ export default function InvesticePage() {
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
           <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 mb-12 md:mb-16">
             <div className="col-span-12 md:col-span-5">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-light">
-                § 03 — Pravdivá čísla
-              </div>
               <h2
                 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,4rem)] leading-[1.02] tracking-[-0.025em]"
               >
@@ -358,10 +323,9 @@ export default function InvesticePage() {
             </div>
             <div className="col-span-12 md:col-span-6 md:col-start-7 flex md:items-end">
               <p className="text-paper/80 leading-relaxed max-w-md">
-                Slibovat 15 % ročně bez&nbsp;rizika je byznys jiných firem.
-                My vám raději hned na&nbsp;začátku ukážeme, jak vypadá
-                realistický průběh. Disciplína se tvoří z&nbsp;nepříjemných
-                pravd, ne&nbsp;z&nbsp;katalogových.
+                Slibovat 15&nbsp;% ročně bez&nbsp;rizika je zavádějící.
+                My Vám raději hned na&nbsp;začátku ukážeme, jak vypadá
+                realistický průběh. Disciplína se tvoří ze&nbsp;zkušenosti.
               </p>
             </div>
           </div>
@@ -394,73 +358,6 @@ export default function InvesticePage() {
 
       {/* CALCULATOR (reused) */}
       <Calculator />
-
-      {/* COMMON MISTAKES */}
-      <section className="relative py-24 md:py-32 bg-bone-warm">
-        <div className="mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-10 mb-12 md:mb-16 items-end">
-            <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-                § 05 — Chyby
-              </div>
-              <h2
-                className="mt-6 font-display text-[clamp(2rem,4.4vw,3.8rem)] leading-[1.02] tracking-[-0.025em] text-ink"
-              >
-                Čtyři chyby, které <span className="italic text-moss">krájejí výnos.</span>
-              </h2>
-            </div>
-            <div className="col-span-12 md:col-span-5">
-              <p className="text-base leading-[1.6] text-ink-soft max-w-md">
-                Na&nbsp;rozdíl od&nbsp;hypoték nelze investiční chyby vždy zpětně
-                napravit — proto je důležité vědět o&nbsp;nich dřív, než&nbsp;začnou.
-              </p>
-            </div>
-          </div>
-
-          <ol className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule border border-rule">
-            {mistakes.map((m, i) => (
-              <li
-                key={m.n}
-                className="reveal bg-bone-warm p-8 md:p-10"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div
-                  className="font-display num text-4xl text-brass leading-none"
-                >
-                  {m.n}
-                </div>
-                <h3
-                  className="mt-6 font-display text-2xl md:text-3xl tracking-[-0.01em] text-ink"
-                >
-                  {m.t}
-                </h3>
-                <p
-                  className="mt-3 text-[15px] leading-[1.65] text-ink-soft max-w-md"
-                  dangerouslySetInnerHTML={{ __html: m.b }}
-                />
-              </li>
-            ))}
-          </ol>
-
-          <div className="mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 pt-8 border-t border-rule">
-            <p
-              className="font-display italic text-xl md:text-2xl text-ink max-w-3xl leading-[1.3]"
-            >
-              Pokud váháte mezi „začít teď“ a&nbsp;„počkat na&nbsp;lepší dobu“ —
-              první z&nbsp;nich téměř vždy vyhrává.
-            </p>
-            <Link
-              href="/#kontakt"
-              className="group inline-flex items-center gap-3 self-start md:self-auto whitespace-nowrap bg-ink text-paper px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-moss transition-all duration-500"
-            >
-              Začít s investováním
-              <span className="inline-block transition-transform duration-500 group-hover:translate-x-1.5">
-                →
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <Contact />
     </>

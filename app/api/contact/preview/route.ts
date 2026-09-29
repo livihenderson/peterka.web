@@ -20,7 +20,7 @@ export async function GET(req: Request) {
     email: "jan.novak@example.cz",
     interests: ["Hypotéky", "Pojištění"],
     message:
-      "Dobrý den, kupujeme byt v Táboře a řešíme hypotéku. Zároveň bychom rádi probrali životní pojištění pro celou rodinu. Děkuji, Jan.",
+      "Dobrý den, kupujeme byt v\u00A0Táboře a\u00A0řešíme hypotéku. Zároveň bychom rádi probrali životní pojištění pro celou rodinu. Děkuji, Jan.",
     submittedAt: new Intl.DateTimeFormat("cs-CZ", {
       dateStyle: "long",
       timeStyle: "short",

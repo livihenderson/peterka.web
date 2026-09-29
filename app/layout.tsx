@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin", "latin-ext"],
   display: "swap",
-  // Decorative mono used only for small labels/eyebrows — keep it off the
+  // Decorative mono used only for small labels/eyebrows - keep it off the
   // critical path so it doesn't compete with the hero fonts on first paint.
   preload: false,
 });
@@ -31,11 +31,11 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Peterka & Kolektiv — Privátní finanční dům",
+    default: "Peterka & Kolektiv\u00A0- Privátní finanční dům",
     template: "%s · Peterka & Kolektiv",
   },
   description:
-    "Komplexní soukromá péče o váš majetek, vaši rodinu a vaše záměry. Investice, hypotéky, pojištění a nemovitosti pod jednou střechou. Praha · České Budějovice · Tábor · Soběslav.",
+    "Komplexní soukromá péče o\u00A0Váš majetek, Vaši rodinu a\u00A0Vaše cíle. Investice, úvěry, pojištění a\u00A0nemovitosti pod jednou střechou. Praha · České Budějovice · Tábor · Soběslav.",
   keywords: [
     "finanční poradenství",
     "soukromé finance",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Peterka & Kolektiv — Privátní finanční dům",
+    title: "Peterka & Kolektiv\u00A0- Privátní finanční dům",
     description:
-      "Komplexní péče o váš majetek a vaše záměry. 30 let zkušeností mezi 3 zakladateli.",
+      "Komplexní péče o\u00A0Váš majetek a\u00A0Vaše cíle. 30\u00A0let zkušeností mezi 3\u00A0zakladateli.",
     type: "website",
     locale: "cs_CZ",
     url: SITE_URL,
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Peterka & Kolektiv — Privátní finanční dům",
+    title: "Peterka & Kolektiv\u00A0- Privátní finanční dům",
     description:
-      "Komplexní péče o váš majetek a vaše záměry. 30 let zkušeností mezi 3 zakladateli.",
+      "Komplexní péče o\u00A0Váš majetek a\u00A0Vaše cíle. 30\u00A0let zkušeností mezi 3\u00A0zakladateli.",
   },
 };
 

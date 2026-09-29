@@ -7,8 +7,6 @@ import albrechtImg from "../../public/albrecht_josef.webp";
 import mrazekImg from "../../public/mrazek.webp";
 import lacinaImg from "../../public/lacina.webp";
 import jakubImg from "../../public/jakub.webp";
-import ivetaImg from "../../public/iveta.webp";
-import bolitoImg from "../../public/bolito.webp";
 import tomasImg from "../../public/tomas_profile.webp";
 import modreVlasyImg from "../../public/modre_vlasy.webp";
 
@@ -20,8 +18,6 @@ const PORTRAITS: Record<string, StaticImageData> = {
   "/mrazek.webp": mrazekImg,
   "/lacina.webp": lacinaImg,
   "/jakub.webp": jakubImg,
-  "/iveta.webp": ivetaImg,
-  "/bolito.webp": bolitoImg,
   "/tomas_profile.webp": tomasImg,
   "/modre_vlasy.webp": modreVlasyImg,
 };
@@ -81,22 +77,6 @@ const rest: RestMember[] = [
     note: "Zajištění příjmu a&nbsp;ochrana rodiny. Revize starých smluv.",
   },
   {
-    img: "/iveta.webp",
-    name: "Iveta Barancová",
-    focus: "Investice",
-    years: "2 roky",
-    city: "Soběslav",
-    note: "Dlouhodobá portfolia rodin a&nbsp;péče o&nbsp;klientské vztahy.",
-  },
-  {
-    img: "/bolito.webp",
-    name: "Josef Bolen",
-    focus: "Pojištění",
-    years: "4 roky",
-    city: "Praha",
-    note: "Životní i&nbsp;neživotní pojištění. Ochrana příjmu, majetku i&nbsp;odpovědnosti.",
-  },
-  {
     img: "/tomas_profile.webp",
     name: "Tomáš Hořejší",
     focus: "Penze",
@@ -111,7 +91,6 @@ const rest: RestMember[] = [
     years: "2 roky",
     city: "České Budějovice",
     note: "Pojištění odpovědnosti pro&nbsp;podnikatele. Krytí rizik, na&nbsp;která se ve&nbsp;firmě snadno zapomene.",
-    dim: 0.85,
   },
 ];
 
@@ -158,7 +137,7 @@ export default function TeamRest() {
           </span>
         </span>
         <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-ink">
-          Zbytek našeho týmu
+          Celý tým
         </span>
         <span className="ml-auto font-mono text-[11px] tracking-[0.3em] uppercase text-ink-mute num">
           {rest.length} lidí
@@ -185,7 +164,7 @@ export default function TeamRest() {
                 <div className="relative w-36 sm:w-44 lg:w-40 xl:w-52 aspect-[3/4] shrink-0 overflow-hidden bg-moss-deep">
                   <Image
                     src={PORTRAITS[m.img]}
-                    alt={`${m.name} — ${m.focus}`}
+                    alt={`${m.name} - ${m.focus}`}
                     fill
                     sizes="(max-width: 640px) 144px, (max-width: 1280px) 176px, 208px"
                     placeholder="blur"

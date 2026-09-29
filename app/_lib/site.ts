@@ -15,7 +15,7 @@ export const CONTACT = {
   email: "peterka.kolektiv@email.cz",
 } as const;
 
-/** The four branches — addresses mirror app/_components/Locations.tsx. */
+/** The four branches - addresses mirror app/_components/Locations.tsx. */
 export const BRANCHES = [
   {
     id: "praha",
@@ -51,7 +51,20 @@ export const BRANCHES = [
   },
 ] as const;
 
-/** Service subpages — used for the sitemap and Service structured data. */
+/** Banks the team works with. Shown on the home Úvěry card and /sluzby/hypoteky. */
+export const PARTNER_BANKS = [
+  "Česká spořitelna",
+  "ČSOB Hypoteční banka",
+  "Komerční banka",
+  "UniCredit Bank",
+  "Raiffeisenbank",
+  "mBank",
+  "Trinity Bank",
+  "Oberbank",
+  "Inbank",
+] as const;
+
+/** Service subpages - used for the sitemap and Service structured data. */
 export const SERVICES = [
   { slug: "investice", name: "Investice" },
   { slug: "hypoteky", name: "Hypotéky" },

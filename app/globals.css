@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* ============================================================
-   PETERKA & KOLEKTIV — Design tokens
-   "Heritage Library" — bone parchment, deep forest, aged brass
+   PETERKA & KOLEKTIV - Design tokens
+   "Heritage Library" - bone parchment, deep forest, aged brass
    ============================================================ */
 
 :root {
@@ -17,15 +17,15 @@
   --ink-soft:    #2C322B;   /* secondary text */
   --ink-mute:    #5C5F58;   /* tertiary text */
 
-  /* Forest — primary brand */
+  /* Forest - primary brand */
   --moss:        #1E3A2C;   /* deep forest, primary accent */
   --moss-deep:   #112318;   /* darker forest */
   --moss-soft:   #2C5340;   /* lighter forest */
 
-  /* Brass — secondary accent */
+  /* Brass - secondary accent */
   --brass:       #A6814E;   /* aged brass */
   --brass-light: #C9A471;   /* lighter brass */
-  --brass-deep:  #6F5230;   /* deeper brass — darkened for AA contrast on warm/grained surfaces */
+  --brass-deep:  #6F5230;   /* deeper brass - darkened for AA contrast on warm/grained surfaces */
 
   /* Hairlines */
   --rule:        #C5B89D;   /* hairline rule on bone */
@@ -85,7 +85,7 @@
     color: var(--ink);
   }
 
-  /* Keyboard focus — a visible ring on every interactive element. Brass reads
+  /* Keyboard focus - a visible ring on every interactive element. Brass reads
      on both the bone and forest surfaces. Pointer clicks stay ring-free. */
   :where(a, button, input, textarea, select, [tabindex]):focus-visible {
     outline: 2px solid var(--brass);
@@ -93,7 +93,7 @@
     border-radius: 1px;
   }
 
-  /* Subtle parchment grain — applied selectively */
+  /* Subtle parchment grain - applied selectively */
   .grain::before {
     content: "";
     position: absolute;
@@ -105,7 +105,7 @@
     z-index: 0;
   }
 
-  /* Fraunces optical/soft axes — previously set inline per element */
+  /* Fraunces optical/soft axes - previously set inline per element */
   .font-display,
   .dropcap::first-letter {
     font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
@@ -133,7 +133,7 @@
   }
 }
 
-/* Scroll-driven reveal — pure CSS */
+/* Scroll-driven reveal - pure CSS */
 @layer utilities {
   .reveal {
     opacity: 0;
@@ -165,7 +165,7 @@
     to   { transform: scaleX(1); }
   }
 
-  /* Soft photo treatment — slightly desaturated, warm shadow */
+  /* Soft photo treatment - slightly desaturated, warm shadow */
   .portrait-treatment {
     filter: saturate(0.82) contrast(1.04) sepia(0.05) brightness(var(--dim, 1));
   }
@@ -177,7 +177,7 @@
     filter: saturate(1) contrast(1) sepia(0) brightness(var(--dim, 1));
   }
 
-  /* Numbers — tabular */
+  /* Numbers - tabular */
   .num {
     font-feature-settings: "tnum", "lnum";
     font-variant-numeric: tabular-nums lining-nums;

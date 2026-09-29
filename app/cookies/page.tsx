@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cookies",
   description:
-    "Jaké cookies používá web Peterka & Kolektiv, k čemu slouží a jak je můžete spravovat.",
+    "Jaké cookies používá web Peterka & Kolektiv, k\u00A0čemu slouží a\u00A0jak je můžete spravovat.",
   alternates: { canonical: "/cookies" },
   robots: { index: true, follow: true },
 };
@@ -15,11 +15,11 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
     t: "Co jsou cookies",
     body: (
       <p>
-        Cookies jsou drobné textové soubory, které prohlížeč ukládá na&nbsp;vašem
+        Cookies jsou drobné textové soubory, které prohlížeč ukládá na&nbsp;Vašem
         zařízení při návštěvě webu. Slouží k&nbsp;tomu, aby si stránka pamatovala
-        vaše předvolby, fungovala technicky správně a&nbsp;vy jste se k&nbsp;ní
+        Vaše předvolby, fungovala technicky správně a&nbsp;Vy jste se k&nbsp;ní
         mohli pohodlně vrátit. Některé cookies jsou nezbytné pro běh webu,
-        jiné jsou volitelné a&nbsp;používáme je jen s&nbsp;vaším souhlasem.
+        jiné jsou volitelné a&nbsp;používáme je jen s&nbsp;Vaším souhlasem.
       </p>
     ),
   },
@@ -29,10 +29,10 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
     body: (
       <>
         <p>
-          Náš web staví na&nbsp;principu <em>privacy by default</em> —
+          Náš web staví na&nbsp;principu <em>privacy by default</em> -
           ve&nbsp;výchozím stavu používáme pouze technicky nezbytné cookies.
           Žádné marketingové ani profilovací cookies třetích stran neumisťujeme
-          bez&nbsp;vašeho výslovného souhlasu.
+          bez&nbsp;Vašeho výslovného souhlasu.
         </p>
 
         <div className="mt-8 space-y-6">
@@ -100,7 +100,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
         <p>
           Technické cookies platí pouze po dobu trvání návštěvy (relační
           cookies) nebo do&nbsp;několika dnů. Pokud v&nbsp;budoucnu nasadíme
-          analytické cookies, jejich platnost nepřekročí 13&nbsp;měsíců —
+          analytické cookies, jejich platnost nepřekročí 13&nbsp;měsíců -
           v&nbsp;souladu s&nbsp;doporučením evropských dozorových úřadů.
         </p>
       </>
@@ -118,13 +118,13 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
           do&nbsp;okamžiku odvolání.
         </p>
         <p className="mt-5">
-          Cookies můžete rovněž spravovat přímo v&nbsp;nastavení vašeho
-          prohlížeče — všechny moderní prohlížeče umožňují cookies blokovat
+          Cookies můžete rovněž spravovat přímo v&nbsp;nastavení Vašeho
+          prohlížeče&nbsp;- všechny moderní prohlížeče umožňují cookies blokovat
           nebo mazat:
         </p>
         <ul className="mt-5 space-y-2 text-[15px]">
           <li>
-            —{" "}
+            -{" "}
             <a
               href="https://support.google.com/chrome/answer/95647"
               target="_blank"
@@ -135,7 +135,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
             </a>
           </li>
           <li>
-            —{" "}
+            -{" "}
             <a
               href="https://support.mozilla.org/cs/kb/cookies-informace-ktere-ukladaji-webove-stranky"
               target="_blank"
@@ -146,7 +146,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
             </a>
           </li>
           <li>
-            —{" "}
+            -{" "}
             <a
               href="https://support.apple.com/cs-cz/guide/safari/sfri11471/mac"
               target="_blank"
@@ -157,7 +157,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
             </a>
           </li>
           <li>
-            —{" "}
+            -{" "}
             <a
               href="https://support.microsoft.com/cs-cz/microsoft-edge"
               target="_blank"
@@ -173,7 +173,7 @@ const sections: { n: string; t: string; body: React.ReactNode }[] = [
   },
   {
     n: "V.",
-    t: "Souvislost s ochranou údajů",
+    t: "Souvislost s\u00A0ochranou údajů",
     body: (
       <p>
         Pokud jsou cookies osobním údajem, řídí se jejich zpracování rovněž
@@ -205,19 +205,12 @@ export default function CookiesPage() {
           }}
         />
         <div className="relative mx-auto max-w-[88rem] px-6 md:px-10">
-          <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-brass-deep">
-            § Právní část — Cookies
-          </div>
           <h1
             className="mt-6 font-display text-ink text-[clamp(2.6rem,6vw,5.2rem)] leading-[0.96] tracking-[-0.025em] max-w-[18ch]"
           >
-            Drobné soubory,{" "}
-            <span className="italic text-moss">které vás respektují.</span>
+            Zásady používání{" "}
+            <span className="italic text-moss">souborů cookies.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-[1.6] text-ink-soft">
-            Náš web ve&nbsp;výchozím stavu nepoužívá nic víc, než&nbsp;co
-            potřebuje, aby fungoval. Tady je přehled — bez&nbsp;právnické vaty.
-          </p>
           <div className="mt-10 font-mono text-[10px] tracking-[0.28em] uppercase text-ink-mute">
             Účinné od&nbsp;MMXXVI · Naposledy aktualizováno&nbsp;[doplnit]
           </div>
