@@ -352,6 +352,9 @@ export default function PojisteniPage() {
               </div>
             ))}
           </div>
+          <p className="mt-6 font-mono text-[10px] tracking-[0.22em] uppercase text-paper/55">
+            Zdroje: ČNB, ČAP
+          </p>
         </div>
       </section>
 
